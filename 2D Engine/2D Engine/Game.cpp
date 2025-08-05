@@ -1,8 +1,8 @@
 #include "Game.h"
 #include "TextureManager.h"
+#include "GameObject.h"
 
-SDL_Rect sourceRect, destinationRect;
-SDL_Texture *playerTexture;
+GameObject* player;
 
 Game::Game() {
 	
@@ -37,9 +37,8 @@ void Game::Init(const char *windowTitle, int height, int width, bool isFullscree
 
 		isRunning = true;
 	}
-	else {
-		isRunning = false;
-	}
+	player = new GameObject("resources/standard/walk.png", renderer,0,0);
+
 };
 
 void Game::HandleEvents() {
@@ -55,20 +54,12 @@ void Game::HandleEvents() {
 
 void Game::Render() {
 	SDL_RenderClear(renderer);
-
-	playerTexture = TextureManager::LoadTexture("resources/standard/walk.png", renderer);
-	SDL_RenderCopy(renderer, playerTexture, NULL, &destinationRect);
+	player->Render();
 	SDL_RenderPresent(renderer);
 }
 
 void Game::Update() {
-	ctr++;
-	destinationRect.h = 64;
-	destinationRect.w = 64;
-
-	destinationRect.x = ctr;
-
-	std::cout << "counter: " << ctr << std::endl;
+	player->Update();
 }
 
 void Game::Clean() {
