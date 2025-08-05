@@ -3,6 +3,7 @@
 #include <string>
 #include <iostream>
 #include <string>
+#include <SDL_image.h>
 
 class Game
 {
