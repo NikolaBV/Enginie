@@ -3,22 +3,25 @@
 
 const float OBJECT_SIZE_SCALER = 1.50f;
 
-GameObject::GameObject(const char* textureSheet, SDL_Renderer* ren, int x, int y) {
+GameObject::GameObject(const char* textureSheet, int x, int y) {
+	objectTexture = TextureManager::LoadTexture(textureSheet);
 	xPosition = x;
 	yPosition = y;
-	renderer = ren;
-	objectTexture = TextureManager::LoadTexture(textureSheet, renderer);
 }
 
 void GameObject::Update() {
-	sourceRect.w = 64;
+
+	xPosition++;
+	yPosition++;
+
+	sourceRect.w = 64; //Size of a single spirte in the sheet
 	sourceRect.h = 64;
 
-	sourceRect.x = 0;
+	sourceRect.x = 0; //0 Means beginning to crop from the top left of the sprite sheet
 	sourceRect.y = 0;
 
 	destinationRect.x = xPosition;
-	destinationRect.x = yPosition;
+	destinationRect.y = yPosition;
 
 	destinationRect.w = sourceRect.w * OBJECT_SIZE_SCALER;
 	destinationRect.h = sourceRect.h * OBJECT_SIZE_SCALER;
@@ -26,5 +29,5 @@ void GameObject::Update() {
 
 }
 void GameObject::Render() {
-	SDL_RenderCopy(renderer, objectTexture, &sourceRect, &destinationRect);
+	SDL_RenderCopy(Game::renderer, objectTexture, &sourceRect, &destinationRect);
 }

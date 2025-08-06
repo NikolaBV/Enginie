@@ -10,7 +10,6 @@ class Game
 private:
 	bool isRunning;
 	SDL_Window *window;
-	SDL_Renderer* renderer;
 	int ctr;
 public:
 	Game();
@@ -24,5 +23,7 @@ public:
 	void Clean();
 
 	bool Running() { return isRunning; };
+
+	static SDL_Renderer* renderer;
 };
 

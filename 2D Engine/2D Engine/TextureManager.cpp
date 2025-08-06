@@ -1,13 +1,18 @@
 #include "TextureManager.h"
 
-SDL_Texture* TextureManager::LoadTexture(const char* pathToFile, SDL_Renderer* renderer) {
+void TextureManager::Draw(SDL_Texture* texture, SDL_Rect sourcePosition, SDL_Rect destinationPosition)
+{
+	SDL_RenderCopy(Game::renderer, texture, &sourcePosition, &destinationPosition);
+}
+
+SDL_Texture* TextureManager::LoadTexture(const char* pathToFile) {
 	SDL_Texture* texture = nullptr;
 	SDL_Surface* surface = IMG_Load(pathToFile);
 	if (surface == NULL)
 		std::cout << "Error" << std::endl;
 	else
 	{
-		texture = SDL_CreateTextureFromSurface(renderer, surface);
+		texture = SDL_CreateTextureFromSurface(Game::renderer, surface);
 		if (texture == NULL)
 			std::cout << "Error" << std::endl;
 	}

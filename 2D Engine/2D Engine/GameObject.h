@@ -10,7 +10,7 @@ private:
 	SDL_Renderer *renderer;
 
 public:
-	GameObject(const char* textureSheet, SDL_Renderer* renderer, int x, int y);
+	GameObject(const char* textureSheet, int x, int y);
 	~GameObject();
 
 	void Update();

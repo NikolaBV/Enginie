@@ -9,7 +9,7 @@ int main() {
     int frameTime;
 
     game = new Game();
-    game->Init("First window", 640, 480, false);
+    game->Init("First window", 800, 640, false);
 
     while (game->Running()) {
         frameStart = SDL_GetTicks(); //How many milisecs since SDL was initilized
