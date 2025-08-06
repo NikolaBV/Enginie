@@ -10,7 +10,6 @@ class Game
 private:
 	bool isRunning;
 	SDL_Window *window;
-	int ctr;
 public:
 	Game();
 	~Game();

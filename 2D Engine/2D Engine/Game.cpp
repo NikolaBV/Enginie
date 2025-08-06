@@ -2,21 +2,25 @@
 #include "TextureManager.h"
 #include "GameObject.h"
 #include "Map.h"
+#include "EntityComponentSystem.h"
+#include "Components.h"
 
 GameObject* player;
 Map* map;
 
 SDL_Renderer* Game::renderer = nullptr;
+Manager manager;
+auto& newPlayer(manager.AddEntity());
 
 Game::Game() {
-	
+
 }
 
 Game::~Game() {
 
 }
 
-void Game::Init(const char *windowTitle, int height, int width, bool isFullscreen) {
+void Game::Init(const char* windowTitle, int height, int width, bool isFullscreen) {
 
 	int flags = 0;
 
@@ -41,8 +45,11 @@ void Game::Init(const char *windowTitle, int height, int width, bool isFullscree
 
 		isRunning = true;
 	}
-	player = new GameObject("resources/standard/walk.png",0,0);
+	player = new GameObject("resources/standard/walk.png", 0, 0);
 	map = new Map();
+
+	newPlayer.AddComponent<PositionComponent>();
+	newPlayer.GetComponent<PositionComponent>().SetPosition(500, 500);
 };
 
 void Game::HandleEvents() {
@@ -54,7 +61,7 @@ void Game::HandleEvents() {
 		isRunning = false;
 		break;
 	}
-} 
+}
 
 void Game::Render() {
 	SDL_RenderClear(renderer);
@@ -65,6 +72,8 @@ void Game::Render() {
 
 void Game::Update() {
 	player->Update();
+	manager.Update();
+	std::cout << "X: " << newPlayer.GetComponent<PositionComponent>().getX() << "; " << "Y: " << newPlayer.GetComponent<PositionComponent>().getY() << std::endl;
 }
 
 void Game::Clean() {
