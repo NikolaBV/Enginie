@@ -1,0 +1,36 @@
+# Ignore build directories and user-specific files
+x64/
+*.obj
+*.pdb
+*.idb
+*.ipch
+*.aps
+*.ncb
+*.sdf
+*.opensdf
+*.suo
+*.user
+*.VC.db
+*.VC.opendb
+*.log
+*.tlog
+*.cache
+*.ilk
+*.exp
+*.exe
+*.dll~
+*.lib
+*.tmp
+*.bak
+*.old
+*.sln.docstates
+
+# Do NOT ignore DLLs (so SDL2.dll, SDL2_ttf.dll, etc. are included)
+# (No '*.dll' ignore rule)
+
+# Ignore Visual Studio temporary files
+.vs/
+
+# Ignore OS generated files
+.DS_Store
+Thumbs.db
