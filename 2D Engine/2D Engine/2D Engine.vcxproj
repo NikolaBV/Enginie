@@ -101,6 +101,10 @@
       <AdditionalLibraryDirectories>$(ProjectDir)..\..\lib\SDL2-dev\lib\x86;$(ProjectDir)..\..\lib\SDL2_image-2.0.5\lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <PostBuildEvent>
+      <Command>copy "$(ProjectDir)dlls\*.*" "$(TargetDir)" /Y</Command>
+      <Message>Copying all DLLs from dlls/ to output directory</Message>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -120,6 +124,10 @@
       <AdditionalLibraryDirectories>$(ProjectDir)..\..\lib\SDL2-dev\lib\x86;$(ProjectDir)..\..\lib\SDL2_image-2.0.5\lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <PostBuildEvent>
+      <Command>copy "$(ProjectDir)dlls\*.*" "$(TargetDir)" /Y</Command>
+      <Message>Copying all DLLs from dlls/ to output directory</Message>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -136,10 +144,8 @@
       <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
-      <Command>copy "$(ProjectDir)..\..\lib\SDL2\SDL2.dll" "$(TargetDir)"
-copy "$(ProjectDir)..\..\lib\SDL2_image-2.0.5\lib\x64\SDL2_image.dll" "$(TargetDir)"
-copy "$(ProjectDir)..\..\lib\SDL2_image-2.0.5\lib\x64\*.dll" "$(TargetDir)"</Command>
-      <Message>Copying SDL2 DLLs to output directory</Message>
+      <Command>copy "$(ProjectDir)dlls\*.*" "$(TargetDir)" /Y</Command>
+      <Message>Copying all DLLs from dlls/ to output directory</Message>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -161,10 +167,8 @@ copy "$(ProjectDir)..\..\lib\SDL2_image-2.0.5\lib\x64\*.dll" "$(TargetDir)"</Com
       <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
-      <Command>copy "$(ProjectDir)..\..\lib\SDL2\SDL2.dll" "$(TargetDir)"
-copy "$(ProjectDir)..\..\lib\SDL2_image-2.0.5\lib\x64\SDL2_image.dll" "$(TargetDir)"
-copy "$(ProjectDir)..\..\lib\SDL2_image-2.0.5\lib\x64\*.dll" "$(TargetDir)"</Command>
-      <Message>Copying SDL2 DLLs to output directory</Message>
+      <Command>copy "$(ProjectDir)dlls\*.*" "$(TargetDir)" /Y</Command>
+      <Message>Copying all DLLs from dlls/ to output directory</Message>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
