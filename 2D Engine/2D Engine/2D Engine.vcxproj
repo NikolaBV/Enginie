@@ -102,8 +102,8 @@
       <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
-      <Command>copy "$(ProjectDir)dlls\*.*" "$(TargetDir)" /Y</Command>
-      <Message>Copying all DLLs from dlls/ to output directory</Message>
+      <Command>copy "$(ProjectDir)dlls\*.*" "$(TargetDir)" /Y&#xD;&#xA;copy "$(ProjectDir)..\..\lib\SDL2_image-2.0.5\lib\x86\zlib1.dll" "$(TargetDir)" /Y&#xD;&#xA;xcopy "$(ProjectDir)resources" "$(TargetDir)resources" /E /I /Y</Command>
+      <Message>Copying all DLLs and resources to output directory</Message>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -114,7 +114,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir)..\..\lib\SDL2-dev\include;$(ProjectDir)..\..\lib\SDL2_image-2.0.5\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\lib\SDL2-dev\include;$(ProjectDir)..\..\lib\SDL2_image-2.0.5\lib\x64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -125,8 +125,8 @@
       <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
-      <Command>copy "$(ProjectDir)dlls\*.*" "$(TargetDir)" /Y</Command>
-      <Message>Copying all DLLs from dlls/ to output directory</Message>
+      <Command>copy "$(ProjectDir)dlls\*.*" "$(TargetDir)" /Y&#xD;&#xA;copy "$(ProjectDir)..\..\lib\SDL2_image-2.0.5\lib\x86\zlib1.dll" "$(TargetDir)" /Y&#xD;&#xA;xcopy "$(ProjectDir)resources" "$(TargetDir)resources" /E /I /Y</Command>
+      <Message>Copying all DLLs and resources to output directory</Message>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -144,8 +144,8 @@
       <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
-      <Command>copy "$(ProjectDir)dlls\*.*" "$(TargetDir)" /Y</Command>
-      <Message>Copying all DLLs from dlls/ to output directory</Message>
+      <Command>copy "$(ProjectDir)dlls\*.*" "$(TargetDir)" /Y&#xD;&#xA;copy "$(ProjectDir)..\..\lib\SDL2_image-2.0.5\lib\x64\zlib1.dll" "$(TargetDir)" /Y&#xD;&#xA;xcopy "$(ProjectDir)resources" "$(TargetDir)resources" /E /I /Y</Command>
+      <Message>Copying all DLLs and resources to output directory</Message>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -167,8 +167,8 @@
       <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
-      <Command>copy "$(ProjectDir)dlls\*.*" "$(TargetDir)" /Y</Command>
-      <Message>Copying all DLLs from dlls/ to output directory</Message>
+      <Command>copy "$(ProjectDir)dlls\*.*" "$(TargetDir)" /Y&#xD;&#xA;xcopy "$(ProjectDir)resources" "$(TargetDir)resources" /E /I /Y</Command>
+      <Message>Copying all DLLs and resources to output directory</Message>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

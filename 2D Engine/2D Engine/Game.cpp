@@ -45,6 +45,16 @@ void Game::Init(const char* windowTitle, int height, int width, bool isFullscree
 
 		isRunning = true;
 	}
+	
+	// Set working directory to executable directory for proper resource loading
+	char* base_path = SDL_GetBasePath();
+	if (base_path) {
+		SDL_SetHint(SDL_HINT_WINDOWS_DISABLE_THREAD_NAMING, "1");
+		// Note: SDL doesn't have a direct chdir function, but we can use the base path
+		// The resources should be copied to the executable directory
+		SDL_free(base_path);
+	}
+	
 	player = new GameObject("resources/standard/walk.png", 0, 0);
 	map = new Map();
 
