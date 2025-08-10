@@ -1,16 +1,15 @@
 #include "Game.h"
 #include "TextureManager.h"
-#include "GameObject.h"
 #include "Map.h"
-#include "EntityComponentSystem.h"
 #include "Components.h"
+#include "PositionComponent.h"
+#include "SpriteComponent.h"
 
-GameObject* player;
 Map* map;
 
 SDL_Renderer* Game::renderer = nullptr;
 Manager manager;
-auto& newPlayer(manager.AddEntity());
+auto& player(manager.AddEntity());
 
 Game::Game() {
 
@@ -45,7 +44,7 @@ void Game::Init(const char* windowTitle, int height, int width, bool isFullscree
 
 		isRunning = true;
 	}
-	
+
 	// Set working directory to executable directory for proper resource loading
 	char* base_path = SDL_GetBasePath();
 	if (base_path) {
@@ -54,12 +53,11 @@ void Game::Init(const char* windowTitle, int height, int width, bool isFullscree
 		// The resources should be copied to the executable directory
 		SDL_free(base_path);
 	}
-	
-	player = new GameObject("resources/standard/walk.png", 0, 0);
+
 	map = new Map();
 
-	newPlayer.AddComponent<PositionComponent>();
-	newPlayer.GetComponent<PositionComponent>().SetPosition(500, 500);
+	player.AddComponent<PositionComponent>(0,0);
+	player.AddComponent <SpriteComponent>("resources/standard/walk.png");
 };
 
 void Game::HandleEvents() {
@@ -76,14 +74,17 @@ void Game::HandleEvents() {
 void Game::Render() {
 	SDL_RenderClear(renderer);
 	map->DrawMap();
-	player->Render();
+	manager.Draw(); 
 	SDL_RenderPresent(renderer);
 }
 
 void Game::Update() {
-	player->Update();
+	manager.refresh();
 	manager.Update();
-	std::cout << "X: " << newPlayer.GetComponent<PositionComponent>().getX() << "; " << "Y: " << newPlayer.GetComponent<PositionComponent>().getY() << std::endl;
+
+	if (player.GetComponent<PositionComponent>().getX() > 100) {
+		player.GetComponent<SpriteComponent>().SetTexture("resources/standard/sit.png");
+	}
 }
 
 void Game::Clean() {

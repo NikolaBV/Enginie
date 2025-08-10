@@ -45,8 +45,7 @@ private:
 	ComponentBitSet componentBitset;
 public:
 	void Update() {
-		for (auto& c : components)c->Update();
-		for (auto& c : components)c->Draw();
+		for (auto& c : components) c->Update();
 	}
 	void Draw();
 	bool IsActive() { return isActive; };
