@@ -3,12 +3,12 @@
 #include "SDL.h"
 #include "TextureManager.h"
 #include "EntityComponentSystem.h"
-#include "PositionComponent.h"
+#include "TransformComponent.h"
 
 class SpriteComponent : public Component
 {
 private:
-	PositionComponent* position;
+	TransformComponent* transform;
 	SDL_Texture* texture;
 	SDL_Rect sourceRect, destinationRect;
 public:
@@ -23,7 +23,7 @@ public:
 
 	void Init() override
 	{
-		position = &entity->GetComponent<PositionComponent>();
+		transform = &entity->GetComponent<TransformComponent>();
 
 		sourceRect.x = 0;
 		sourceRect.y = 0;
@@ -36,8 +36,8 @@ public:
 
 	void Update() override
 	{
-		destinationRect.x = position->getX();
-		destinationRect.y = position->getY();
+		destinationRect.x = (int)transform->position.x;
+		destinationRect.y = (int)transform->position.y;
 
 	}
 

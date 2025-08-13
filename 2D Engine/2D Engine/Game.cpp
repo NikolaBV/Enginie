@@ -2,7 +2,7 @@
 #include "TextureManager.h"
 #include "Map.h"
 #include "Components.h"
-#include "PositionComponent.h"
+#include "TransformComponent.h"
 #include "SpriteComponent.h"
 
 Map* map;
@@ -56,7 +56,7 @@ void Game::Init(const char* windowTitle, int height, int width, bool isFullscree
 
 	map = new Map();
 
-	player.AddComponent<PositionComponent>(0,0);
+	player.AddComponent<TransformComponent>(0,0);
 	player.AddComponent <SpriteComponent>("resources/standard/walk.png");
 };
 
@@ -82,7 +82,9 @@ void Game::Update() {
 	manager.refresh();
 	manager.Update();
 
-	if (player.GetComponent<PositionComponent>().getX() > 100) {
+	player.GetComponent<TransformComponent>().position.Add(Vector2D(5, 5));
+
+	if (player.GetComponent<TransformComponent>().position.x > 100) {
 		player.GetComponent<SpriteComponent>().SetTexture("resources/standard/sit.png");
 	}
 }
