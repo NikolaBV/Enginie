@@ -92,6 +92,7 @@ void Game::Update() {
 
 	if (Collision::AABB(player.GetComponent<ColliderComponent>().collider, wall.GetComponent<ColliderComponent>().collider)) {
 		std::cout << player.GetComponent<ColliderComponent>().tag << " collided with " << player.GetComponent<ColliderComponent>().tag << std::endl;
+		player.GetComponent<TransformComponent>().velocity * -1;
 	}
 }
 

@@ -72,3 +72,15 @@ std::ostream& operator<<(std::ostream& stream, const Vector2D& vector) {
 	stream << "Vector2D{" << vector.x << ", " << vector.y << "}";
 	return stream;
 }
+
+Vector2D Vector2D::operator*(const int& i) {
+	this->x *= i;
+	this->y *= i;
+	return *this;
+}
+
+Vector2D Vector2D::Zero() {
+	this->x = 0;
+	this->y = 0;
+	return *this;
+}
