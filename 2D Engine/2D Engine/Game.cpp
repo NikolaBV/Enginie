@@ -8,6 +8,7 @@
 Map* map;
 
 SDL_Renderer* Game::renderer = nullptr;
+SDL_Event Game::event;
 Manager manager;
 auto& player(manager.AddEntity());
 
@@ -58,10 +59,10 @@ void Game::Init(const char* windowTitle, int height, int width, bool isFullscree
 
 	player.AddComponent<TransformComponent>(0,0);
 	player.AddComponent <SpriteComponent>("resources/standard/walk.png");
+	player.AddComponent<KeyboardController>();
 };
 
 void Game::HandleEvents() {
-	SDL_Event event;
 	SDL_PollEvent(&event);
 
 	switch (event.type) {
@@ -81,12 +82,6 @@ void Game::Render() {
 void Game::Update() {
 	manager.refresh();
 	manager.Update();
-
-	player.GetComponent<TransformComponent>().position.Add(Vector2D(5, 5));
-
-	if (player.GetComponent<TransformComponent>().position.x > 100) {
-		player.GetComponent<SpriteComponent>().SetTexture("resources/standard/sit.png");
-	}
 }
 
 void Game::Clean() {
