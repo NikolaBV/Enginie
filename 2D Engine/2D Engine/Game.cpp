@@ -2,8 +2,7 @@
 #include "TextureManager.h"
 #include "Map.h"
 #include "Components.h"
-#include "TransformComponent.h"
-#include "SpriteComponent.h"
+#include "Collision.h"
 
 Map* map;
 
@@ -11,6 +10,7 @@ SDL_Renderer* Game::renderer = nullptr;
 SDL_Event Game::event;
 Manager manager;
 auto& player(manager.AddEntity());
+auto& wall(manager.AddEntity());
 
 Game::Game() {
 
@@ -57,9 +57,16 @@ void Game::Init(const char* windowTitle, int height, int width, bool isFullscree
 
 	map = new Map();
 
-	player.AddComponent<TransformComponent>(0,0);
+	player.AddComponent<TransformComponent>(1);
 	player.AddComponent <SpriteComponent>("resources/standard/walk.png");
 	player.AddComponent<KeyboardController>();
+	player.AddComponent<ColliderComponent>("player");
+
+	wall.AddComponent<TransformComponent>(100.0f, 100.0f, 300, 20, 1);
+	wall.AddComponent<SpriteComponent>("resources/tiles/dirt.png");
+	wall.AddComponent<ColliderComponent>("wall");
+
+	std::cout << "Wall created at position: (100, 100) with size: 300x20" << std::endl;
 };
 
 void Game::HandleEvents() {
@@ -75,13 +82,17 @@ void Game::HandleEvents() {
 void Game::Render() {
 	SDL_RenderClear(renderer);
 	map->DrawMap();
-	manager.Draw(); 
+	manager.Draw();
 	SDL_RenderPresent(renderer);
 }
 
 void Game::Update() {
 	manager.refresh();
 	manager.Update();
+
+	if (Collision::AABB(player.GetComponent<ColliderComponent>().collider, wall.GetComponent<ColliderComponent>().collider)) {
+		std::cout << player.GetComponent<ColliderComponent>().tag << " collided with " << player.GetComponent<ColliderComponent>().tag << std::endl;
+	}
 }
 
 void Game::Clean() {

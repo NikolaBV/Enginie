@@ -19,6 +19,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="ColliderComponent.cpp" />
+    <ClCompile Include="Collision.cpp" />
     <ClCompile Include="Components.cpp" />
     <ClCompile Include="EntityComponentSystem.cpp" />
     <ClCompile Include="Game.cpp" />
@@ -31,6 +33,8 @@
     <ClCompile Include="Vector2D.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ColliderComponent.h" />
+    <ClInclude Include="Collision.h" />
     <ClInclude Include="Components.h" />
     <ClInclude Include="EntityComponentSystem.h" />
     <ClInclude Include="Game.h" />
