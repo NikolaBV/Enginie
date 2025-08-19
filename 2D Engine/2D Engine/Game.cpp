@@ -15,13 +15,16 @@ std::vector<ColliderComponent*> Game::colliders;
 auto& player(manager.AddEntity());
 auto& wall(manager.AddEntity());
 
-Game::Game() {
+enum groupLables : std::size_t {
+	groupMap,
+	groupPlayers,
+	groupEnemies,
+	groupColliders
+};
 
-}
+Game::Game() {}
 
-Game::~Game() {
-
-}
+Game::~Game() {}
 
 void Game::Init(const char* windowTitle, int height, int width, bool isFullscreen) {
 
@@ -49,25 +52,24 @@ void Game::Init(const char* windowTitle, int height, int width, bool isFullscree
 		isRunning = true;
 	}
 
-	// Set working directory to executable directory for proper resource loading
 	char* base_path = SDL_GetBasePath();
 	if (base_path) {
 		SDL_SetHint(SDL_HINT_WINDOWS_DISABLE_THREAD_NAMING, "1");
-		// Note: SDL doesn't have a direct chdir function, but we can use the base path
-		// The resources should be copied to the executable directory
 		SDL_free(base_path);
 	}
 
-	Map::LoadMap("resources/maps/p16x16.map",16,16);
+	Map::LoadMap("resources/maps/p16x16.map", 16, 16);
 
 	player.AddComponent<TransformComponent>(1);
 	player.AddComponent <SpriteComponent>("resources/standard/walk.png");
 	player.AddComponent<KeyboardController>();
 	player.AddComponent<ColliderComponent>("player");
+	player.AddGroup(groupPlayers);
 
 	wall.AddComponent<TransformComponent>(100.0f, 100.0f, 300, 20, 1);
 	wall.AddComponent<SpriteComponent>("resources/tiles/dirt.png");
 	wall.AddComponent<ColliderComponent>("wall");
+	player.AddGroup(groupMap);
 
 	std::cout << "Wall created at position: (100, 100) with size: 300x20" << std::endl;
 };
@@ -82,9 +84,22 @@ void Game::HandleEvents() {
 	}
 }
 
+auto& tiles(manager.GetGroup(groupMap));
+auto& players(manager.GetGroup(groupPlayers));
+auto& enemies(manager.GetGroup(groupEnemies));
+;
+
 void Game::Render() {
 	SDL_RenderClear(renderer);
-	manager.Draw();
+	for (auto& tile : tiles) {
+		tile->Draw();
+	}
+	for (auto& player : players) {
+		player->Draw();
+	}
+	for (auto& enemy : enemies) {
+		enemy->Draw();
+	}
 	SDL_RenderPresent(renderer);
 }
 
@@ -92,7 +107,7 @@ void Game::Update() {
 	manager.refresh();
 	manager.Update();
 
-	for (auto collider:colliders) {
+	for (auto collider : colliders) {
 		Collision::AABB(player.GetComponent<ColliderComponent>(), *collider);
 	}
 }
@@ -108,4 +123,5 @@ void Game::AddTile(int tileId, int x, int y) {
 	auto& tile(manager.AddEntity());
 	// Use 32x32 tiles like in the tutorial so the map does not fill the entire window
 	tile.AddComponent<TileComponent>(x, y, 32, 32, tileId);
+	tile.AddGroup(groupMap);
 }

@@ -1,5 +1,6 @@
 #include "EntityComponentSystem.h"
 
-void Entity::Draw() {
-	for (auto& c : components) c->Draw();
+void Entity::AddGroup(Group mGroup) {
+	groupBitset[mGroup] = true;
+	manager.AddToGroup(this, mGroup);
 }
