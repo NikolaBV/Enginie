@@ -9,6 +9,7 @@ int main() {
     int frameTime;
 
     game = new Game();
+    // Window size back to a more standard size; map tiles are now 32px so more of the map fits.
     game->Init("First window", 800, 640, false);
 
     while (game->Running()) {

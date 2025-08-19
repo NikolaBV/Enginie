@@ -17,21 +17,21 @@ public:
 
 	TileComponent() = default;
 	TileComponent(int x, int y, int width, int height, int tileId) {
-		tileRect.x = x;
-		tileRect.y = y;
 		tileRect.w = width;
 		tileRect.h = height;
+		tileRect.x = x * width;
+		tileRect.y = y * height;
 		this->tileId = tileId;
 
 		switch (tileId) {
 		case 0:
-			path = "resources/tiles/water.png";
-			break;
-		case 1:
 			path = "resources/tiles/dirt.png";
 			break;
-		case 2:
+		case 1:
 			path = "resources/tiles/grass.png";
+			break;
+		case 2:
+			path = "resources/tiles/water.png";
 			break;
 		default:
 			break;
@@ -39,7 +39,7 @@ public:
 	}
 
 	void Init() override {
-		entity->AddComponent<TransformComponent>((float)tileRect.x, (float)tileRect.y,tileRect.w, tileRect.y, 1);
+		entity->AddComponent<TransformComponent>((float)tileRect.x, (float)tileRect.y, tileRect.h, tileRect.w, 1);
 		transform = &entity->GetComponent<TransformComponent>();
 
 		entity->AddComponent<SpriteComponent>(path);

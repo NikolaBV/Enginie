@@ -15,10 +15,6 @@ std::vector<ColliderComponent*> Game::colliders;
 auto& player(manager.AddEntity());
 auto& wall(manager.AddEntity());
 
-auto& tileZero(manager.AddEntity());
-auto& tileOne(manager.AddEntity());
-auto& tileTwo(manager.AddEntity());
-
 Game::Game() {
 
 }
@@ -62,15 +58,7 @@ void Game::Init(const char* windowTitle, int height, int width, bool isFullscree
 		SDL_free(base_path);
 	}
 
-	map = new Map();
-
-	tileZero.AddComponent<TileComponent>(200, 200, 64, 64, 0);
-	tileOne.AddComponent<TileComponent>(250, 250, 64, 64, 1);
-	tileTwo.AddComponent<TileComponent>(150, 150, 64, 64, 2);
-
-	tileOne.AddComponent<ColliderComponent>("dirt");
-	tileTwo.AddComponent<ColliderComponent>("grass");
-
+	Map::LoadMap("resources/maps/p16x16.map",16,16);
 
 	player.AddComponent<TransformComponent>(1);
 	player.AddComponent <SpriteComponent>("resources/standard/walk.png");
@@ -96,7 +84,6 @@ void Game::HandleEvents() {
 
 void Game::Render() {
 	SDL_RenderClear(renderer);
-	//map->DrawMap();
 	manager.Draw();
 	SDL_RenderPresent(renderer);
 }
@@ -115,4 +102,10 @@ void Game::Clean() {
 	SDL_DestroyRenderer(renderer);
 	SDL_Quit();
 	std::cout << "Game has been cleaned" << std::endl;
+}
+
+void Game::AddTile(int tileId, int x, int y) {
+	auto& tile(manager.AddEntity());
+	// Use 32x32 tiles like in the tutorial so the map does not fill the entire window
+	tile.AddComponent<TileComponent>(x, y, 32, 32, tileId);
 }
