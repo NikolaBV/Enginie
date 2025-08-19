@@ -30,6 +30,7 @@
     <ClCompile Include="PositionComponent.cpp" />
     <ClCompile Include="SpriteComponent.cpp" />
     <ClCompile Include="TextureManager.cpp" />
+    <ClCompile Include="TileComponent.cpp" />
     <ClCompile Include="Vector2D.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -40,6 +41,7 @@
     <ClInclude Include="Game.h" />
     <ClInclude Include="KeyboardController.h" />
     <ClInclude Include="Map.h" />
+    <ClInclude Include="TileComponent.h" />
     <ClInclude Include="TransformComponent.h" />
     <ClInclude Include="SpriteComponent.h" />
     <ClInclude Include="TextureManager.h" />

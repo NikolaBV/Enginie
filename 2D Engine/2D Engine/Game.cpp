@@ -9,8 +9,15 @@ Map* map;
 SDL_Renderer* Game::renderer = nullptr;
 SDL_Event Game::event;
 Manager manager;
+
+std::vector<ColliderComponent*> Game::colliders;
+
 auto& player(manager.AddEntity());
 auto& wall(manager.AddEntity());
+
+auto& tileZero(manager.AddEntity());
+auto& tileOne(manager.AddEntity());
+auto& tileTwo(manager.AddEntity());
 
 Game::Game() {
 
@@ -57,6 +64,14 @@ void Game::Init(const char* windowTitle, int height, int width, bool isFullscree
 
 	map = new Map();
 
+	tileZero.AddComponent<TileComponent>(200, 200, 64, 64, 0);
+	tileOne.AddComponent<TileComponent>(250, 250, 64, 64, 1);
+	tileTwo.AddComponent<TileComponent>(150, 150, 64, 64, 2);
+
+	tileOne.AddComponent<ColliderComponent>("dirt");
+	tileTwo.AddComponent<ColliderComponent>("grass");
+
+
 	player.AddComponent<TransformComponent>(1);
 	player.AddComponent <SpriteComponent>("resources/standard/walk.png");
 	player.AddComponent<KeyboardController>();
@@ -81,7 +96,7 @@ void Game::HandleEvents() {
 
 void Game::Render() {
 	SDL_RenderClear(renderer);
-	map->DrawMap();
+	//map->DrawMap();
 	manager.Draw();
 	SDL_RenderPresent(renderer);
 }
@@ -90,9 +105,8 @@ void Game::Update() {
 	manager.refresh();
 	manager.Update();
 
-	if (Collision::AABB(player.GetComponent<ColliderComponent>().collider, wall.GetComponent<ColliderComponent>().collider)) {
-		std::cout << player.GetComponent<ColliderComponent>().tag << " collided with " << player.GetComponent<ColliderComponent>().tag << std::endl;
-		player.GetComponent<TransformComponent>().velocity * -1;
+	for (auto collider:colliders) {
+		Collision::AABB(player.GetComponent<ColliderComponent>(), *collider);
 	}
 }
 
