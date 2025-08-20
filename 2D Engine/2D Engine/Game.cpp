@@ -61,7 +61,7 @@ void Game::Init(const char* windowTitle, int height, int width, bool isFullscree
 	Map::LoadMap("resources/maps/p16x16.map", 16, 16);
 
 	player.AddComponent<TransformComponent>(1);
-	player.AddComponent <SpriteComponent>("resources/standard/walk.png");
+	player.AddComponent <SpriteComponent>("resources/standard/idle.png", true);
 	player.AddComponent<KeyboardController>();
 	player.AddComponent<ColliderComponent>("player");
 	player.AddGroup(groupPlayers);
