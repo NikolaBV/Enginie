@@ -11,7 +11,6 @@ bool Collision::AABB(const SDL_Rect& firstRect, const SDL_Rect& secondRect) {
 
 bool Collision::AABB(const ColliderComponent& firstColliderObject, const ColliderComponent& secondColliderObject) {
 	if (AABB(firstColliderObject.collider, secondColliderObject.collider)) {
-		std::cout << firstColliderObject.tag << " collided with " << secondColliderObject.tag << std::endl;
 		return true;
 	}
 	else {

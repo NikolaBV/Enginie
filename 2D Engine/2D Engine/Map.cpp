@@ -31,8 +31,14 @@ void Map::LoadMap(std::string path, int sizeX, int sizeY) {
 			if (cell.empty()) {
 				continue;
 			}
+			// Cells encode source coordinates as two digits: XY -> (sourceX=X, sourceY=Y)
+			if (cell.length() < 2) {
+				continue;
+			}
 			int tileId = std::stoi(cell);
-			Game::AddTile(tileId, x, y);
+			int sourceX = (tileId % 10) * 64;
+			int sourceY = (tileId / 10) * 64;
+			Game::AddTile(sourceX, sourceY, x * 128, y * 128);
 		}
 	}
 }

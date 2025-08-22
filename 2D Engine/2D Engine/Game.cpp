@@ -15,6 +15,8 @@ std::vector<ColliderComponent*> Game::colliders;
 auto& player(manager.AddEntity());
 auto& wall(manager.AddEntity());
 
+const char* mapFile = "resources/tiles/tileset.png";
+
 enum groupLables : std::size_t {
 	groupMap,
 	groupPlayers,
@@ -58,18 +60,13 @@ void Game::Init(const char* windowTitle, int height, int width, bool isFullscree
 		SDL_free(base_path);
 	}
 
-	Map::LoadMap("resources/maps/p16x16.map", 16, 16);
+	Map::LoadMap("resources/maps/firstMap.map", 10, 10);
 
 	player.AddComponent<TransformComponent>(1);
 	player.AddComponent <SpriteComponent>("resources/standard/idle.png", true);
 	player.AddComponent<KeyboardController>();
 	player.AddComponent<ColliderComponent>("player");
 	player.AddGroup(groupPlayers);
-
-	wall.AddComponent<TransformComponent>(100.0f, 100.0f, 300, 20, 1);
-	wall.AddComponent<SpriteComponent>("resources/tiles/dirt.png");
-	wall.AddComponent<ColliderComponent>("wall");
-	player.AddGroup(groupMap);
 
 	std::cout << "Wall created at position: (100, 100) with size: 300x20" << std::endl;
 };
@@ -119,9 +116,9 @@ void Game::Clean() {
 	std::cout << "Game has been cleaned" << std::endl;
 }
 
-void Game::AddTile(int tileId, int x, int y) {
+void Game::AddTile(int sourceX, int sourceY, int xPosition, int yPosition) {
 	auto& tile(manager.AddEntity());
 	// Use 32x32 tiles like in the tutorial so the map does not fill the entire window
-	tile.AddComponent<TileComponent>(x, y, 32, 32, tileId);
+	tile.AddComponent<TileComponent>(sourceX, sourceY, xPosition, yPosition, mapFile);
 	tile.AddGroup(groupMap);
 }
