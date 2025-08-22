@@ -10,6 +10,8 @@ SDL_Renderer* Game::renderer = nullptr;
 SDL_Event Game::event;
 Manager manager;
 
+SDL_Rect Game::camera = { 0,0, 800,640 };
+
 std::vector<ColliderComponent*> Game::colliders;
 
 bool Game::isRunning = false;
@@ -105,13 +107,27 @@ void Game::Update() {
 	manager.refresh();
 	manager.Update();
 
-	Vector2D playerVelocity = player.GetComponent<TransformComponent>().velocity;
-	int playerSpeed = player.GetComponent<TransformComponent>().speed;
+	camera.x = player.GetComponent<TransformComponent>().position.x - 400; 
+	camera.y = player.GetComponent<TransformComponent>().position.y - 320;
 
-	for (auto tile : tiles) {
-		tile->GetComponent<TileComponent>().destinationRect.x += -(playerVelocity.x * playerSpeed);
-		tile->GetComponent<TileComponent>().destinationRect.y += -(playerVelocity.y * playerSpeed);
+	// Map size: 10x10 tiles * 128 pixels = 1280x1280 pixels
+	const int mapWidth = 10 * 128;  // 1280 pixels
+	const int mapHeight = 10 * 128; // 1280 pixels
+
+	// Clamp camera to map boundaries
+	if (camera.x < 0) {
+		camera.x = 0;
 	}
+	if (camera.y < 0) {
+		camera.y = 0;
+	}
+	if (camera.x > mapWidth - camera.w) {
+		camera.x = mapWidth - camera.w;
+	}
+	if (camera.y > mapHeight - camera.h) {
+		camera.y = mapHeight - camera.h;
+	}
+
 }
 
 void Game::Clean() {

@@ -10,12 +10,12 @@ class ColliderComponent;
 class Game
 {
 private:
-	SDL_Window *window;
+	SDL_Window* window;
 public:
 	Game();
 	~Game();
 
-	void Init(const char *windowTitle, int height, int width, bool isFullscreen);
+	void Init(const char* windowTitle, int height, int width, bool isFullscreen);
 
 	void HandleEvents();
 	void Update();
@@ -29,6 +29,6 @@ public:
 	static SDL_Event event;
 	static std::vector< ColliderComponent*> colliders;
 	static bool isRunning;
-
+	static SDL_Rect camera;
 };
 
