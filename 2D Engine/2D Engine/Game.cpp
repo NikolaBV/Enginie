@@ -12,6 +12,8 @@ Manager manager;
 
 std::vector<ColliderComponent*> Game::colliders;
 
+bool Game::isRunning = false;
+
 auto& player(manager.AddEntity());
 auto& wall(manager.AddEntity());
 
@@ -23,6 +25,10 @@ enum groupLables : std::size_t {
 	groupEnemies,
 	groupColliders
 };
+
+auto& tiles(manager.GetGroup(groupMap));
+auto& players(manager.GetGroup(groupPlayers));
+auto& enemies(manager.GetGroup(groupEnemies));
 
 Game::Game() {}
 
@@ -62,7 +68,7 @@ void Game::Init(const char* windowTitle, int height, int width, bool isFullscree
 
 	Map::LoadMap("resources/maps/firstMap.map", 10, 10);
 
-	player.AddComponent<TransformComponent>(1);
+	player.AddComponent<TransformComponent>(1.40f);
 	player.AddComponent <SpriteComponent>("resources/standard/idle.png", true);
 	player.AddComponent<KeyboardController>();
 	player.AddComponent<ColliderComponent>("player");
@@ -80,11 +86,6 @@ void Game::HandleEvents() {
 		break;
 	}
 }
-
-auto& tiles(manager.GetGroup(groupMap));
-auto& players(manager.GetGroup(groupPlayers));
-auto& enemies(manager.GetGroup(groupEnemies));
-;
 
 void Game::Render() {
 	SDL_RenderClear(renderer);
@@ -104,8 +105,12 @@ void Game::Update() {
 	manager.refresh();
 	manager.Update();
 
-	for (auto collider : colliders) {
-		Collision::AABB(player.GetComponent<ColliderComponent>(), *collider);
+	Vector2D playerVelocity = player.GetComponent<TransformComponent>().velocity;
+	int playerSpeed = player.GetComponent<TransformComponent>().speed;
+
+	for (auto tile : tiles) {
+		tile->GetComponent<TileComponent>().destinationRect.x += -(playerVelocity.x * playerSpeed);
+		tile->GetComponent<TileComponent>().destinationRect.y += -(playerVelocity.y * playerSpeed);
 	}
 }
 

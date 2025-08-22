@@ -62,6 +62,9 @@ public:
 				transform->velocity.x = 0;
 				sprite->Play("idle");
 				break;
+			case SDLK_ESCAPE:
+				Game::isRunning = false;
+				break;
 			}
 		}
 	}

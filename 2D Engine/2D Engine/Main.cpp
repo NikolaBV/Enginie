@@ -10,7 +10,7 @@ int main() {
 
     game = new Game();
     // Window size matches the 10x10 map with 64px tiles (640x640 pixels)
-    game->Init("First window", 640, 640, false);
+    game->Init("First window", 800, 640, false);
 
     while (game->Running()) {
         frameStart = SDL_GetTicks(); //How many milisecs since SDL was initilized
