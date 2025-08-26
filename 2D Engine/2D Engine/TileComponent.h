@@ -16,7 +16,7 @@ public:
 
 	TileComponent() = default;
 
-	TileComponent(int sourceX, int sourceY, int xPosition, int yPosition, const char* path) {
+	TileComponent(int sourceX, int sourceY, int xPosition, int yPosition, const char* path, int tileSize, int tileScale) {
 		texture = TextureManager::LoadTexture(path);
 
 		position.x = xPosition;
@@ -25,11 +25,11 @@ public:
 
 		sourceRect.x = sourceX;
 		sourceRect.y = sourceY;
-		sourceRect.w = sourceRect.h = 64;
+		sourceRect.w = sourceRect.h = tileSize;
 
 		destinationRect.x = xPosition;
 		destinationRect.y = yPosition;
-		destinationRect.w = destinationRect.h = 128;
+		destinationRect.w = destinationRect.h = tileSize * tileScale;
 	}
 	void Draw() override {
 		TextureManager::Draw(texture, sourceRect, destinationRect);

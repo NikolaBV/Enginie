@@ -12,25 +12,9 @@ Manager manager;
 
 SDL_Rect Game::camera = { 0,0, 800,640 };
 
-std::vector<ColliderComponent*> Game::colliders;
-
 bool Game::isRunning = false;
 
 auto& player(manager.AddEntity());
-auto& wall(manager.AddEntity());
-
-const char* mapFile = "resources/tiles/tileset.png";
-
-enum groupLables : std::size_t {
-	groupMap,
-	groupPlayers,
-	groupEnemies,
-	groupColliders
-};
-
-auto& tiles(manager.GetGroup(groupMap));
-auto& players(manager.GetGroup(groupPlayers));
-auto& enemies(manager.GetGroup(groupEnemies));
 
 Game::Game() {}
 
@@ -68,7 +52,8 @@ void Game::Init(const char* windowTitle, int height, int width, bool isFullscree
 		SDL_free(base_path);
 	}
 
-	Map::LoadMap("resources/maps/firstMap.map", 10, 10);
+	map = new Map("resources/tiles/tileset.png", 2, 64);
+	map->LoadMap("resources/maps/firstMap.map", 10, 10);
 
 	player.AddComponent<TransformComponent>(1.40f);
 	player.AddComponent <SpriteComponent>("resources/standard/idle.png", true);
@@ -78,6 +63,12 @@ void Game::Init(const char* windowTitle, int height, int width, bool isFullscree
 
 	std::cout << "Wall created at position: (100, 100) with size: 300x20" << std::endl;
 };
+
+auto& tiles(manager.GetGroup(Game::groupMap));
+auto& players(manager.GetGroup(Game::groupPlayers));
+auto& enemies(manager.GetGroup(Game::groupEnemies));
+auto& colliders(manager.GetGroup(Game::groupColliders));
+
 
 void Game::HandleEvents() {
 	SDL_PollEvent(&event);
@@ -94,18 +85,36 @@ void Game::Render() {
 	for (auto& tile : tiles) {
 		tile->Draw();
 	}
+
+	for (auto& collider : colliders) {
+		collider->Draw();
+	}
+
 	for (auto& player : players) {
 		player->Draw();
 	}
-	for (auto& enemy : enemies) {
-		enemy->Draw();
-	}
+    for (auto& collider : colliders) {
+        collider->Draw();
+    }
+
 	SDL_RenderPresent(renderer);
 }
 
 void Game::Update() {
+
+	SDL_Rect playerCollider = player.GetComponent<ColliderComponent>().collider;
+	Vector2D playerPosition = player.GetComponent<TransformComponent>().position;
+
 	manager.refresh();
 	manager.Update();
+
+
+	for (auto& collider : colliders) {
+		SDL_Rect tempCollider = collider->GetComponent<ColliderComponent>().collider;
+		if (Collision::AABB(tempCollider, playerCollider)) {
+			player.GetComponent<TransformComponent>().position = playerPosition;
+		}
+	}
 
 	camera.x = player.GetComponent<TransformComponent>().position.x - 400; 
 	camera.y = player.GetComponent<TransformComponent>().position.y - 320;
@@ -135,11 +144,4 @@ void Game::Clean() {
 	SDL_DestroyRenderer(renderer);
 	SDL_Quit();
 	std::cout << "Game has been cleaned" << std::endl;
-}
-
-void Game::AddTile(int sourceX, int sourceY, int xPosition, int yPosition) {
-	auto& tile(manager.AddEntity());
-	// Use 32x32 tiles like in the tutorial so the map does not fill the entire window
-	tile.AddComponent<TileComponent>(sourceX, sourceY, xPosition, yPosition, mapFile);
-	tile.AddGroup(groupMap);
 }

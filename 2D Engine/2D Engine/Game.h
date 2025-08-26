@@ -24,11 +24,15 @@ public:
 
 	bool Running() { return isRunning; };
 
-	static void AddTile(int sourceX, int sourceY, int xPosition, int yPosition);
 	static SDL_Renderer* renderer;
 	static SDL_Event event;
-	static std::vector< ColliderComponent*> colliders;
 	static bool isRunning;
 	static SDL_Rect camera;
+	enum groupLables : std::size_t {
+		groupMap,
+		groupPlayers,
+		groupEnemies,
+		groupColliders
+	};
 };
 

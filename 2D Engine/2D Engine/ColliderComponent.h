@@ -4,6 +4,7 @@
 #include "EntityComponentSystem.h"
 #include "TransformComponent.h"
 #include "Game.h"
+#include "TextureManager.h"
 
 class ColliderComponent : public Component
 {
@@ -11,27 +12,51 @@ public:
 	SDL_Rect collider;
 	std::string tag;
 
+	SDL_Texture* texture;
+	SDL_Rect sourceRect, destinationRect;
+
 	TransformComponent* transform;
 
 	ColliderComponent(std::string tag) {
 		this->tag = tag;
 	}
 
-	void Init() override{
+	ColliderComponent(std::string tag, int xPosition, int yPosition, int size) {
+		this->tag = tag;
+
+		collider.x = xPosition;
+		collider.y = yPosition;
+
+		collider.h = collider.w = size;
+	}
+
+
+	void Init() override {
 		if (!entity->HasComponent<TransformComponent>()) {
 			entity->AddComponent<TransformComponent>();
 		}
 		transform = &entity->GetComponent<TransformComponent>();
 
-		Game::colliders.push_back(this);
+		texture = TextureManager::LoadTexture("resources/tiles/CollisionTexture.png");
+		sourceRect = { 0,0,64,64 };
+		destinationRect = { collider.x, collider.y, collider.w, collider.h };
 	}
 
 	void Update() override {
-		collider.x = static_cast<int>(transform->position.x);
-		collider.y = static_cast<int>(transform->position.y);
 
-		collider.w = transform->width * transform->scale;
-		collider.h = transform->height * transform->scale;
+		if (tag != "terrain") {
+			collider.x = static_cast<int>(transform->position.x);
+			collider.y = static_cast<int>(transform->position.y);
+
+			collider.w = transform->width * transform->scale;
+			collider.h = transform->height * transform->scale;
+		}
+		destinationRect.x = collider.x - Game::camera.x;
+		destinationRect.y = collider.y - Game::camera.y;
+	}
+
+	void Draw() override {
+		TextureManager::Draw(texture, sourceRect, destinationRect);
 	}
 };
 
