@@ -19,22 +19,22 @@ public:
 		if (Game::event.type == SDL_KEYDOWN) {
 			switch (Game::event.key.keysym.sym) {
 			case SDLK_w:
-				sprite->SetTexture("resources/standard/walk.png");
+				sprite->SetTexture("playerWalk");
 				transform->velocity.y = -1;
 				sprite->Play("walkUp");
 				break;
 			case SDLK_a:
-				sprite->SetTexture("resources/standard/walk.png");
+				sprite->SetTexture("playerWalk");
 				transform->velocity.x = -1;
 				sprite->Play("walkLeft");
 				break;
 			case SDLK_s:
-				sprite->SetTexture("resources/standard/walk.png");
+				sprite->SetTexture("playerWalk");
 				transform->velocity.y = 1;
 				sprite->Play("walkDown");
 				break;
 			case SDLK_d:
-				sprite->SetTexture("resources/standard/walk.png");
+				sprite->SetTexture("playerWalk");
 				sprite->Play("walkRight");
 				transform->velocity.x = 1;
 				break;
@@ -43,22 +43,22 @@ public:
 		if (Game::event.type == SDL_KEYUP) {
 			switch (Game::event.key.keysym.sym) {
 			case SDLK_w:
-				sprite->SetTexture("resources/standard/idle.png");
+				sprite->SetTexture("playerIdle");
 				transform->velocity.y = 0;
 				sprite->Play("idle");
 				break;
 			case SDLK_a:
-				sprite->SetTexture("resources/standard/idle.png");
+				sprite->SetTexture("playerIdle");
 				transform->velocity.x = 0;
 				sprite->Play("idle");
 				break;
 			case SDLK_s:
-				sprite->SetTexture("resources/standard/idle.png");
+				sprite->SetTexture("playerIdle");
 				transform->velocity.y = 0;
 				sprite->Play("idle");
 				break;
 			case SDLK_d:
-				sprite->SetTexture("resources/standard/idle.png");
+				sprite->SetTexture("playerIdle");
 				transform->velocity.x = 0;
 				sprite->Play("idle");
 				break;

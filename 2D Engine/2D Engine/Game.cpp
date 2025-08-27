@@ -3,6 +3,7 @@
 #include "Map.h"
 #include "Components.h"
 #include "Collision.h"
+#include "AssetManager.h"
 
 Map* map;
 
@@ -11,6 +12,8 @@ SDL_Event Game::event;
 Manager manager;
 
 SDL_Rect Game::camera = { 0,0, 800,640 };
+
+AssetManager* Game::assets = new AssetManager(&manager);
 
 bool Game::isRunning = false;
 
@@ -52,23 +55,33 @@ void Game::Init(const char* windowTitle, int height, int width, bool isFullscree
 		SDL_free(base_path);
 	}
 
-	map = new Map("resources/tiles/tileset.png", 2, 64);
+	//TODO Make a function for loading assets
+	assets->AddTexture("terrain", "resources/tiles/tileset.png");
+	assets->AddTexture("playerIdle", "resources/standard/idle.png");
+	assets->AddTexture("playerWalk", "resources/standard/walk.png");
+
+	assets->AddTexture("testProjectile", "resources/projectiles/testProjectile.png");
+
+	map = new Map("terrain", 2, 64);
 	map->LoadMap("resources/maps/firstMap.map", 10, 10);
 
 	player.AddComponent<TransformComponent>(1.40f);
-	player.AddComponent <SpriteComponent>("resources/standard/idle.png", true);
+	player.AddComponent <SpriteComponent>("playerIdle", true);
 	player.AddComponent<KeyboardController>();
 	player.AddComponent<ColliderComponent>("player");
 	player.AddGroup(groupPlayers);
 
-	std::cout << "Wall created at position: (100, 100) with size: 300x20" << std::endl;
+	assets->CreateProjectile(Vector2D(100, 300), Vector2D(2, 0), 200, 2, "testProjectile");
+	assets->CreateProjectile(Vector2D(100, 300), Vector2D(2, 2), 200, 2, "testProjectile");
+	assets->CreateProjectile(Vector2D(100, 300), Vector2D(2, 1.5f), 100, 2, "testProjectile");
+
 };
 
 auto& tiles(manager.GetGroup(Game::groupMap));
 auto& players(manager.GetGroup(Game::groupPlayers));
 auto& enemies(manager.GetGroup(Game::groupEnemies));
 auto& colliders(manager.GetGroup(Game::groupColliders));
-
+auto& projectiles(manager.GetGroup(Game::groupProjectiles));
 
 void Game::HandleEvents() {
 	SDL_PollEvent(&event);
@@ -93,9 +106,13 @@ void Game::Render() {
 	for (auto& player : players) {
 		player->Draw();
 	}
-    for (auto& collider : colliders) {
-        collider->Draw();
-    }
+	for (auto& collider : colliders) {
+		collider->Draw();
+	}
+
+	for (auto& projectile : projectiles) {
+		projectile->Draw();
+	}
 
 	SDL_RenderPresent(renderer);
 }
@@ -116,7 +133,14 @@ void Game::Update() {
 		}
 	}
 
-	camera.x = player.GetComponent<TransformComponent>().position.x - 400; 
+	for (auto& projectile : projectiles) {
+		if (Collision::AABB(player.GetComponent<ColliderComponent>().collider, projectile->GetComponent<ColliderComponent>().collider)) {
+			std::cout << "Projectile hit player" << std::endl;
+			projectile->Destroy();
+		}
+	}
+
+	camera.x = player.GetComponent<TransformComponent>().position.x - 400;
 	camera.y = player.GetComponent<TransformComponent>().position.y - 320;
 
 	// Map size: 10x10 tiles * 128 pixels = 1280x1280 pixels

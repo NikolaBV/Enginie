@@ -1,0 +1,29 @@
+#include "AssetManager.h"
+#include "Components.h"
+
+AssetManager::AssetManager(Manager* manager) :manager(manager) {
+
+}
+AssetManager::~AssetManager() {
+
+}
+
+void AssetManager::CreateProjectile(Vector2D position, Vector2D velocity, int range, int speed, std::string textureId)
+{
+	auto& projectile(manager->AddEntity());
+	projectile.AddComponent<TransformComponent>(position.x, position.y, 64, 64, 1);
+	projectile.AddComponent<SpriteComponent>(textureId, false);
+	projectile.AddComponent<ProjectileComponent>(range, speed, velocity);
+	projectile.AddComponent<ColliderComponent>("projectile");
+	projectile.AddGroup(Game::groupProjectiles);
+
+
+}
+
+void AssetManager::AddTexture(std::string id, const char* path) {
+	textures.emplace(id, TextureManager::LoadTexture(path));
+}
+
+SDL_Texture* AssetManager::GetTexture(std::string id) {
+	return textures[id];
+}

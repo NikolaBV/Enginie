@@ -5,14 +5,14 @@ class Map
 private:
 
 public:
-	Map(const char* mapFilePath, int mapScale, int tileSize);
+	Map(std::string textureId, int mapScale, int tileSize);
 	~Map();
 
 	void LoadMap(std::string path, int sizeX, int sizeY);
 	void AddTile(int sourceX, int sourceY, int xPosition, int yPosition);
 
 private:
-	const char* mapFilePath;
+	std::string textureId;
 	int mapScale;
 	int tileSize;
 	int scaledSize;

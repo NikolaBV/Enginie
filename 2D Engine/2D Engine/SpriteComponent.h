@@ -6,6 +6,9 @@
 #include "TransformComponent.h"
 #include "Animation.h"
 #include <map>
+#include "AssetManager.h"
+
+class AssetManager;
 
 class SpriteComponent : public Component
 {
@@ -25,11 +28,11 @@ public:
 	std::map<const char*, Animation> animations;
 
 	SpriteComponent() = default;
-	SpriteComponent(const char* texturePath) {
-		SetTexture(texturePath);
+	SpriteComponent(std::string textureId) {
+		SetTexture(textureId);
 	}
 
-	SpriteComponent(const char* texturePath, bool isAnimated) {
+	SpriteComponent(std::string textureId, bool isAnimated) {
 		animated = isAnimated;
 
 		Animation idle = Animation(0, 2, 200);
@@ -48,14 +51,11 @@ public:
 
 		Play("idle");
 
-		SetTexture(texturePath);
+		SetTexture(textureId);
 	}
 
-	~SpriteComponent() {
-		SDL_DestroyTexture(texture);
-	}
-	void SetTexture(const char* texturePath) {
-		texture = TextureManager::LoadTexture(texturePath);
+	void SetTexture(std::string textureId) {
+		texture = Game::assets->GetTexture(textureId);
 	}
 
 	void Init() override
@@ -77,12 +77,11 @@ public:
 
 		sourceRect.y = animationIndex * transform->height;
 
-		destinationRect.x = static_cast<int>(transform->position.x);
-		destinationRect.y = static_cast<int>(transform->position.y);
+		destinationRect.x = static_cast<int>(transform->position.x) - Game::camera.x;
+		destinationRect.y = static_cast<int>(transform->position.y) - Game::camera.y;
 
 		destinationRect.w = transform->width * transform->scale;
 		destinationRect.h = transform->height * transform->scale;
-
 	}
 
 	void Draw() override

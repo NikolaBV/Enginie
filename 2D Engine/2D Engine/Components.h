@@ -5,6 +5,7 @@
 #include "KeyboardController.h"
 #include "ColliderComponent.h"
 #include "TileComponent.h"
+#include "ProjectileComponent.h"
 
 class Components
 {
