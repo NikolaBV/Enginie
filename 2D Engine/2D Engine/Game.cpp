@@ -4,6 +4,7 @@
 #include "Components.h"
 #include "Collision.h"
 #include "AssetManager.h"
+#include <sstream>
 
 Map* map;
 
@@ -18,6 +19,7 @@ AssetManager* Game::assets = new AssetManager(&manager);
 bool Game::isRunning = false;
 
 auto& player(manager.AddEntity());
+auto& label(manager.AddEntity());
 
 Game::Game() {}
 
@@ -56,11 +58,18 @@ void Game::Init(const char* windowTitle, int height, int width, bool isFullscree
 	}
 
 	//TODO Make a function for loading assets
+
+	if (TTF_Init() == -1) {
+		std::cout << "Error loading SDL_TTF" << std::endl;
+	}
+
 	assets->AddTexture("terrain", "resources/tiles/tileset.png");
 	assets->AddTexture("playerIdle", "resources/standard/idle.png");
 	assets->AddTexture("playerWalk", "resources/standard/walk.png");
 
 	assets->AddTexture("testProjectile", "resources/projectiles/testProjectile.png");
+
+	assets->AddFont("stardew", "resources/fonts/Stardew_Valley.otf", 16);
 
 	map = new Map("terrain", 2, 64);
 	map->LoadMap("resources/maps/firstMap.map", 10, 10);
@@ -70,6 +79,10 @@ void Game::Init(const char* windowTitle, int height, int width, bool isFullscree
 	player.AddComponent<KeyboardController>();
 	player.AddComponent<ColliderComponent>("player");
 	player.AddGroup(groupPlayers);
+
+
+	SDL_Color whiteColor = { 255,255,255,255 };
+	label.AddComponent<UILabelComponent>(10, 10, "Testing new font", "stardew", whiteColor);
 
 	assets->CreateProjectile(Vector2D(100, 300), Vector2D(2, 0), 200, 2, "testProjectile");
 	assets->CreateProjectile(Vector2D(100, 300), Vector2D(2, 2), 200, 2, "testProjectile");
@@ -113,6 +126,8 @@ void Game::Render() {
 	for (auto& projectile : projectiles) {
 		projectile->Draw();
 	}
+	
+	label.Draw();
 
 	SDL_RenderPresent(renderer);
 }
@@ -121,6 +136,10 @@ void Game::Update() {
 
 	SDL_Rect playerCollider = player.GetComponent<ColliderComponent>().collider;
 	Vector2D playerPosition = player.GetComponent<TransformComponent>().position;
+
+	std::stringstream stringStream;
+	stringStream << "Player position" << playerPosition;
+	label.GetComponent<UILabelComponent>().SetlabelText(stringStream.str(), "stardew");
 
 	manager.refresh();
 	manager.Update();

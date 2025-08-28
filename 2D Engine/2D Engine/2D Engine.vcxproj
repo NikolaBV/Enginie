@@ -34,6 +34,7 @@
     <ClCompile Include="SpriteComponent.cpp" />
     <ClCompile Include="TextureManager.cpp" />
     <ClCompile Include="TileComponent.cpp" />
+    <ClCompile Include="UILabelComponent.cpp" />
     <ClCompile Include="Vector2D.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -51,6 +52,7 @@
     <ClInclude Include="TransformComponent.h" />
     <ClInclude Include="SpriteComponent.h" />
     <ClInclude Include="TextureManager.h" />
+    <ClInclude Include="UILabelComponent.h" />
     <ClInclude Include="Vector2D.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
@@ -157,13 +159,13 @@ xcopy "$(ProjectDir)resources" "$(TargetDir)resources" /E /I /Y</Command>
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;SDL_MAIN_HANDLED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir)..\..\lib\SDL2-dev\include;$(ProjectDir)..\..\lib\SDL2_image-2.0.5\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\lib\SDL2_ttf-2.0.12\include;$(ProjectDir)..\..\lib\SDL2-dev\include;$(ProjectDir)..\..\lib\SDL2_image-2.0.5\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(ProjectDir)..\..\lib\SDL2-dev\lib\x64;$(ProjectDir)..\..\lib\SDL2_image-2.0.5\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\..\lib\SDL2_ttf-2.0.12\lib\x64;$(ProjectDir)..\..\lib\SDL2-dev\lib\x64;$(ProjectDir)..\..\lib\SDL2_image-2.0.5\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;SDL2_ttf.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
       <Command>copy "$(ProjectDir)dlls\*.*" "$(TargetDir)" /Y
