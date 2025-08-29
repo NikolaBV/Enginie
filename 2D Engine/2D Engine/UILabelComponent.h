@@ -10,8 +10,12 @@
 class UILabelComponent : public Component
 {
 public:
-	UILabelComponent(int xPosition, int yPosition, std::string text, std::string font, SDL_Color& textColor)
-		: labelText(text), labelFont(font), textColor(textColor) {
+	AssetManager localAssetManager = nullptr;
+
+	UILabelComponent();
+
+	UILabelComponent(AssetManager& assetManager,int xPosition, int yPosition, std::string text, std::string font, SDL_Color& textColor)
+		: localAssetManager(assetManager), labelText(text), labelFont(font), textColor(textColor) {
 		position.x = xPosition;
 		position.y = yPosition;
 
@@ -21,7 +25,7 @@ public:
 	~UILabelComponent() {};
 
 	void SetlabelText(std::string text, std::string font) {
-		SDL_Surface* surface = TTF_RenderText_Blended(Game::assets->GetFont(font), text.c_str(), textColor);
+		SDL_Surface* surface = TTF_RenderText_Blended(localAssetManager.GetFont(font), text.c_str(), textColor);
 		labelTexture = SDL_CreateTextureFromSurface(Game::renderer, surface);
 		SDL_FreeSurface(surface);
 
@@ -36,6 +40,5 @@ private:
 	std::string labelFont;
 	SDL_Color textColor;
 	SDL_Texture* labelTexture;
-
 };
 

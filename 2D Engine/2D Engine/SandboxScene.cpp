@@ -4,6 +4,8 @@
 void SandboxScene::OnEnter(SceneContext& sceneContext)
 {
 	playerEntity = &manager.AddEntity();
+	labelEntity = &manager.AddEntity();
+
 	assets.AddTexture("terrain", "resources/tiles/tileset.png");
 	map = std::make_unique<Map>("terrain", 2, 64);
 
@@ -16,19 +18,16 @@ void SandboxScene::OnEnter(SceneContext& sceneContext)
 
 	assets.AddFont("stardew", "resources/fonts/Stardew_Valley.otf", 16);
 
-
-	//auto& label(sceneContext.manager.AddEntity());
-
 	std::cout << "Adding player entity components" << std::endl;
 	playerEntity->AddComponent<TransformComponent>(1.40f);
-	playerEntity->AddComponent <SpriteComponent>(assets,"playerIdle", true);
+	playerEntity->AddComponent <SpriteComponent>(assets, "playerIdle", true);
 	playerEntity->AddComponent<KeyboardController>(assets);
 	playerEntity->AddComponent<ColliderComponent>("player");
 	playerEntity->AddGroup(GroupLabels::groupPlayers);
 
 
-	//SDL_Color whiteColor = { 255,255,255,255 };
-	//label.AddComponent<UILabelComponent>(10, 10, "Testing new font", "stardew", whiteColor);
+	SDL_Color whiteColor = { 255,255,255,255 };
+	labelEntity->AddComponent<UILabelComponent>(assets, 10, 10, "Testing new font", "stardew", whiteColor);
 
 	assets.CreateProjectile(Vector2D(100, 300), Vector2D(2, 0), 200, 2, "testProjectile");
 	assets.CreateProjectile(Vector2D(100, 300), Vector2D(2, 2), 200, 2, "testProjectile");
@@ -51,9 +50,9 @@ void SandboxScene::Update(SceneContext& sceneContext)
 	SDL_Rect playerCollider = playerEntity->GetComponent<ColliderComponent>().collider;
 	Vector2D playerPosition = playerEntity->GetComponent<TransformComponent>().position;
 
-	/*std::stringstream stringStream;
-	stringStream << "Player position" << playerPosition;*/
-	//labelEntity->GetComponent<UILabelComponent>().SetlabelText(stringStream.str(), "stardew");
+	std::stringstream stringStream;
+	stringStream << "Player position: " << "(" << playerPosition.x << ", " << playerPosition.y << ")";
+	labelEntity->GetComponent<UILabelComponent>().SetlabelText(stringStream.str(), "stardew");
 
 	manager.refresh();
 	manager.Update();
@@ -121,4 +120,6 @@ void SandboxScene::Render(SceneContext& sceneContext)
 	for (auto& projectile : projectiles) {
 		projectile->Draw();
 	}
+
+	labelEntity->Draw();
 }

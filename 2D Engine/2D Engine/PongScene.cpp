@@ -2,6 +2,7 @@
 
 void PongScene::OnEnter(SceneContext& ctx)
 {
+	std::cout << "Pong scene loaded" << std::endl;
 }
 
 void PongScene::OnExit(SceneContext& ctx)

@@ -23,5 +23,6 @@ public:
 private:
 	std::unique_ptr<Map> map;
 	Entity* playerEntity = nullptr;
+	Entity* labelEntity = nullptr;
 };
 
