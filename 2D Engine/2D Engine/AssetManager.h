@@ -6,6 +6,7 @@
 #include "TextureManager.h"
 #include "Vector2D.h"
 #include "SDL_ttf.h"
+
 class AssetManager
 {
 public:

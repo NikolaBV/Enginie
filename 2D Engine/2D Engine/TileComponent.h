@@ -4,7 +4,7 @@
 #include <SDL.h>
 #include "TextureManager.h"
 #include "Vector2D.h"
-#include "AssetManager.h"
+#include "Game.h"
 
 class TileComponent : public Component
 {
@@ -17,8 +17,8 @@ public:
 
 	TileComponent() = default;
 
-	TileComponent(int sourceX, int sourceY, int xPosition, int yPosition, std::string textureId, int tileSize, int tileScale) {
-		texture = Game::assets->GetTexture(textureId);
+	TileComponent(AssetManager& assetManager, int sourceX, int sourceY, int xPosition, int yPosition, std::string textureId, int tileSize, int tileScale) {
+		texture = assetManager.GetTexture(textureId);
 
 		position.x = xPosition;
 		position.y = yPosition;

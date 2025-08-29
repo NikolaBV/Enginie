@@ -1,4 +1,5 @@
 #include "TextureManager.h"
+#include "Game.h"
 
 void TextureManager::Draw(SDL_Texture* texture, SDL_Rect sourcePosition, SDL_Rect destinationPosition)
 {

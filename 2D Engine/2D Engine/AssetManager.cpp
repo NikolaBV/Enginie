@@ -1,5 +1,6 @@
 #include "AssetManager.h"
 #include "Components.h"
+#include "Groups.h"
 
 AssetManager::AssetManager(Manager* manager) :manager(manager) {
 
@@ -12,12 +13,10 @@ void AssetManager::CreateProjectile(Vector2D position, Vector2D velocity, int ra
 {
 	auto& projectile(manager->AddEntity());
 	projectile.AddComponent<TransformComponent>(position.x, position.y, 64, 64, 1);
-	projectile.AddComponent<SpriteComponent>(textureId, false);
+	projectile.AddComponent<SpriteComponent>(*this, textureId, false);
 	projectile.AddComponent<ProjectileComponent>(range, speed, velocity);
 	projectile.AddComponent<ColliderComponent>("projectile");
-	projectile.AddGroup(Game::groupProjectiles);
-
-
+	projectile.AddGroup(GroupLabels::groupProjectiles);
 }
 
 void AssetManager::AddTexture(std::string id, const char* path) {

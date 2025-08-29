@@ -4,19 +4,24 @@
 #include <iostream>
 #include <SDL_image.h>
 #include <vector>
+#include "Scene.h"
 
 class ColliderComponent;
 class AssetManager;
+class Scene;
 
 class Game
 {
 private:
 	SDL_Window* window;
+	Scene* currentScene = nullptr;
 public:
 	Game();
 	~Game();
 
 	void Init(const char* windowTitle, int height, int width, bool isFullscreen);
+
+	void SetScene(Scene* scene);
 
 	void HandleEvents();
 	void Update();
@@ -30,12 +35,5 @@ public:
 	static bool isRunning;
 	static SDL_Rect camera;
 	static AssetManager* assets;
-	enum groupLables : std::size_t {
-		groupMap,
-		groupPlayers,
-		groupEnemies,
-		groupColliders,
-		groupProjectiles
-	};
 };
 

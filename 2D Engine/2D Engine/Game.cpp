@@ -4,22 +4,19 @@
 #include "Components.h"
 #include "Collision.h"
 #include "AssetManager.h"
+#include "SandboxScene.h"
+#include "Groups.h" 
+
 #include <sstream>
 
 Map* map;
 
 SDL_Renderer* Game::renderer = nullptr;
 SDL_Event Game::event;
-Manager manager;
-
 SDL_Rect Game::camera = { 0,0, 800,640 };
-
-AssetManager* Game::assets = new AssetManager(&manager);
+AssetManager* Game::assets = nullptr;
 
 bool Game::isRunning = false;
-
-auto& player(manager.AddEntity());
-auto& label(manager.AddEntity());
 
 Game::Game() {}
 
@@ -57,47 +54,33 @@ void Game::Init(const char* windowTitle, int height, int width, bool isFullscree
 		SDL_free(base_path);
 	}
 
-	//TODO Make a function for loading assets
-
+	// Fonts
 	if (TTF_Init() == -1) {
 		std::cout << "Error loading SDL_TTF" << std::endl;
 	}
 
-	assets->AddTexture("terrain", "resources/tiles/tileset.png");
-	assets->AddTexture("playerIdle", "resources/standard/idle.png");
-	assets->AddTexture("playerWalk", "resources/standard/walk.png");
+	SetScene(new SandboxScene());
+}
 
-	assets->AddTexture("testProjectile", "resources/projectiles/testProjectile.png");
-
-	assets->AddFont("stardew", "resources/fonts/Stardew_Valley.otf", 16);
-
-	map = new Map("terrain", 2, 64);
-	map->LoadMap("resources/maps/firstMap.map", 10, 10);
-
-	player.AddComponent<TransformComponent>(1.40f);
-	player.AddComponent <SpriteComponent>("playerIdle", true);
-	player.AddComponent<KeyboardController>();
-	player.AddComponent<ColliderComponent>("player");
-	player.AddGroup(groupPlayers);
-
-
-	SDL_Color whiteColor = { 255,255,255,255 };
-	label.AddComponent<UILabelComponent>(10, 10, "Testing new font", "stardew", whiteColor);
-
-	assets->CreateProjectile(Vector2D(100, 300), Vector2D(2, 0), 200, 2, "testProjectile");
-	assets->CreateProjectile(Vector2D(100, 300), Vector2D(2, 2), 200, 2, "testProjectile");
-	assets->CreateProjectile(Vector2D(100, 300), Vector2D(2, 1.5f), 100, 2, "testProjectile");
-
-};
-
-auto& tiles(manager.GetGroup(Game::groupMap));
-auto& players(manager.GetGroup(Game::groupPlayers));
-auto& enemies(manager.GetGroup(Game::groupEnemies));
-auto& colliders(manager.GetGroup(Game::groupColliders));
-auto& projectiles(manager.GetGroup(Game::groupProjectiles));
+void Game::SetScene(Scene* scene) {
+	if (currentScene) {
+		SceneContext ctx{ *this };
+		currentScene->OnExit(ctx);
+	}
+	currentScene = scene;
+	if (currentScene) {
+		SceneContext ctx{ *this};
+		currentScene->OnEnter(ctx);
+	}
+}
 
 void Game::HandleEvents() {
 	SDL_PollEvent(&event);
+
+	if (currentScene) {
+		SceneContext ctx{ *this };
+		currentScene->HandleEvent(ctx, event);
+	}
 
 	switch (event.type) {
 	case SDL_QUIT:
@@ -106,80 +89,23 @@ void Game::HandleEvents() {
 	}
 }
 
-void Game::Render() {
-	SDL_RenderClear(renderer);
-	for (auto& tile : tiles) {
-		tile->Draw();
-	}
-
-	for (auto& collider : colliders) {
-		collider->Draw();
-	}
-
-	for (auto& player : players) {
-		player->Draw();
-	}
-	for (auto& collider : colliders) {
-		collider->Draw();
-	}
-
-	for (auto& projectile : projectiles) {
-		projectile->Draw();
-	}
-	
-	label.Draw();
-
-	SDL_RenderPresent(renderer);
-}
-
 void Game::Update() {
 
-	SDL_Rect playerCollider = player.GetComponent<ColliderComponent>().collider;
-	Vector2D playerPosition = player.GetComponent<TransformComponent>().position;
+	if (currentScene) {
+		SceneContext ctx{ *this };
+		currentScene->Update(ctx);
+	}
+}
 
-	std::stringstream stringStream;
-	stringStream << "Player position" << playerPosition;
-	label.GetComponent<UILabelComponent>().SetlabelText(stringStream.str(), "stardew");
+void Game::Render() {
+	SDL_RenderClear(renderer);
 
-	manager.refresh();
-	manager.Update();
-
-
-	for (auto& collider : colliders) {
-		SDL_Rect tempCollider = collider->GetComponent<ColliderComponent>().collider;
-		if (Collision::AABB(tempCollider, playerCollider)) {
-			player.GetComponent<TransformComponent>().position = playerPosition;
-		}
+	if (currentScene) {
+		SceneContext ctx{ *this };
+		currentScene->Render(ctx);
 	}
 
-	for (auto& projectile : projectiles) {
-		if (Collision::AABB(player.GetComponent<ColliderComponent>().collider, projectile->GetComponent<ColliderComponent>().collider)) {
-			std::cout << "Projectile hit player" << std::endl;
-			projectile->Destroy();
-		}
-	}
-
-	camera.x = player.GetComponent<TransformComponent>().position.x - 400;
-	camera.y = player.GetComponent<TransformComponent>().position.y - 320;
-
-	// Map size: 10x10 tiles * 128 pixels = 1280x1280 pixels
-	const int mapWidth = 10 * 128;  // 1280 pixels
-	const int mapHeight = 10 * 128; // 1280 pixels
-
-	// Clamp camera to map boundaries
-	if (camera.x < 0) {
-		camera.x = 0;
-	}
-	if (camera.y < 0) {
-		camera.y = 0;
-	}
-	if (camera.x > mapWidth - camera.w) {
-		camera.x = mapWidth - camera.w;
-	}
-	if (camera.y > mapHeight - camera.h) {
-		camera.y = mapHeight - camera.h;
-	}
-
+	SDL_RenderPresent(renderer);
 }
 
 void Game::Clean() {

@@ -9,6 +9,9 @@ class KeyboardController : public Component
 public:
 	TransformComponent* transform;
 	SpriteComponent* sprite;
+	AssetManager localAssetManager = nullptr;
+
+	KeyboardController(AssetManager& assetManager):localAssetManager(assetManager) {}
 
 	void Init() override {
 		transform = &entity->GetComponent<TransformComponent>();
@@ -19,22 +22,22 @@ public:
 		if (Game::event.type == SDL_KEYDOWN) {
 			switch (Game::event.key.keysym.sym) {
 			case SDLK_w:
-				sprite->SetTexture("playerWalk");
+				sprite->SetTexture(localAssetManager, "playerWalk");
 				transform->velocity.y = -1;
 				sprite->Play("walkUp");
 				break;
 			case SDLK_a:
-				sprite->SetTexture("playerWalk");
+				sprite->SetTexture(localAssetManager,"playerWalk");
 				transform->velocity.x = -1;
 				sprite->Play("walkLeft");
 				break;
 			case SDLK_s:
-				sprite->SetTexture("playerWalk");
+				sprite->SetTexture(localAssetManager,"playerWalk");
 				transform->velocity.y = 1;
 				sprite->Play("walkDown");
 				break;
 			case SDLK_d:
-				sprite->SetTexture("playerWalk");
+				sprite->SetTexture(localAssetManager,"playerWalk");
 				sprite->Play("walkRight");
 				transform->velocity.x = 1;
 				break;
@@ -43,22 +46,22 @@ public:
 		if (Game::event.type == SDL_KEYUP) {
 			switch (Game::event.key.keysym.sym) {
 			case SDLK_w:
-				sprite->SetTexture("playerIdle");
+				sprite->SetTexture(localAssetManager, "playerIdle");
 				transform->velocity.y = 0;
 				sprite->Play("idle");
 				break;
 			case SDLK_a:
-				sprite->SetTexture("playerIdle");
+				sprite->SetTexture(localAssetManager, "playerIdle");
 				transform->velocity.x = 0;
 				sprite->Play("idle");
 				break;
 			case SDLK_s:
-				sprite->SetTexture("playerIdle");
+				sprite->SetTexture(localAssetManager, "playerIdle");
 				transform->velocity.y = 0;
 				sprite->Play("idle");
 				break;
 			case SDLK_d:
-				sprite->SetTexture("playerIdle");
+				sprite->SetTexture(localAssetManager, "playerIdle");
 				transform->velocity.x = 0;
 				sprite->Play("idle");
 				break;
@@ -68,5 +71,8 @@ public:
 			}
 		}
 	}
+
+
+	KeyboardController() = default;
 };
 

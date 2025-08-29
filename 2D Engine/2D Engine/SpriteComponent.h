@@ -5,8 +5,10 @@
 #include "EntityComponentSystem.h"
 #include "TransformComponent.h"
 #include "Animation.h"
-#include <map>
 #include "AssetManager.h"
+#include "Game.h"
+
+#include <map>
 
 class AssetManager;
 
@@ -22,17 +24,17 @@ private:
 	int speed = 100; //delay between frames in miliseconds
 		
 public:
-
+	AssetManager localAssetManager = nullptr;
 	int animationIndex = 2;
 
 	std::map<const char*, Animation> animations;
 
-	SpriteComponent() = default;
-	SpriteComponent(std::string textureId) {
-		SetTexture(textureId);
+	SpriteComponent();
+	SpriteComponent(AssetManager& assetManager,std::string textureId):localAssetManager(assetManager) {
+		SetTexture(assetManager,textureId);
 	}
 
-	SpriteComponent(std::string textureId, bool isAnimated) {
+	SpriteComponent(AssetManager& assetManager, std::string textureId, bool isAnimated) {
 		animated = isAnimated;
 
 		Animation idle = Animation(0, 2, 200);
@@ -51,11 +53,11 @@ public:
 
 		Play("idle");
 
-		SetTexture(textureId);
+		SetTexture(assetManager,textureId);
 	}
 
-	void SetTexture(std::string textureId) {
-		texture = Game::assets->GetTexture(textureId);
+	void SetTexture(AssetManager& assetManager,std::string textureId) {
+		texture = assetManager.GetTexture(textureId);
 	}
 
 	void Init() override

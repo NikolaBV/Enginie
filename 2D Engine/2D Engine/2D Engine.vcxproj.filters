@@ -19,6 +19,18 @@
     <Filter Include="Source Files\ECS">
       <UniqueIdentifier>{0aab47c5-d344-404e-ba36-f08567895501}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Pong">
+      <UniqueIdentifier>{54708012-684f-4d2b-a920-5f43752824a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Pong">
+      <UniqueIdentifier>{88353273-a2f7-4142-9967-a98a55595b55}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Sandbox">
+      <UniqueIdentifier>{062b8bb5-0a45-42bd-9926-a546e1e9d870}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Sandbox">
+      <UniqueIdentifier>{4101722c-5aae-4651-8d91-47d95055f8bf}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -72,6 +84,15 @@
     <ClCompile Include="UILabelComponent.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="PongScene.cpp">
+      <Filter>Source Files\Pong</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SandboxScene.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game.h">
@@ -120,6 +141,18 @@
       <Filter>Header Files\ECS</Filter>
     </ClInclude>
     <ClInclude Include="UILabelComponent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PongScene.h">
+      <Filter>Header Files\Pong</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SandboxScene.h">
+      <Filter>Header Files\Sandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="Groups.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
