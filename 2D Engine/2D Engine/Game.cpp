@@ -17,6 +17,7 @@ SDL_Renderer* Game::renderer = nullptr;
 SDL_Event Game::event;
 SDL_Rect Game::camera = { 0,0, 800,640 };
 AssetManager* Game::assets = nullptr;
+const Uint8* Game::keyState = NULL;
 
 bool Game::isRunning = false;
 
@@ -92,7 +93,7 @@ void Game::HandleEvents() {
 }
 
 void Game::Update() {
-
+	Game::keyState = SDL_GetKeyboardState(NULL);
 	if (currentScene) {
 		SceneContext ctx{ *this };
 		currentScene->Update(ctx);

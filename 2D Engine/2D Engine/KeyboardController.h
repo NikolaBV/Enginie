@@ -10,8 +10,11 @@ public:
 	TransformComponent* transform;
 	SpriteComponent* sprite;
 	AssetManager localAssetManager = nullptr;
+	const Uint8* localKeyState;
 
-	KeyboardController(AssetManager& assetManager):localAssetManager(assetManager) {}
+	KeyboardController();
+
+	KeyboardController(AssetManager& assetManager, const Uint8* keyState):localAssetManager(assetManager), localKeyState(keyState) {}
 
 	void Init() override {
 		transform = &entity->GetComponent<TransformComponent>();
@@ -19,29 +22,26 @@ public:
 	}
 
 	void Update() override {
-		if (Game::event.type == SDL_KEYDOWN) {
-			switch (Game::event.key.keysym.sym) {
-			case SDLK_w:
-				sprite->SetTexture(localAssetManager, "playerWalk");
-				transform->velocity.y = -1;
-				sprite->Play("walkUp");
-				break;
-			case SDLK_a:
-				sprite->SetTexture(localAssetManager,"playerWalk");
-				transform->velocity.x = -1;
-				sprite->Play("walkLeft");
-				break;
-			case SDLK_s:
-				sprite->SetTexture(localAssetManager,"playerWalk");
-				transform->velocity.y = 1;
-				sprite->Play("walkDown");
-				break;
-			case SDLK_d:
-				sprite->SetTexture(localAssetManager,"playerWalk");
-				sprite->Play("walkRight");
-				transform->velocity.x = 1;
-				break;
-			}
+
+		if (localKeyState[SDL_SCANCODE_W]) {
+			sprite->SetTexture(localAssetManager, "playerWalk");
+			transform->velocity.y = -1;
+			sprite->Play("walkUp");
+		}
+		else if (localKeyState[SDL_SCANCODE_A]) {
+			sprite->SetTexture(localAssetManager, "playerWalk");
+			transform->velocity.x = -1;
+			sprite->Play("walkLeft");
+		}
+		else if (localKeyState[SDL_SCANCODE_S]) {
+			sprite->SetTexture(localAssetManager, "playerWalk");
+			transform->velocity.y = 1;
+			sprite->Play("walkDown");
+		}
+		else if (localKeyState[SDL_SCANCODE_D]) {
+			sprite->SetTexture(localAssetManager, "playerWalk");
+			sprite->Play("walkRight");
+			transform->velocity.x = 1;
 		}
 		if (Game::event.type == SDL_KEYUP) {
 			switch (Game::event.key.keysym.sym) {
@@ -71,8 +71,5 @@ public:
 			}
 		}
 	}
-
-
-	KeyboardController() = default;
 };
 

@@ -21,7 +21,7 @@ void SandboxScene::OnEnter(SceneContext& sceneContext)
 	std::cout << "Adding player entity components" << std::endl;
 	playerEntity->AddComponent<TransformComponent>(1.40f);
 	playerEntity->AddComponent <SpriteComponent>(assets, "playerIdle", true);
-	playerEntity->AddComponent<KeyboardController>(assets);
+	playerEntity->AddComponent<KeyboardController>(assets, Game::keyState);
 	playerEntity->AddComponent<ColliderComponent>("player");
 	playerEntity->AddGroup(GroupLabels::groupPlayers);
 
@@ -39,6 +39,7 @@ void SandboxScene::OnEnter(SceneContext& sceneContext)
 void SandboxScene::OnExit(SceneContext& sceneContext)
 {
 	Game::assets = nullptr;
+	playerEntity = nullptr;
 }
 
 void SandboxScene::HandleEvent(SceneContext& sceneContext, const SDL_Event& e)
@@ -47,6 +48,7 @@ void SandboxScene::HandleEvent(SceneContext& sceneContext, const SDL_Event& e)
 
 void SandboxScene::Update(SceneContext& sceneContext)
 {
+	playerEntity->GetComponent<KeyboardController>().localKeyState = Game::keyState;
 	SDL_Rect playerCollider = playerEntity->GetComponent<ColliderComponent>().collider;
 	Vector2D playerPosition = playerEntity->GetComponent<TransformComponent>().position;
 
@@ -64,7 +66,6 @@ void SandboxScene::Update(SceneContext& sceneContext)
 		SDL_Rect tempCollider = collider->GetComponent<ColliderComponent>().collider;
 		if (Collision::AABB(tempCollider, playerCollider)) {
 			playerEntity->GetComponent<TransformComponent>().position = playerPosition;
-			std::cout << "Player hit collider" << std::endl;
 		}
 	}
 
