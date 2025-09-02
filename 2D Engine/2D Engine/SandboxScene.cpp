@@ -51,9 +51,12 @@ void SandboxScene::Update(SceneContext& sceneContext)
 	playerEntity->GetComponent<KeyboardController>().localKeyState = Game::keyState;
 	SDL_Rect playerCollider = playerEntity->GetComponent<ColliderComponent>().collider;
 	Vector2D playerPosition = playerEntity->GetComponent<TransformComponent>().position;
+	Vector2D playerVelocity = playerEntity->GetComponent<TransformComponent>().velocity;
 
 	std::stringstream stringStream;
-	stringStream << "Player position: " << "(" << playerPosition.x << ", " << playerPosition.y << ")";
+	stringStream << "Player position: " << "(" << playerPosition.x << ", " << playerPosition.y << ") ";
+	stringStream << "Player velocity: " << "(x : " << playerVelocity.x << ", y : " << playerVelocity.y << ")";
+
 	labelEntity->GetComponent<UILabelComponent>().SetlabelText(stringStream.str(), "stardew");
 
 	manager.refresh();
