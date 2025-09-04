@@ -26,6 +26,7 @@
     <ClCompile Include="Components.cpp" />
     <ClCompile Include="EntityComponentSystem.cpp" />
     <ClCompile Include="Game.cpp" />
+    <ClCompile Include="HealthComponent.cpp" />
     <ClCompile Include="KeyboardController.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Map.cpp" />
@@ -49,6 +50,7 @@
     <ClInclude Include="EntityComponentSystem.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="Groups.h" />
+    <ClInclude Include="HealthComponent.h" />
     <ClInclude Include="KeyboardController.h" />
     <ClInclude Include="Map.h" />
     <ClInclude Include="PongScene.h" />

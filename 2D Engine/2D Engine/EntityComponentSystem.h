@@ -88,6 +88,23 @@ public:
 		return *c;
 	}
 
+	template <typename T>
+	void RemoveComponent() {
+		auto id = GetComponentTypeID<T>();
+		if (!componentBitset[id]) return;
+
+		Component* target = componentArray[id];
+
+		components.erase(
+			std::remove_if(components.begin(), components.end(),
+				[target](const std::unique_ptr<Component>& up) { return up.get() == target; }),
+			components.end()
+		);
+
+		componentArray[id] = nullptr;
+		componentBitset[id] = false;
+	}
+
 	template <typename T> T& GetComponent() const {
 		auto ptr(componentArray[GetComponentTypeID<T>()]);
 		return *static_cast<T*>(ptr);

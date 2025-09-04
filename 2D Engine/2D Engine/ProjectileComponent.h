@@ -5,8 +5,20 @@
 
 class ProjectileComponent : public Component
 {
+private:
+	TransformComponent* transform;
+
+	int range = 0;
+	int speed = 0;
+	unsigned int distance = 0;
+	Vector2D velocity;
+
 public:
-	ProjectileComponent(int range, int speed, Vector2D velocity) :range(range), speed(speed), velocity(velocity) {
+	int damage = 0;
+
+	ProjectileComponent() = default;
+
+	ProjectileComponent(int range, int speed, Vector2D velocity, unsigned int damage) :range(range), speed(speed), velocity(velocity), damage(damage) {
 
 	}
 	~ProjectileComponent(){}
@@ -33,12 +45,5 @@ public:
 		}
 	}
 
-private:
-	TransformComponent* transform;
-
-	int range = 0;
-	int speed = 0;
-	int distance = 0;
-	Vector2D velocity;
 };
 

@@ -34,7 +34,6 @@ public:
 			((int)localKeyState[SDL_SCANCODE_S] == 1 && (int)localKeyState[SDL_SCANCODE_D] == 1) ||
 			((int)localKeyState[SDL_SCANCODE_S] == 1 && (int)localKeyState[SDL_SCANCODE_A] == 1)
 			) {
-			std::cout << "diagonal movement" << std::endl;
 			transform->speed = 2;
 		}
 		else {

@@ -23,15 +23,16 @@ void SandboxScene::OnEnter(SceneContext& sceneContext)
 	playerEntity->AddComponent <SpriteComponent>(assets, "playerIdle", true);
 	playerEntity->AddComponent<KeyboardController>(assets, Game::keyState);
 	playerEntity->AddComponent<ColliderComponent>("player");
+	playerEntity->AddComponent<HealthComponent>(100, 0);
 	playerEntity->AddGroup(GroupLabels::groupPlayers);
 
 
 	SDL_Color whiteColor = { 255,255,255,255 };
 	labelEntity->AddComponent<UILabelComponent>(assets, 10, 10, "Testing new font", "stardew", whiteColor);
 
-	assets.CreateProjectile(Vector2D(100, 300), Vector2D(2, 0), 200, 2, "testProjectile");
-	assets.CreateProjectile(Vector2D(100, 300), Vector2D(2, 2), 200, 2, "testProjectile");
-	assets.CreateProjectile(Vector2D(100, 300), Vector2D(2, 1.5f), 100, 2, "testProjectile");
+	assets.CreateProjectile(Vector2D(100, 300), Vector2D(2, 0), 200, 2, "testProjectile", -20);
+	assets.CreateProjectile(Vector2D(100, 300), Vector2D(2, 0), 200, 2, "testProjectile", 20);
+	assets.CreateProjectile(Vector2D(100, 300), Vector2D(2, 1.5f), 100, 2, "testProjectile", -10);
 
 	Game::assets = &assets;
 }
@@ -48,57 +49,68 @@ void SandboxScene::HandleEvent(SceneContext& sceneContext, const SDL_Event& e)
 
 void SandboxScene::Update(SceneContext& sceneContext)
 {
-	playerEntity->GetComponent<KeyboardController>().localKeyState = Game::keyState;
-	SDL_Rect playerCollider = playerEntity->GetComponent<ColliderComponent>().collider;
-	Vector2D playerPosition = playerEntity->GetComponent<TransformComponent>().position;
-	Vector2D playerVelocity = playerEntity->GetComponent<TransformComponent>().velocity;
+	
+	if (!playerEntity->GetComponent<HealthComponent>().GetIsDead()) {
+		playerEntity->GetComponent<KeyboardController>().localKeyState = Game::keyState;
+		SDL_Rect playerCollider = playerEntity->GetComponent<ColliderComponent>().collider;
+		Vector2D playerPosition = playerEntity->GetComponent<TransformComponent>().position;
+		Vector2D playerVelocity = playerEntity->GetComponent<TransformComponent>().velocity;
 
-	std::stringstream stringStream;
-	stringStream << "Player position: " << "(" << playerPosition.x << ", " << playerPosition.y << ") ";
-	stringStream << "Player velocity: " << "(x : " << playerVelocity.x << ", y : " << playerVelocity.y << ")";
+		std::stringstream stringStream;
+		stringStream << "Player position: " << "(" << playerPosition.x << ", " << playerPosition.y << ") ";
+		stringStream << "Player velocity: " << "(x : " << playerVelocity.x << ", y : " << playerVelocity.y << ")";
 
-	labelEntity->GetComponent<UILabelComponent>().SetlabelText(stringStream.str(), "stardew");
+		labelEntity->GetComponent<UILabelComponent>().SetlabelText(stringStream.str(), "stardew");
 
-	manager.refresh();
-	manager.Update();
+		manager.refresh();
+		manager.Update();
 
-	auto& colliders = manager.GetGroup(GroupLabels::groupColliders);
-	auto& projectiles = manager.GetGroup(GroupLabels::groupProjectiles);
+		auto& colliders = manager.GetGroup(GroupLabels::groupColliders);
+		auto& projectiles = manager.GetGroup(GroupLabels::groupProjectiles);
 
-	for (auto& collider : colliders) {
-		SDL_Rect tempCollider = collider->GetComponent<ColliderComponent>().collider;
-		if (Collision::AABB(tempCollider, playerCollider)) {
-			playerEntity->GetComponent<TransformComponent>().position = playerPosition;
+		for (auto& collider : colliders) {
+			SDL_Rect tempCollider = collider->GetComponent<ColliderComponent>().collider;
+			if (Collision::AABB(tempCollider, playerCollider)) {
+				playerEntity->GetComponent<TransformComponent>().position = playerPosition;
+			}
+		}
+
+		for (auto& projectile : projectiles) {
+			if (Collision::AABB(playerEntity->GetComponent<ColliderComponent>().collider, projectile->GetComponent<ColliderComponent>().collider)) {
+				std::cout << "Projectile hit player" << std::endl;
+				std::cout << "Projectile damage: " << projectile->GetComponent<ProjectileComponent>().damage << std::endl;
+				playerEntity->GetComponent<HealthComponent>().ApplyDamage(projectile->GetComponent<ProjectileComponent>().damage, projectile->GetComponent<ColliderComponent>().tag);
+				std::cout << "Player Health: " << playerEntity->GetComponent<HealthComponent>().GetHealth() << std::endl;
+				projectile->Destroy();
+			}
+		}
+
+		Game::camera.x = playerEntity->GetComponent<TransformComponent>().position.x - 400;
+		Game::camera.y = playerEntity->GetComponent<TransformComponent>().position.y - 320;
+
+		// Map size: 10x10 tiles * 128 pixels = 1280x1280 pixels
+		const int mapWidth = 10 * 128;  // 1280 pixels
+		const int mapHeight = 10 * 128; // 1280 pixels
+
+		// Clamp camera to map boundaries
+		if (Game::camera.x < 0) {
+			Game::camera.x = 0;
+		}
+		if (Game::camera.y < 0) {
+			Game::camera.y = 0;
+		}
+		if (Game::camera.x > mapWidth - Game::camera.w) {
+			Game::camera.x = mapWidth - Game::camera.w;
+		}
+		if (Game::camera.y > mapHeight - Game::camera.h) {
+			Game::camera.y = mapHeight - Game::camera.h;
 		}
 	}
-
-	for (auto& projectile : projectiles) {
-		if (Collision::AABB(playerEntity->GetComponent<ColliderComponent>().collider, projectile->GetComponent<ColliderComponent>().collider)) {
-			std::cout << "Projectile hit player" << std::endl;
-			projectile->Destroy();
-		}
+	else {
+		//TODO If the player dies the game instantly restarts, add a better death handling system here
+		OnEnter(sceneContext);
 	}
-
-	Game::camera.x = playerEntity->GetComponent<TransformComponent>().position.x - 400;
-	Game::camera.y = playerEntity->GetComponent<TransformComponent>().position.y - 320;
-
-	// Map size: 10x10 tiles * 128 pixels = 1280x1280 pixels
-	const int mapWidth = 10 * 128;  // 1280 pixels
-	const int mapHeight = 10 * 128; // 1280 pixels
-
-	// Clamp camera to map boundaries
-	if (Game::camera.x < 0) {
-		Game::camera.x = 0;
-	}
-	if (Game::camera.y < 0) {
-		Game::camera.y = 0;
-	}
-	if (Game::camera.x > mapWidth - Game::camera.w) {
-		Game::camera.x = mapWidth - Game::camera.w;
-	}
-	if (Game::camera.y > mapHeight - Game::camera.h) {
-		Game::camera.y = mapHeight - Game::camera.h;
-	}
+	
 }
 
 void SandboxScene::Render(SceneContext& sceneContext)

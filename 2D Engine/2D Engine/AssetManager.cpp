@@ -9,12 +9,12 @@ AssetManager::~AssetManager() {
 
 }
 
-void AssetManager::CreateProjectile(Vector2D position, Vector2D velocity, int range, int speed, std::string textureId)
+void AssetManager::CreateProjectile(Vector2D position, Vector2D velocity, int range, int speed, std::string textureId, int damage)
 {
 	auto& projectile(manager->AddEntity());
 	projectile.AddComponent<TransformComponent>(position.x, position.y, 64, 64, 1);
 	projectile.AddComponent<SpriteComponent>(*this, textureId, false);
-	projectile.AddComponent<ProjectileComponent>(range, speed, velocity);
+	projectile.AddComponent<ProjectileComponent>(range, speed, velocity, damage);
 	projectile.AddComponent<ColliderComponent>("projectile");
 	projectile.AddGroup(GroupLabels::groupProjectiles);
 }
