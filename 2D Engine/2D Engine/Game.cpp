@@ -67,12 +67,12 @@ void Game::Init(const char* windowTitle, int height, int width, bool isFullscree
 
 void Game::SetScene(Scene* scene) {
 	if (currentScene) {
-		SceneContext ctx{ *this };
+		SceneContext ctx{ *this, eventBus };
 		currentScene->OnExit(ctx);
 	}
 	currentScene = scene;
 	if (currentScene) {
-		SceneContext ctx{ *this};
+		SceneContext ctx{ *this, eventBus };
 		currentScene->OnEnter(ctx);
 	}
 }
@@ -81,7 +81,7 @@ void Game::HandleEvents() {
 	SDL_PollEvent(&event);
 
 	if (currentScene) {
-		SceneContext ctx{ *this };
+		SceneContext ctx{ *this, eventBus };
 		currentScene->HandleEvent(ctx, event);
 	}
 
@@ -95,7 +95,7 @@ void Game::HandleEvents() {
 void Game::Update() {
 	Game::keyState = SDL_GetKeyboardState(NULL);
 	if (currentScene) {
-		SceneContext ctx{ *this };
+		SceneContext ctx{ *this, eventBus };
 		currentScene->Update(ctx);
 	}
 }
@@ -104,7 +104,7 @@ void Game::Render() {
 	SDL_RenderClear(renderer);
 
 	if (currentScene) {
-		SceneContext ctx{ *this };
+		SceneContext ctx{ *this, eventBus };
 		currentScene->Render(ctx);
 	}
 

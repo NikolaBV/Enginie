@@ -5,6 +5,7 @@
 #include <SDL_image.h>
 #include <vector>
 #include "Scene.h"
+#include "EventBus.h"
 
 class ColliderComponent;
 class AssetManager;
@@ -15,6 +16,7 @@ class Game
 private:
 	SDL_Window* window;
 	Scene* currentScene = nullptr;
+	EventBus eventBus;
 public:
 	Game();
 	~Game();

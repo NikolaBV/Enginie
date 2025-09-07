@@ -1,6 +1,8 @@
 #pragma once
 #include "EntityComponentSystem.h"
 #include <string>
+#include "EventBus.h"
+#include "ColliderComponent.h"
 
 class HealthComponent : public Component
 {
@@ -9,13 +11,14 @@ private:
 	int maxHealth = 100;
 	int minHealth = 0;
 	bool isDead = false;
+	EventBus* eventBus = nullptr;
 
 public:
 	HealthComponent() {}
 
-	HealthComponent(int maxHealth, int minHealth) {
-		SetMaxHealth(maxHealth);
-		SetMinHealth(minHealth);
+	HealthComponent(int maxHealth, int minHealth, EventBus& bus)
+		: maxHealth(maxHealth), minHealth(minHealth), eventBus(&bus)
+	{
 		SetHealth();
 	}
 
@@ -90,8 +93,16 @@ public:
 			this->isDead = false;
 		}
 	}
+
+	void SetEventBus(EventBus& bus) { eventBus = &bus; }
+
 	void OnDeath() {
-		std::cout << "entity is dead" << std::endl;
+		std::cout << "Entity: " << this->entity->GetComponent<ColliderComponent>().tag << " has died " << std::endl;
+
+		if (eventBus) {
+			eventBus->Publish(DiedEvent{ this->entity });
+
+		}
 		this->entity->Destroy();
 	}
 };

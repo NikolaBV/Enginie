@@ -2,11 +2,13 @@
 #include "SDL.h"
 #include "EntityComponentSystem.h"
 #include "AssetManager.h"
+#include "EventBus.h"
 
 class Game;
 
 struct SceneContext {
 	Game& game;
+	EventBus& eventBus;
 };
 
 class Scene
@@ -22,6 +24,5 @@ public:
 protected:
 	Manager manager;
 	AssetManager assets{ &manager };
-
 };
 

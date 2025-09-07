@@ -23,14 +23,19 @@ void SandboxScene::OnEnter(SceneContext& sceneContext)
 	playerEntity->AddComponent <SpriteComponent>(assets, "playerIdle", true);
 	playerEntity->AddComponent<KeyboardController>(assets, Game::keyState);
 	playerEntity->AddComponent<ColliderComponent>("player");
-	playerEntity->AddComponent<HealthComponent>(100, 0);
+	playerEntity->AddComponent<HealthComponent>(100, 0, sceneContext.eventBus);
 	playerEntity->AddGroup(GroupLabels::groupPlayers);
 
+	sceneContext.eventBus.Subscribe<DiedEvent>([this](const DiedEvent& e) {
+		if (e.entity == playerEntity) {
+			pendingRestart = true;
+		}
+		});
 
 	SDL_Color whiteColor = { 255,255,255,255 };
 	labelEntity->AddComponent<UILabelComponent>(assets, 10, 10, "Testing new font", "stardew", whiteColor);
 
-	assets.CreateProjectile(Vector2D(100, 300), Vector2D(2, 0), 200, 2, "testProjectile", -20);
+	assets.CreateProjectile(Vector2D(100, 300), Vector2D(2, 0), 200, 2, "testProjectile", 80);
 	assets.CreateProjectile(Vector2D(100, 300), Vector2D(2, 0), 200, 2, "testProjectile", 20);
 	assets.CreateProjectile(Vector2D(100, 300), Vector2D(2, 1.5f), 100, 2, "testProjectile", -10);
 
@@ -49,8 +54,6 @@ void SandboxScene::HandleEvent(SceneContext& sceneContext, const SDL_Event& e)
 
 void SandboxScene::Update(SceneContext& sceneContext)
 {
-	
-	if (!playerEntity->GetComponent<HealthComponent>().GetIsDead()) {
 		playerEntity->GetComponent<KeyboardController>().localKeyState = Game::keyState;
 		SDL_Rect playerCollider = playerEntity->GetComponent<ColliderComponent>().collider;
 		Vector2D playerPosition = playerEntity->GetComponent<TransformComponent>().position;
@@ -64,6 +67,14 @@ void SandboxScene::Update(SceneContext& sceneContext)
 
 		manager.refresh();
 		manager.Update();
+
+		if (pendingRestart) {
+			std::cout << "Game restarting..." << std::endl;
+			OnExit(sceneContext);
+			OnEnter(sceneContext);
+			pendingRestart = false;
+			return;
+		}
 
 		auto& colliders = manager.GetGroup(GroupLabels::groupColliders);
 		auto& projectiles = manager.GetGroup(GroupLabels::groupProjectiles);
@@ -105,12 +116,6 @@ void SandboxScene::Update(SceneContext& sceneContext)
 		if (Game::camera.y > mapHeight - Game::camera.h) {
 			Game::camera.y = mapHeight - Game::camera.h;
 		}
-	}
-	else {
-		//TODO If the player dies the game instantly restarts, add a better death handling system here
-		OnEnter(sceneContext);
-	}
-	
 }
 
 void SandboxScene::Render(SceneContext& sceneContext)
