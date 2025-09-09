@@ -81,13 +81,13 @@ void SandboxScene::Update(SceneContext& sceneContext)
 
 		for (auto& collider : colliders) {
 			SDL_Rect tempCollider = collider->GetComponent<ColliderComponent>().collider;
-			if (Collision::AABB(tempCollider, playerCollider)) {
+			if (Collision::IntersectsWithDistanceBased(tempCollider, playerCollider)) {
 				playerEntity->GetComponent<TransformComponent>().position = playerPosition;
 			}
 		}
 
 		for (auto& projectile : projectiles) {
-			if (Collision::AABB(playerEntity->GetComponent<ColliderComponent>().collider, projectile->GetComponent<ColliderComponent>().collider)) {
+			if (Collision::IntersectsWithDistanceBased(playerEntity->GetComponent<ColliderComponent>().collider, projectile->GetComponent<ColliderComponent>().collider)) {
 				std::cout << "Projectile hit player" << std::endl;
 				std::cout << "Projectile damage: " << projectile->GetComponent<ProjectileComponent>().damage << std::endl;
 				playerEntity->GetComponent<HealthComponent>().ApplyDamage(projectile->GetComponent<ProjectileComponent>().damage, projectile->GetComponent<ColliderComponent>().tag);
@@ -130,14 +130,12 @@ void SandboxScene::Render(SceneContext& sceneContext)
 		tile->Draw();
 	}
 
-	for (auto& player : players) {
-		player->Draw();
-	}
-
 	for (auto& collider : colliders) {
 		collider->Draw();
 	}
-
+	for (auto& player : players) {
+		player->Draw();
+	}
 	for (auto& projectile : projectiles) {
 		projectile->Draw();
 	}

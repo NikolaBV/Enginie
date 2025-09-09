@@ -87,9 +87,6 @@
     <ClCompile Include="Scene.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SandboxScene.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Animation.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -98,6 +95,9 @@
     </ClCompile>
     <ClCompile Include="EventBus.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SandboxScene.cpp">
+      <Filter>Source Files\Sandbox</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
