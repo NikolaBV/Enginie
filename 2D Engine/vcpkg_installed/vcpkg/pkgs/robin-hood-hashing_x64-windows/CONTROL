@@ -1,0 +1,7 @@
+Package: robin-hood-hashing
+Version: 3.11.5
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 52ffc45622864e172f13ef7d10fa9df956a8d100f8bf56de02da901a73df1616
+Description: Fast & memory efficient hashtable based on robin hood hashing for C++11/14/17/20

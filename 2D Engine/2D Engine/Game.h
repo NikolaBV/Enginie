@@ -6,6 +6,7 @@
 #include <vector>
 #include "Scene.h"
 #include "EventBus.h"
+#include <RmlUi/Core.h>
 
 class ColliderComponent;
 class AssetManager;
@@ -38,5 +39,7 @@ public:
 	static bool isRunning;
 	static SDL_Rect camera;
 	static AssetManager* assets;
+	static Rml::Context* context;
+	static Rml::ElementDocument* document;
 };
 

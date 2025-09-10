@@ -27,6 +27,8 @@
     <ClCompile Include="EntityComponentSystem.cpp" />
     <ClCompile Include="EventBus.cpp" />
     <ClCompile Include="Game.cpp" />
+    <ClCompile Include="rmlui_backends\RmlUi_Platform_SDL.cpp" />
+    <ClCompile Include="rmlui_backends\RmlUi_Renderer_SDL.cpp" />
     <ClCompile Include="HealthComponent.cpp" />
     <ClCompile Include="KeyboardController.cpp" />
     <ClCompile Include="Main.cpp" />
@@ -57,6 +59,8 @@
     <ClInclude Include="Map.h" />
     <ClInclude Include="PongScene.h" />
     <ClInclude Include="ProjectileComponent.h" />
+    <ClInclude Include="rmlui_backends\RmlUi_Platform_SDL.h" />
+    <ClInclude Include="rmlui_backends\RmlUi_Renderer_SDL.h" />
     <ClInclude Include="SandboxScene.h" />
     <ClInclude Include="Scene.h" />
     <ClInclude Include="TileComponent.h" />
