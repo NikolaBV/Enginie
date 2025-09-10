@@ -3,6 +3,7 @@
 
 void SandboxScene::OnEnter(SceneContext& sceneContext)
 {
+	isRunningScene = true;
 	playerEntity = &manager.AddEntity();
 	labelEntity = &manager.AddEntity();
 
@@ -29,6 +30,8 @@ void SandboxScene::OnEnter(SceneContext& sceneContext)
 	sceneContext.eventBus.Subscribe<DiedEvent>([this](const DiedEvent& e) {
 		if (e.entity == playerEntity) {
 			pendingRestart = true;
+			isRunningScene = false;
+			Game::document->Show();
 		}
 		});
 
@@ -54,6 +57,7 @@ void SandboxScene::HandleEvent(SceneContext& sceneContext, const SDL_Event& e)
 
 void SandboxScene::Update(SceneContext& sceneContext)
 {
+	if (isRunningScene) {
 		playerEntity->GetComponent<KeyboardController>().localKeyState = Game::keyState;
 		SDL_Rect playerCollider = playerEntity->GetComponent<ColliderComponent>().collider;
 		Vector2D playerPosition = playerEntity->GetComponent<TransformComponent>().position;
@@ -71,7 +75,6 @@ void SandboxScene::Update(SceneContext& sceneContext)
 		if (pendingRestart) {
 			std::cout << "Game restarting..." << std::endl;
 			OnExit(sceneContext);
-			OnEnter(sceneContext);
 			pendingRestart = false;
 			return;
 		}
@@ -116,6 +119,10 @@ void SandboxScene::Update(SceneContext& sceneContext)
 		if (Game::camera.y > mapHeight - Game::camera.h) {
 			Game::camera.y = mapHeight - Game::camera.h;
 		}
+	}
+	else {
+		return;
+	}
 }
 
 void SandboxScene::Render(SceneContext& sceneContext)

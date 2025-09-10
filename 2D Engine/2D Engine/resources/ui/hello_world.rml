@@ -6,12 +6,9 @@
 </head>
 <body data-model="animals">
    <div class="container">
-    <h1>RmlUi</h1>
-    <p>Hello <span id="world">world</span>!</p>
-    <p data-if="show_text">The quick brown fox jumps over the lazy {{animal}}.</p>
-  <input type="text" class="text" data-value="animal"/>
-
-<button id="start-game">Start Game</button>
+    <h1>Welcome to Enginie</h1>
+<button id="start-sandbox">Start Sandbox</button>
+<button id="start-pong">Start Pong</button>
 <button id="quit-game">Quit Game</button>
 
 </body>

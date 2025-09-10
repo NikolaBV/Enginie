@@ -25,5 +25,6 @@ private:
 	Entity* playerEntity = nullptr;
 	Entity* labelEntity = nullptr;
 	bool pendingRestart = false;
+	bool isRunningScene = false;
 };
 

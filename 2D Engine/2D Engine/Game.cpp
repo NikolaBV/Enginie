@@ -56,6 +56,7 @@ public:
 		std::cout << "Start game button from UI clicked" << std::endl;
 		if (game != nullptr && scene != nullptr) {
 			game->SetScene(scene);
+			game->document->Clone();
 		}
 		if (Game::document != nullptr) {
 			Game::document->Hide();
@@ -165,10 +166,16 @@ void Game::Init(const char* windowTitle, int height, int width, bool isFullscree
 		std::cout << "Could not find quit-game element" << std::endl;
 	}
 
-	if (Rml::Element* startElement = document->GetElementById("start-game")) {
-		static StartGameListener startListener(this, new SandboxScene());
-		startElement->AddEventListener("click", &startListener);
+	if (Rml::Element* startSandboxElement = document->GetElementById("start-sandbox")) {
+		static StartGameListener startSandboxListner(this, new SandboxScene());
+		startSandboxElement->AddEventListener("click", &startSandboxListner);
 	}
+
+	if (Rml::Element* startPongElement = document->GetElementById("start-pong")) {
+		static StartGameListener startListener(this, new PongScene());
+		startPongElement->AddEventListener("click", &startListener);
+	}
+
 	else {
 		std::cout << "Could not find start-game element" << std::endl;
 	}
