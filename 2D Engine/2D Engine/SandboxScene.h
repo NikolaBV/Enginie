@@ -26,5 +26,6 @@ private:
 	Entity* labelEntity = nullptr;
 	bool pendingRestart = false;
 	bool isRunningScene = false;
+
 };
 

@@ -67,7 +67,7 @@ public:
 
 void Game::Init(const char* windowTitle, int height, int width, bool isFullscreen) {
 
-#pragma region SDLInitlization
+#pragma region SDL Initlization
 	int flags = 0;
 
 	if (isFullscreen) {
@@ -120,7 +120,7 @@ void Game::Init(const char* windowTitle, int height, int width, bool isFullscree
 	rml_render_interface = std::make_unique<RenderInterface_SDL>(renderer);
 	Rml::SetRenderInterface(rml_render_interface.get());
 
-	bool rmlInit =  Rml::Initialise();
+	bool rmlInit = Rml::Initialise();
 
 	if (rmlInit) {
 		std::cout << "rmlInit initlised" << std::endl;
@@ -129,22 +129,18 @@ void Game::Init(const char* windowTitle, int height, int width, bool isFullscree
 	Rml::Context* localContext = Rml::CreateContext("default", Rml::Vector2i(height, width));
 	if (localContext) {
 		std::cout << "RmlUi context initlised" << std::endl;
+		context = localContext;
 	}
-	context = localContext;
+	else {
+		std::cout << "ERROR: RmlUi context failed" << std::endl;
+		return;
+	}
 
 	bool success = Rml::LoadFontFace("resources/fonts/Stardew_Valley.otf");
 
 	if (success) {
 		std::cout << "Font loaded in RML" << std::endl;
 	}
-
-
-	if (Rml::DataModelConstructor constructor = context->CreateDataModel("animals"))
-	{
-		constructor.Bind("show_text", &my_data.show_text);
-		constructor.Bind("animal", &my_data.animal);
-	}
-
 
 	Rml::ElementDocument* localDocument = context->LoadDocument("D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\2D Engine\\resources\\ui\\hello_world.rml");
 	document = localDocument;
@@ -199,10 +195,10 @@ void Game::HandleEvents() {
 	SDL_PollEvent(&event);
 	if (RmlSDL::InputEventHandler(context, event))
 
-	if (currentScene) {
-		SceneContext ctx{ *this, eventBus };
-		currentScene->HandleEvent(ctx, event);
-	}
+		if (currentScene) {
+			SceneContext ctx{ *this, eventBus };
+			currentScene->HandleEvent(ctx, event);
+		}
 
 	switch (event.type) {
 	case SDL_QUIT:
@@ -222,6 +218,7 @@ void Game::Update() {
 }
 
 void Game::Render() {
+	SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
 	SDL_RenderClear(renderer);
 
 	if (currentScene) {

@@ -20,9 +20,12 @@ void SandboxScene::OnEnter(SceneContext& sceneContext)
 	assets.AddFont("stardew", "resources/fonts/Stardew_Valley.otf", 16);
 
 	std::cout << "Adding player entity components" << std::endl;
+
+    std::map<SDL_Scancode, const char*> playerKeyboardControlsMap = { {SDL_SCANCODE_W, "playerWalk"} };
+
 	playerEntity->AddComponent<TransformComponent>(1.40f);
 	playerEntity->AddComponent <SpriteComponent>(assets, "playerIdle", true);
-	playerEntity->AddComponent<KeyboardController>(assets, Game::keyState);
+	playerEntity->AddComponent<KeyboardController>(assets, Game::keyState, playerKeyboardControlsMap, true, true);
 	playerEntity->AddComponent<ColliderComponent>("player");
 	playerEntity->AddComponent<HealthComponent>(100, 0, sceneContext.eventBus);
 	playerEntity->AddGroup(GroupLabels::groupPlayers);

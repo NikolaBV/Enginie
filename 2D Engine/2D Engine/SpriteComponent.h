@@ -77,7 +77,7 @@ public:
 			sourceRect.x = sourceRect.w * static_cast<int>((SDL_GetTicks() / speed) % frames);
 		}
 
-		sourceRect.y = animationIndex * transform->height;
+		sourceRect.y = (animated ? animationIndex : 0) * transform->height;
 
 		destinationRect.x = static_cast<int>(transform->position.x) - Game::camera.x;
 		destinationRect.y = static_cast<int>(transform->position.y) - Game::camera.y;
