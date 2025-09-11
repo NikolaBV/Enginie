@@ -27,6 +27,7 @@
     <ClCompile Include="EntityComponentSystem.cpp" />
     <ClCompile Include="EventBus.cpp" />
     <ClCompile Include="Game.cpp" />
+    <ClCompile Include="InputScheme.h" />
     <ClCompile Include="rmlui_backends\RmlUi_Platform_SDL.cpp" />
     <ClCompile Include="rmlui_backends\RmlUi_Renderer_SDL.cpp" />
     <ClCompile Include="HealthComponent.cpp" />

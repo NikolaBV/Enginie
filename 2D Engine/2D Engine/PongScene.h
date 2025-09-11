@@ -6,6 +6,7 @@
 #include "Collision.h"
 #include "UILabelComponent.h"
 #include "ColliderComponent.h"
+#include "InputScheme.h"
 
 #include <sstream>
 #include <vector>
