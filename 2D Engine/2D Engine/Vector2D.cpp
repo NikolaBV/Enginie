@@ -37,6 +37,11 @@ Vector2D& Vector2D::Divide(const Vector2D& vector) {
 	return *this;
 }
 
+float Vector2D::DotProduct(const Vector2D& vector) const
+{
+    return this->x * vector.x + this->y * vector.y;
+}    
+
 Vector2D& operator+(Vector2D& vectorOne, Vector2D& vectorTwo) {
 	return vectorOne.Add(vectorTwo);
 }

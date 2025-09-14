@@ -43,6 +43,8 @@ void PongScene::OnEnter(SceneContext& ctx)
 	ball->AddComponent<ColliderComponent>("ball");
 	ball->AddGroup(GroupLabels::groupProjectiles);
 
+	ball->GetComponent<TransformComponent>().velocity.x = -1;
+
 	SDL_Color whiteColor = { 255,255,255,255 };
 	leftScoreLabel->AddComponent<UILabelComponent>(assets, 10, 10, "Score Player 1", "stardew", whiteColor);
 	rightScoreLabel->AddComponent<UILabelComponent>(assets, 700,10, "Score Player 2", "stardew", whiteColor);
@@ -61,6 +63,15 @@ void PongScene::HandleEvent(SceneContext& ctx, const SDL_Event& e)
 
 void PongScene::Update(SceneContext& ctx)
 {
+	//SDL_Rect leftPaddleCollider = leftPaddle->GetComponent<ColliderComponent>().collider;
+	//Vector2D leftPaddlePosition = leftPaddle->GetComponent<TransformComponent>().position;
+
+	//SDL_Rect rightPaddleCollider = rightPaddle->GetComponent<ColliderComponent>().collider;
+	//Vector2D rightPaddlePosition = rightPaddle->GetComponent<TransformComponent>().position;
+
+	SDL_Rect ballCollider = ball->GetComponent<ColliderComponent>().collider;
+	Vector2D ballPosition = ball->GetComponent<TransformComponent>().position;
+
 	std::stringstream leftPaddleLabelStream;
 	std::stringstream rightPaddleLabelStream;
 
@@ -72,6 +83,21 @@ void PongScene::Update(SceneContext& ctx)
 
 	manager.refresh();
 	manager.Update();
+
+	//TODO Implement a proper defl;ection of the ball, dont just reverse its direrction
+	if (Collision::AABB(rightPaddle->GetComponent<ColliderComponent>().collider, ball->GetComponent<ColliderComponent>().collider)) {
+		std::cout << "Ball collided with right paddle" << std::endl;
+		ball->GetComponent<TransformComponent>().position = ballPosition;
+		ball->GetComponent<TransformComponent>().velocity.Multiply(Vector2D(-1, -1));
+		ball->GetComponent<TransformComponent>().velocity.Add(Vector2D(0.20f, 0.20f));
+
+	}
+	if (Collision::AABB(leftPaddle->GetComponent<ColliderComponent>().collider, ball->GetComponent<ColliderComponent>().collider)) {
+		std::cout << "Ball collided with left paddle" << std::endl;
+		ball->GetComponent<TransformComponent>().position = ballPosition;
+		ball->GetComponent<TransformComponent>().velocity.Multiply(Vector2D(-1, -1));
+		ball->GetComponent<TransformComponent>().velocity.Add(Vector2D(0.20f, 0.20f));
+	}
 
 	//TODO Remove this, add proper score handling later
 	leftScore++;
