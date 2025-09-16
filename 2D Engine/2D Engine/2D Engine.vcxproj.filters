@@ -31,6 +31,24 @@
     <Filter Include="Header Files\Sandbox">
       <UniqueIdentifier>{4101722c-5aae-4651-8d91-47d95055f8bf}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\EventListners">
+      <UniqueIdentifier>{54fd13c6-ce5b-4d44-b223-2621be74ed78}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\EventListners">
+      <UniqueIdentifier>{a4322ae3-8622-4aeb-bfb7-c732693eb077}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Pong\EventListners">
+      <UniqueIdentifier>{6669f8ab-fa25-45c5-8255-1e6521a18c1d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Pong\EventListners">
+      <UniqueIdentifier>{bed6df99-5a79-4e4c-b396-1ec401c3c401}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Sandbox\EventListners">
+      <UniqueIdentifier>{581304ea-67e6-4cbd-9dbc-3dd5caed009a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Sandbox\EventListners">
+      <UniqueIdentifier>{566710c4-8dbd-4cf6-9f48-b2c02d733baf}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -99,6 +117,24 @@
     <ClCompile Include="SandboxScene.cpp">
       <Filter>Source Files\Sandbox</Filter>
     </ClCompile>
+    <ClCompile Include="InputScheme.h">
+      <Filter>Header Files</Filter>
+    </ClCompile>
+    <ClCompile Include="rmlui_backends\RmlUi_Platform_SDL.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="rmlui_backends\RmlUi_Renderer_SDL.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="QuitGameListner.cpp">
+      <Filter>Source Files\EventListners</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayAgainListner.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="StartGameListner.cpp">
+      <Filter>Source Files\Sandbox\EventListners</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game.h">
@@ -166,6 +202,21 @@
     </ClInclude>
     <ClInclude Include="EventBus.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="rmlui_backends\RmlUi_Platform_SDL.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="rmlui_backends\RmlUi_Renderer_SDL.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="QuitGameListner.h">
+      <Filter>Header Files\EventListners</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayAgainListner.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StartGameListner.h">
+      <Filter>Header Files\Sandbox\EventListners</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

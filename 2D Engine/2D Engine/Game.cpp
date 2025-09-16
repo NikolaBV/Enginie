@@ -15,6 +15,8 @@
 #include "PongScene.h"
 
 #include <sstream>
+#include "QuitGameListner.h"
+#include "StartGameListner.h"
 
 Map* map;
 
@@ -31,39 +33,6 @@ Rml::EventListener* eventListner;
 Game::Game() {}
 
 Game::~Game() {}
-
-
-struct ApplicationData {
-	bool show_text = true;
-	Rml::String animal = "dog";
-} my_data;
-
-class QuitGameListener : public Rml::EventListener {
-public:
-	void ProcessEvent(Rml::Event& event) override {
-		std::cout << "Quit game button from UI clicked" << std::endl;
-		Game::isRunning = false;
-	}
-};
-
-class StartGameListener : public Rml::EventListener {
-private:
-	Game* game = nullptr;
-	Scene* scene = nullptr;
-public:
-	StartGameListener(Game* game, Scene* scene) : game(game), scene(scene) {}
-	void ProcessEvent(Rml::Event& event) override {
-		std::cout << "Start game button from UI clicked" << std::endl;
-		if (game != nullptr && scene != nullptr) {
-			game->SetScene(scene);
-			game->document->Clone();
-		}
-		if (Game::document != nullptr) {
-			Game::document->Hide();
-		}
-	}
-};
-
 
 void Game::Init(const char* windowTitle, int height, int width, bool isFullscreen) {
 
@@ -142,7 +111,7 @@ void Game::Init(const char* windowTitle, int height, int width, bool isFullscree
 		std::cout << "Font loaded in RML" << std::endl;
 	}
 
-	Rml::ElementDocument* localDocument = context->LoadDocument("D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\2D Engine\\resources\\ui\\hello_world.rml");
+	Rml::ElementDocument* localDocument = context->LoadDocument("D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\2D Engine\\resources\\ui\\rml\\main-menu\\hello_world.rml");
 	document = localDocument;
 
 	if (localDocument != NULL) {

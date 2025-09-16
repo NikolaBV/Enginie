@@ -5,7 +5,7 @@
 #include <typeindex>
 #include "EntityComponentSystem.h"
 
-struct DiedEvent { Entity* entity; };
+struct EndGame { Entity* entity; };
 
 class EventBus {
 public:

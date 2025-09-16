@@ -28,6 +28,8 @@
     <ClCompile Include="EventBus.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="InputScheme.h" />
+    <ClCompile Include="PlayAgainListner.cpp" />
+    <ClCompile Include="QuitGameListner.cpp" />
     <ClCompile Include="rmlui_backends\RmlUi_Platform_SDL.cpp" />
     <ClCompile Include="rmlui_backends\RmlUi_Renderer_SDL.cpp" />
     <ClCompile Include="HealthComponent.cpp" />
@@ -40,6 +42,7 @@
     <ClCompile Include="SandboxScene.cpp" />
     <ClCompile Include="Scene.cpp" />
     <ClCompile Include="SpriteComponent.cpp" />
+    <ClCompile Include="StartGameListner.cpp" />
     <ClCompile Include="TextureManager.cpp" />
     <ClCompile Include="TileComponent.cpp" />
     <ClCompile Include="UILabelComponent.cpp" />
@@ -58,12 +61,15 @@
     <ClInclude Include="HealthComponent.h" />
     <ClInclude Include="KeyboardController.h" />
     <ClInclude Include="Map.h" />
+    <ClInclude Include="PlayAgainListner.h" />
     <ClInclude Include="PongScene.h" />
     <ClInclude Include="ProjectileComponent.h" />
+    <ClInclude Include="QuitGameListner.h" />
     <ClInclude Include="rmlui_backends\RmlUi_Platform_SDL.h" />
     <ClInclude Include="rmlui_backends\RmlUi_Renderer_SDL.h" />
     <ClInclude Include="SandboxScene.h" />
     <ClInclude Include="Scene.h" />
+    <ClInclude Include="StartGameListner.h" />
     <ClInclude Include="TileComponent.h" />
     <ClInclude Include="TransformComponent.h" />
     <ClInclude Include="SpriteComponent.h" />

@@ -1,0 +1,14 @@
+<rml>
+  <head>
+    <title>Game Over</title>
+    <link type="text/rcss" href="rml.rcss"/>
+    <link type="text/rcss" href="window.rcss"/>
+  </head>
+  <body data-model="winners">
+    <div class="container">
+      <h1 data-if="winner_player">{{winner}} won the game!</h1>
+      <button id="play-again">Play Again</button>
+      <button id="quit-game">Quit Game</button>
+    </div>
+  </body>
+</rml>

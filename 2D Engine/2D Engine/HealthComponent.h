@@ -100,8 +100,7 @@ public:
 		std::cout << "Entity: " << this->entity->GetComponent<ColliderComponent>().tag << " has died " << std::endl;
 
 		if (eventBus) {
-			eventBus->Publish(DiedEvent{ this->entity });
-
+			eventBus->Publish(EndGame{ this->entity });
 		}
 		this->entity->Destroy();
 	}

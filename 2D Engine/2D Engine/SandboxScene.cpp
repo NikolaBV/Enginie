@@ -30,7 +30,7 @@ void SandboxScene::OnEnter(SceneContext& sceneContext)
 	playerEntity->AddComponent<HealthComponent>(100, 0, sceneContext.eventBus);
 	playerEntity->AddGroup(GroupLabels::groupPlayers);
 
-	sceneContext.eventBus.Subscribe<DiedEvent>([this](const DiedEvent& e) {
+	sceneContext.eventBus.Subscribe<EndGame>([this](const EndGame& e) {
 		if (e.entity == playerEntity) {
 			pendingRestart = true;
 			isRunningScene = false;

@@ -10,6 +10,7 @@
 
 #include <sstream>
 #include <vector>
+#include <RmlUi/Core.h>
 
 class PongScene : public Scene {
 public:
@@ -18,6 +19,9 @@ public:
 	void HandleEvent(SceneContext& ctx, const SDL_Event& e) override;
 	void Update(SceneContext& ctx) override;
 	void Render(SceneContext& ctx) override;
+	void ResetGame();
+	Rml::String playerWinner = "";
+
 private:
 	Entity* leftPaddle = nullptr;
 	Entity* rightPaddle = nullptr;
@@ -28,5 +32,10 @@ private:
 	SDL_Rect net;
 
 	int leftScore = 0, rightScore = 0;
-	void ResetRound(SceneContext& ctx);
+	int maxScore = 2;
+
+	bool pendingRestart = false;
+	bool isRunningScene = false;
+
+	static Rml::ElementDocument* gameOver;
 };
