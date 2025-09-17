@@ -52,7 +52,7 @@ void PongScene::OnEnter(SceneContext& ctx)
 	ball->AddComponent<ColliderComponent>("ball");
 	ball->AddGroup(GroupLabels::groupProjectiles);
 
-	ball->GetComponent<TransformComponent>().velocity = Vector2D(1, 0);
+	ball->GetComponent<TransformComponent>().velocity = Vector2D(1, 0.5f);
 
 
 	SDL_Color whiteColor = { 255,255,255,255 };
@@ -163,8 +163,6 @@ void PongScene::Update(SceneContext& ctx)
 		}
 		//TODO Implement a proper defl;ection of the ball, dont just reverse its direrction
 		if (Collision::AABB(rightPaddle->GetComponent<ColliderComponent>().collider, ball->GetComponent<ColliderComponent>().collider)) {
-			std::cout << "Ball collided with right paddle" << std::endl;
-			std::cout << "Ball collided with right paddle" << std::endl;
 			ball->GetComponent<TransformComponent>().position = ballPosition;
 
 			Vector2D normalVector;
@@ -197,12 +195,12 @@ void PongScene::Update(SceneContext& ctx)
 			reflected.y = objectVelocity.y - twoProj.y;
 
 			ball->GetComponent<TransformComponent>().velocity = reflected;
+			reflected.Add(Vector2D(0.05f, 0.05f));
 			std::cout << "Ball velocity after collision: " << ball->GetComponent<TransformComponent>().velocity << std::endl;
 
 
 		}
 		if (Collision::AABB(leftPaddle->GetComponent<ColliderComponent>().collider, ball->GetComponent<ColliderComponent>().collider)) {
-			std::cout << "Ball collided with right paddle" << std::endl;
 			ball->GetComponent<TransformComponent>().position = ballPosition;
 
 			Vector2D normalVector;
@@ -235,6 +233,7 @@ void PongScene::Update(SceneContext& ctx)
 			reflected.y = objectVelocity.y - twoProj.y;
 
 			ball->GetComponent<TransformComponent>().velocity = reflected;
+			reflected.Add(Vector2D(0.05f, 0.05f));
 			std::cout << "Ball velocity after collision: " << ball->GetComponent<TransformComponent>().velocity << std::endl;
 		}
 
@@ -331,11 +330,17 @@ void PongScene::Update(SceneContext& ctx)
 
 		else if (collidesLeft) {
 			rightScore++;
+			leftPaddle->GetComponent<TransformComponent>().position = Vector2D(50, 320);
+			rightPaddle->GetComponent<TransformComponent>().position = Vector2D(750, 320);
+
 			ball->GetComponent<TransformComponent>().position = Vector2D(450, 320);
 			ball->GetComponent<TransformComponent>().velocity = Vector2D(-1, 0);
 		}
 		else if (collidesRight) {
 			leftScore++;
+			leftPaddle->GetComponent<TransformComponent>().position = Vector2D(50, 320);
+			rightPaddle->GetComponent<TransformComponent>().position = Vector2D(750, 320);
+
 			ball->GetComponent<TransformComponent>().position = Vector2D(450, 320);
 			ball->GetComponent<TransformComponent>().velocity = Vector2D(1, 0);
 		}
@@ -383,7 +388,7 @@ void PongScene::ResetGame()
 	rightPaddle->GetComponent<TransformComponent>().position = Vector2D(750, 320);
 	ball->GetComponent<TransformComponent>().position = Vector2D(450, 320);
 
-	ball->GetComponent<TransformComponent>().velocity = Vector2D(1, 0);
+	ball->GetComponent<TransformComponent>().velocity = Vector2D(1, -0.5);
 
 	if (gameOver) {
 		gameOver->Close();
