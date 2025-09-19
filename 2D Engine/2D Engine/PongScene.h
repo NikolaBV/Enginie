@@ -33,6 +33,8 @@ private:
 
 	int leftScore = 0, rightScore = 0;
 	int maxScore = 2;
+	float baseSpeed = 1.0f;
+	float currentSpeed = baseSpeed;
 
 	bool pendingRestart = false;
 	bool isRunningScene = false;

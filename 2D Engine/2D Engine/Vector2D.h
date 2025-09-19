@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+#include <cmath>
 
 class Vector2D
 {
@@ -28,6 +29,7 @@ public:
 
 	Vector2D operator*(const int& i);
 	Vector2D Zero();
+	Vector2D& Normalize();
 
 	friend std::ostream& operator<<(std::ostream& stream, const Vector2D& vector);
 

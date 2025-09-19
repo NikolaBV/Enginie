@@ -89,3 +89,12 @@ Vector2D Vector2D::Zero() {
 	this->y = 0;
 	return *this;
 }
+
+Vector2D& Vector2D::Normalize()
+{
+	// TODO: insert return statement here
+	float length = sqrt((this->x * this->x) + (this->y * this->y));
+	this->x /= length;
+	this->y /= length;
+	return *this;
+}

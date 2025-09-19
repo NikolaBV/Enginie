@@ -195,7 +195,11 @@ void PongScene::Update(SceneContext& ctx)
 			reflected.y = objectVelocity.y - twoProj.y;
 
 			ball->GetComponent<TransformComponent>().velocity = reflected;
-			reflected.Add(Vector2D(0.05f, 0.05f));
+
+			Vector2D dir = reflected.Normalize();
+			float newSpeed = currentSpeed * 1.80f;
+			ball->GetComponent<TransformComponent>().velocity = dir * newSpeed;
+
 			std::cout << "Ball velocity after collision: " << ball->GetComponent<TransformComponent>().velocity << std::endl;
 
 
@@ -232,8 +236,10 @@ void PongScene::Update(SceneContext& ctx)
 			reflected.x = objectVelocity.x - twoProj.x;
 			reflected.y = objectVelocity.y - twoProj.y;
 
-			ball->GetComponent<TransformComponent>().velocity = reflected;
-			reflected.Add(Vector2D(0.05f, 0.05f));
+			Vector2D dir = reflected.Normalize();
+			float newSpeed = currentSpeed * 1.80f;
+			ball->GetComponent<TransformComponent>().velocity = dir * newSpeed;
+
 			std::cout << "Ball velocity after collision: " << ball->GetComponent<TransformComponent>().velocity << std::endl;
 		}
 
@@ -334,7 +340,8 @@ void PongScene::Update(SceneContext& ctx)
 			rightPaddle->GetComponent<TransformComponent>().position = Vector2D(750, 320);
 
 			ball->GetComponent<TransformComponent>().position = Vector2D(450, 320);
-			ball->GetComponent<TransformComponent>().velocity = Vector2D(-1, 0);
+			currentSpeed = baseSpeed;
+			ball->GetComponent<TransformComponent>().velocity = Vector2D(1, -0.5f).Normalize() * currentSpeed;
 		}
 		else if (collidesRight) {
 			leftScore++;
@@ -342,7 +349,9 @@ void PongScene::Update(SceneContext& ctx)
 			rightPaddle->GetComponent<TransformComponent>().position = Vector2D(750, 320);
 
 			ball->GetComponent<TransformComponent>().position = Vector2D(450, 320);
-			ball->GetComponent<TransformComponent>().velocity = Vector2D(1, 0);
+
+			currentSpeed = baseSpeed;
+			ball->GetComponent<TransformComponent>().velocity = Vector2D(1, -0.5f).Normalize() * currentSpeed;
 		}
 
 		if (leftScore >= maxScore) {
