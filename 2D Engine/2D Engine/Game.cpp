@@ -29,6 +29,8 @@ const Uint8* Game::keyState = NULL;
 bool Game::isRunning = false;
 Rml::ElementDocument* Game::document = nullptr;
 Rml::EventListener* eventListner;
+int Game::windowHeight = 0;
+int Game::windowWidth = 0;
 
 Game::Game() {}
 
@@ -50,6 +52,8 @@ void Game::Init(const char* windowTitle, int height, int width, bool isFullscree
 
 		if (window) {
 			std::cout << "Window is created" << std::endl;
+			windowHeight = height;
+			windowWidth = width;
 		}
 
 		renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);

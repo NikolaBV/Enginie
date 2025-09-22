@@ -137,14 +137,9 @@ void PongScene::Update(SceneContext& ctx)
 		Vector2D ballPosition = ball->GetComponent<TransformComponent>().position;
 		Vector2D ballVelocity = ball->GetComponent<TransformComponent>().velocity;
 
-		bool collidesTop = false;
-		bool collidesBottom = false;
+		bool collidesTop =false , collidesBottom = false, collidesLeft = false, collidesRight = false;
 
-		bool collidesLeft = false;
-		bool collidesRight = false;
-
-		std::stringstream leftPaddleLabelStream;
-		std::stringstream rightPaddleLabelStream;
+		std::stringstream leftPaddleLabelStream, rightPaddleLabelStream;
 
 		leftPaddleLabelStream << "Left score: " << leftScore;
 		rightPaddleLabelStream << "Right score: " << rightScore;
@@ -161,184 +156,47 @@ void PongScene::Update(SceneContext& ctx)
 			pendingRestart = false;
 			return;
 		}
-		//TODO Implement a proper defl;ection of the ball, dont just reverse its direrction
 		if (Collision::AABB(rightPaddle->GetComponent<ColliderComponent>().collider, ball->GetComponent<ColliderComponent>().collider)) {
-			ball->GetComponent<TransformComponent>().position = ballPosition;
-
-			Vector2D normalVector;
-			Vector2D objectVelocity = ballVelocity;
-
-			std::cout << "objectVelocity vector" << objectVelocity << std::endl;
-
-			normalVector.x = -1;
-			normalVector.y = 0;
-
-			std::cout << "Normal vector" << normalVector << std::endl;
-
-			float dotProduct = normalVector.DotProduct(objectVelocity);
-			std::cout << "Dot product" << dotProduct << std::endl;
-
-			Vector2D normalVectorTimesDot;
-			normalVectorTimesDot.x = normalVector.x * dotProduct;
-			normalVectorTimesDot.y = normalVector.y * dotProduct;
-
-			std::cout << "normal Vector TimesDot" << normalVectorTimesDot << std::endl;
-
-			Vector2D twoProj;
-			twoProj.x = normalVectorTimesDot.x * 2.0f;
-			twoProj.y = normalVectorTimesDot.y * 2.0f;
-
-			std::cout << "minus Two TimesResult" << twoProj << std::endl;
-
-			Vector2D reflected;
-			reflected.x = objectVelocity.x - twoProj.x;
-			reflected.y = objectVelocity.y - twoProj.y;
-
-			ball->GetComponent<TransformComponent>().velocity = reflected;
-
-			Vector2D dir = reflected.Normalize();
-			float newSpeed = currentSpeed * 1.80f;
-			ball->GetComponent<TransformComponent>().velocity = dir * newSpeed;
-
+			Vector2D normalVector = Vector2D(-1, 0);
+			Vector2D reflection = ballVelocity.Reflection(normalVector);
+			float newSpeed = CalculateNewSpeed(1.80f);
+			ball->GetComponent<TransformComponent>().velocity = reflection * newSpeed;
 			std::cout << "Ball velocity after collision: " << ball->GetComponent<TransformComponent>().velocity << std::endl;
-
-
 		}
 		if (Collision::AABB(leftPaddle->GetComponent<ColliderComponent>().collider, ball->GetComponent<ColliderComponent>().collider)) {
-			ball->GetComponent<TransformComponent>().position = ballPosition;
-
-			Vector2D normalVector;
-			Vector2D objectVelocity = ballVelocity;
-
-			std::cout << "objectVelocity vector" << objectVelocity << std::endl;
-
-			normalVector.x = -1;
-			normalVector.y = 0;
-
-			std::cout << "Normal vector" << normalVector << std::endl;
-
-			float dotProduct = normalVector.DotProduct(objectVelocity);
-			std::cout << "Dot product" << dotProduct << std::endl;
-
-			Vector2D normalVectorTimesDot;
-			normalVectorTimesDot.x = normalVector.x * dotProduct;
-			normalVectorTimesDot.y = normalVector.y * dotProduct;
-
-			std::cout << "normal Vector TimesDot" << normalVectorTimesDot << std::endl;
-
-			Vector2D twoProj;
-			twoProj.x = normalVectorTimesDot.x * 2.0f;
-			twoProj.y = normalVectorTimesDot.y * 2.0f;
-
-			std::cout << "minus Two TimesResult" << twoProj << std::endl;
-
-			Vector2D reflected;
-			reflected.x = objectVelocity.x - twoProj.x;
-			reflected.y = objectVelocity.y - twoProj.y;
-
-			Vector2D dir = reflected.Normalize();
-			float newSpeed = currentSpeed * 1.80f;
-			ball->GetComponent<TransformComponent>().velocity = dir * newSpeed;
-
+			Vector2D normalVector = Vector2D(-1, 0);
+			Vector2D reflection = ballVelocity.Reflection(normalVector);
+			float newSpeed = CalculateNewSpeed(1.80f);
+			ball->GetComponent<TransformComponent>().velocity = reflection * newSpeed;
 			std::cout << "Ball velocity after collision: " << ball->GetComponent<TransformComponent>().velocity << std::endl;
 		}
+		SDL_Rect ballCollider = ball->GetComponent<ColliderComponent>().collider;
 
-		//std::cout << "Collider: (x: " << ball->GetComponent<ColliderComponent>().collider.x<<", y: " << ball->GetComponent<ColliderComponent>().collider.y << std::endl;
-
-		if (ball->GetComponent<ColliderComponent>().collider.y == 0) {
+		if (ballCollider.y == 0) {
 			collidesTop = true;
 		}
 
-		//TODO Remove magic numbers, add window.Height for example
-		if (ball->GetComponent<ColliderComponent>().collider.y >= 640) {
+		if (ballCollider.y >= Game::windowWidth) {
 			collidesBottom = true;
 		}
 
-		if (ball->GetComponent<ColliderComponent>().collider.x <= 0) {
-			std::cout << "Ball left collision" << std::endl;
+		if (ballCollider.x <= 0) {
 			collidesLeft = true;
 		}
-		if (ball->GetComponent<ColliderComponent>().collider.x >= 800) {
-			std::cout << "Ball Right collision" << std::endl;
+		if (ballCollider.x >= Game::windowHeight) {
 			collidesRight = true;
 		}
 
-		if (collidesTop) {
-			Vector2D normalVector;
-			Vector2D objectVelocity = ballVelocity;
-
-			std::cout << "objectVelocity vector: " << objectVelocity << std::endl;
-
-			normalVector.x = 0;
-			normalVector.y = 1;
-
-			std::cout << "Normal vector: " << normalVector << std::endl;
-
-			float dotProduct = normalVector.DotProduct(objectVelocity);
-			std::cout << "Dot product: " << dotProduct << std::endl;
-
-			Vector2D normalVectorTimesDot;
-			normalVectorTimesDot.x = normalVector.x * dotProduct;
-			normalVectorTimesDot.y = normalVector.y * dotProduct;
-
-			std::cout << "normal Vector TimesDot: " << normalVectorTimesDot << std::endl;
-
-			Vector2D twoProj;
-			twoProj.x = normalVectorTimesDot.x * 2.0f;
-			twoProj.y = normalVectorTimesDot.y * 2.0f;
-
-			std::cout << "Two times result: " << twoProj << std::endl;
-
-			Vector2D reflected;
-			reflected.x = objectVelocity.x - twoProj.x;
-			reflected.y = objectVelocity.y - twoProj.y;
-
-			ball->GetComponent<TransformComponent>().velocity = reflected;
-			std::cout << "Ball velocity after collision: " << ball->GetComponent<TransformComponent>().velocity << std::endl;
-
-			ball->GetComponent<TransformComponent>().position = ballPosition;
-		}
-		else if (collidesBottom) {
-			Vector2D normalVector;
-			Vector2D objectVelocity = ballVelocity;
-
-			std::cout << "objectVelocity vector: " << objectVelocity << std::endl;
-
-			normalVector.x = 0;
-			normalVector.y = 1;
-
-			std::cout << "Normal vector: " << normalVector << std::endl;
-
-			float dotProduct = normalVector.DotProduct(objectVelocity);
-			std::cout << "Dot product: " << dotProduct << std::endl;
-
-			Vector2D normalVectorTimesDot;
-			normalVectorTimesDot.x = normalVector.x * dotProduct;
-			normalVectorTimesDot.y = normalVector.y * dotProduct;
-
-			std::cout << "normal Vector TimesDot: " << normalVectorTimesDot << std::endl;
-
-			Vector2D twoProj;
-			twoProj.x = normalVectorTimesDot.x * 2.0f;
-			twoProj.y = normalVectorTimesDot.y * 2.0f;
-
-			std::cout << "Two times result: " << twoProj << std::endl;
-
-			Vector2D reflected;
-			reflected.x = objectVelocity.x - twoProj.x;
-			reflected.y = objectVelocity.y - twoProj.y;
-
-			ball->GetComponent<TransformComponent>().velocity = reflected;
-			std::cout << "Ball velocity after collision: " << ball->GetComponent<TransformComponent>().velocity << std::endl;
-
-			ball->GetComponent<TransformComponent>().position = ballPosition;
+		if (collidesTop || collidesBottom) {
+			Vector2D normalVector = Vector2D(0, 1);
+			Vector2D reflection = ballVelocity.Reflection(normalVector);
+			ball->GetComponent<TransformComponent>().velocity = reflection;
 		}
 
-		else if (collidesLeft) {
+		if (collidesLeft) {
 			rightScore++;
 			leftPaddle->GetComponent<TransformComponent>().position = Vector2D(50, 320);
 			rightPaddle->GetComponent<TransformComponent>().position = Vector2D(750, 320);
-
 			ball->GetComponent<TransformComponent>().position = Vector2D(450, 320);
 			currentSpeed = baseSpeed;
 			ball->GetComponent<TransformComponent>().velocity = Vector2D(1, -0.5f).Normalize() * currentSpeed;
@@ -347,9 +205,7 @@ void PongScene::Update(SceneContext& ctx)
 			leftScore++;
 			leftPaddle->GetComponent<TransformComponent>().position = Vector2D(50, 320);
 			rightPaddle->GetComponent<TransformComponent>().position = Vector2D(750, 320);
-
 			ball->GetComponent<TransformComponent>().position = Vector2D(450, 320);
-
 			currentSpeed = baseSpeed;
 			ball->GetComponent<TransformComponent>().velocity = Vector2D(1, -0.5f).Normalize() * currentSpeed;
 		}
@@ -404,4 +260,9 @@ void PongScene::ResetGame()
 	}
 	isRunningScene = true;
 	pendingRestart = false;
+}
+
+float PongScene::CalculateNewSpeed(float increasePercentage)
+{
+	return  currentSpeed * increasePercentage;
 }

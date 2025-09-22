@@ -21,6 +21,7 @@ public:
 	void Render(SceneContext& ctx) override;
 	void ResetGame();
 	Rml::String playerWinner = "";
+	float CalculateNewSpeed(float increasePercentage);
 
 private:
 	Entity* leftPaddle = nullptr;

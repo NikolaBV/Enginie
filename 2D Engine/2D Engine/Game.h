@@ -41,5 +41,6 @@ public:
 	static AssetManager* assets;
 	static Rml::Context* context;
 	static Rml::ElementDocument* document;
+	static int windowWidth, windowHeight;
 };
 

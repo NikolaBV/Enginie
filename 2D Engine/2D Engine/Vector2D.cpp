@@ -37,6 +37,26 @@ Vector2D& Vector2D::Divide(const Vector2D& vector) {
 	return *this;
 }
 
+Vector2D& Vector2D::Reflection(Vector2D& normalVector)
+{
+	float dotProduct = normalVector.DotProduct(*this);
+
+	Vector2D normalVectorTimesDot;
+	normalVectorTimesDot.x = normalVector.x * dotProduct;
+	normalVectorTimesDot.y = normalVector.y * dotProduct;
+
+	Vector2D twoProj;
+	twoProj.x = normalVectorTimesDot.x * 2.0f;
+	twoProj.y = normalVectorTimesDot.y * 2.0f;
+
+	Vector2D reflected;
+	reflected.x = this->x - twoProj.x;
+	reflected.y = this->y - twoProj.y;
+
+	Vector2D reflectionNormalized = reflected.Normalize();
+	return reflectionNormalized;
+}
+
 float Vector2D::DotProduct(const Vector2D& vector) const
 {
     return this->x * vector.x + this->y * vector.y;
