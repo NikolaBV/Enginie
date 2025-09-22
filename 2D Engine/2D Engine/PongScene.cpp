@@ -170,20 +170,19 @@ void PongScene::Update(SceneContext& ctx)
 			ball->GetComponent<TransformComponent>().velocity = reflection * newSpeed;
 			std::cout << "Ball velocity after collision: " << ball->GetComponent<TransformComponent>().velocity << std::endl;
 		}
-		SDL_Rect ballCollider = ball->GetComponent<ColliderComponent>().collider;
 
-		if (ballCollider.y == 0) {
+		if (ball->GetComponent<ColliderComponent>().collider.y == 0) {
 			collidesTop = true;
 		}
 
-		if (ballCollider.y >= Game::windowWidth) {
+		if (ball->GetComponent<ColliderComponent>().collider.y >= Game::windowWidth) {
 			collidesBottom = true;
 		}
 
-		if (ballCollider.x <= 0) {
+		if (ball->GetComponent<ColliderComponent>().collider.x <= 0) {
 			collidesLeft = true;
 		}
-		if (ballCollider.x >= Game::windowHeight) {
+		if (ball->GetComponent<ColliderComponent>().collider.x >= Game::windowHeight) {
 			collidesRight = true;
 		}
 

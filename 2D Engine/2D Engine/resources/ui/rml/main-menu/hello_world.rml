@@ -9,6 +9,7 @@
     <h1>Welcome to Enginie</h1>
 <button id="start-sandbox">Start Sandbox</button>
 <button id="start-pong">Start Pong</button>
+<button id="start-breakout">Start Breakout</button>
 <button id="quit-game">Quit Game</button>
 
 </body>

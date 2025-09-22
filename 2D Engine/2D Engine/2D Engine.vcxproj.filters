@@ -19,35 +19,47 @@
     <Filter Include="Source Files\ECS">
       <UniqueIdentifier>{0aab47c5-d344-404e-ba36-f08567895501}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Pong">
-      <UniqueIdentifier>{54708012-684f-4d2b-a920-5f43752824a2}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\Pong">
-      <UniqueIdentifier>{88353273-a2f7-4142-9967-a98a55595b55}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Sandbox">
-      <UniqueIdentifier>{062b8bb5-0a45-42bd-9926-a546e1e9d870}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\Sandbox">
-      <UniqueIdentifier>{4101722c-5aae-4651-8d91-47d95055f8bf}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\EventListners">
       <UniqueIdentifier>{54fd13c6-ce5b-4d44-b223-2621be74ed78}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\EventListners">
       <UniqueIdentifier>{a4322ae3-8622-4aeb-bfb7-c732693eb077}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Pong\EventListners">
+    <Filter Include="Source Files\Scenes">
+      <UniqueIdentifier>{8f27218a-62cc-45f8-ab4b-08e10f965f98}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Scenes\Pong">
+      <UniqueIdentifier>{54708012-684f-4d2b-a920-5f43752824a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Scenes\Pong\EventListners">
       <UniqueIdentifier>{6669f8ab-fa25-45c5-8255-1e6521a18c1d}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\Pong\EventListners">
-      <UniqueIdentifier>{bed6df99-5a79-4e4c-b396-1ec401c3c401}</UniqueIdentifier>
+    <Filter Include="Source Files\Scenes\Sandbox">
+      <UniqueIdentifier>{062b8bb5-0a45-42bd-9926-a546e1e9d870}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Sandbox\EventListners">
+    <Filter Include="Source Files\Scenes\Sandbox\EventListners">
       <UniqueIdentifier>{581304ea-67e6-4cbd-9dbc-3dd5caed009a}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\Sandbox\EventListners">
+    <Filter Include="Header Files\Scenes">
+      <UniqueIdentifier>{9408ae56-c0ad-4cc4-986c-f454ada2aba9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Scenes\Sandbox">
+      <UniqueIdentifier>{4101722c-5aae-4651-8d91-47d95055f8bf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Scenes\Sandbox\EventListners">
       <UniqueIdentifier>{566710c4-8dbd-4cf6-9f48-b2c02d733baf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Scenes\Pong">
+      <UniqueIdentifier>{88353273-a2f7-4142-9967-a98a55595b55}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Scenes\Pong\EventListners">
+      <UniqueIdentifier>{bed6df99-5a79-4e4c-b396-1ec401c3c401}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Scenes\Breakout">
+      <UniqueIdentifier>{62079cc5-7e2a-438b-9c6a-556e44c23a62}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Scenes\Breakout">
+      <UniqueIdentifier>{f1b17ac7-0b3d-405f-8d31-8e883ab433a3}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -100,7 +112,7 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="PongScene.cpp">
-      <Filter>Source Files\Pong</Filter>
+      <Filter>Source Files\Scenes\Pong</Filter>
     </ClCompile>
     <ClCompile Include="Scene.cpp">
       <Filter>Source Files</Filter>
@@ -115,7 +127,7 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SandboxScene.cpp">
-      <Filter>Source Files\Sandbox</Filter>
+      <Filter>Source Files\Scenes\Sandbox</Filter>
     </ClCompile>
     <ClCompile Include="InputScheme.h">
       <Filter>Header Files</Filter>
@@ -133,7 +145,10 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="StartGameListner.cpp">
-      <Filter>Source Files\Sandbox\EventListners</Filter>
+      <Filter>Source Files\Scenes\Sandbox\EventListners</Filter>
+    </ClCompile>
+    <ClCompile Include="Breakout.cpp">
+      <Filter>Source Files\Scenes\Breakout</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -183,13 +198,13 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="PongScene.h">
-      <Filter>Header Files\Pong</Filter>
+      <Filter>Header Files\Scenes\Pong</Filter>
     </ClInclude>
     <ClInclude Include="Scene.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SandboxScene.h">
-      <Filter>Header Files\Sandbox</Filter>
+      <Filter>Header Files\Scenes\Sandbox</Filter>
     </ClInclude>
     <ClInclude Include="Groups.h">
       <Filter>Header Files</Filter>
@@ -216,7 +231,10 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="StartGameListner.h">
-      <Filter>Header Files\Sandbox\EventListners</Filter>
+      <Filter>Header Files\Scenes\Sandbox\EventListners</Filter>
+    </ClInclude>
+    <ClInclude Include="Breakout.h">
+      <Filter>Header Files\Scenes\Breakout</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

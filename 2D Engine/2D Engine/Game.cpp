@@ -13,6 +13,7 @@
 
 #include "SandboxScene.h"
 #include "PongScene.h"
+#include "Breakout.h"
 
 #include <sstream>
 #include "QuitGameListner.h"
@@ -144,7 +145,10 @@ void Game::Init(const char* windowTitle, int height, int width, bool isFullscree
 		static StartGameListener startListener(this, new PongScene());
 		startPongElement->AddEventListener("click", &startListener);
 	}
-
+	if (Rml::Element* startBreakoutElement = document->GetElementById("start-breakout")) {
+		static StartGameListener startListener(this, new Breakout());
+		startBreakoutElement->AddEventListener("click", &startListener);
+	}
 	else {
 		std::cout << "Could not find start-game element" << std::endl;
 	}
