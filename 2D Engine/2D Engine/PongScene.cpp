@@ -21,13 +21,12 @@ void PongScene::OnEnter(SceneContext& ctx)
 
 	std::cout << "Pong scene loaded" << std::endl;
 
-	int windowWidth = 0, windowHeight = 0;
-	SDL_GetRendererOutputSize(Game::renderer, &windowWidth, &windowHeight);
+	SDL_GetRendererOutputSize(Game::renderer, &Game::windowWidth, &Game::windowHeight);
 
-	net.x = windowWidth / 2 - 2;
+	net.x = Game::windowWidth / 2 - 2;
 	net.y = 0;
 	net.w = 4;
-	net.h = windowHeight;
+	net.h = Game::windowHeight;
 
 	assets.AddTexture("paddle", "resources/tiles/whiteTile.png");
 	assets.AddFont("stardew", "resources/fonts/Stardew_Valley.otf", 16);
@@ -175,14 +174,14 @@ void PongScene::Update(SceneContext& ctx)
 			collidesTop = true;
 		}
 
-		if (ball->GetComponent<ColliderComponent>().collider.y >= Game::windowWidth) {
+		if (ball->GetComponent<ColliderComponent>().collider.y >= Game::windowHeight) {
 			collidesBottom = true;
 		}
 
 		if (ball->GetComponent<ColliderComponent>().collider.x <= 0) {
 			collidesLeft = true;
 		}
-		if (ball->GetComponent<ColliderComponent>().collider.x >= Game::windowHeight) {
+		if (ball->GetComponent<ColliderComponent>().collider.x >= Game::windowWidth) {
 			collidesRight = true;
 		}
 
