@@ -82,8 +82,8 @@ public:
 		destinationRect.x = static_cast<int>(transform->position.x) - Game::camera.x;
 		destinationRect.y = static_cast<int>(transform->position.y) - Game::camera.y;
 
-		destinationRect.w = transform->width * transform->scale;
-		destinationRect.h = transform->height * transform->scale;
+		destinationRect.w = static_cast<int>(transform->width * transform->scale);
+		destinationRect.h = static_cast<int>(transform->height * transform->scale);
 	}
 
 	void Draw() override

@@ -19,19 +19,19 @@ void Breakout::OnEnter(SceneContext& ctx)
 
 	std::map<SDL_Scancode, const char*> playerControlsMap = { {SDL_SCANCODE_A, "whiteTile"}, {SDL_SCANCODE_D, "whiteTile"} };
 
-	playerPaddle->AddComponent<TransformComponent>(360, 550, 5, 80, 2);
+	playerPaddle->AddComponent<TransformComponent>(360.0f, 550.0f, 5, 80, 2.0f);
 	playerPaddle->AddComponent<SpriteComponent>(assets, "whiteTile", false);
 	playerPaddle->AddComponent<KeyboardController>(assets, Game::keyState, playerControlsMap, true, false, InputScheme::WASD);
 	playerPaddle->AddGroup(GroupLabels::groupPlayers);
 
-	ball->AddComponent<TransformComponent>(400, 400, 5, 5, 2);
+	ball->AddComponent<TransformComponent>(400.0f, 400.0f, 5, 5, 2.0f);
 	ball->AddComponent<SpriteComponent>(assets, "whiteTile", false);
 	ball->AddGroup(GroupLabels::groupProjectiles);
 
 
 	std::cout << "Darkblue: " << static_cast<RectangleColor>(DarkBlue) << std::endl;
 
-	for (int colorInt = Red; colorInt != Last; colorInt++) {
+	for (int colorInt = Red; colorInt <= 4; colorInt++) {
 		DrawColliderRectanglesRow(static_cast<RectangleColor>(colorInt));
 	}
 
@@ -58,15 +58,16 @@ void Breakout::Render(SceneContext& ctx)
 	auto& projectiles(manager.GetGroup(GroupLabels::groupProjectiles));
 	auto& colliders(manager.GetGroup(GroupLabels::groupColliders));
 
-
 	for (auto& player : players) {
 		player->Draw();
 	}
-	for (auto& projectile : projectiles) {
-		projectile->Draw();
-	}
+
 	for (auto& collider : colliders) {
 		collider->Draw();
+	}
+
+	for (auto& projectile : projectiles) {
+		projectile->Draw();
 	}
 }
 
@@ -81,7 +82,7 @@ void Breakout::DrawColliderRectanglesRow(RectangleColor color)
 		RecntangleCollider newRectangleCollider;
 		newRectangleCollider.entity = tempRectangleEntity;
 
-		tempRectangleEntity->AddComponent<TransformComponent>(xPosition, collider_row_y_position, COLLIDER_RECTANGLE_HEIGHT, COLLIDER_RECTANGLE_WIDTH, 2);
+		tempRectangleEntity->AddComponent<TransformComponent>(static_cast<float>(xPosition), static_cast<float>(collider_row_y_position), COLLIDER_RECTANGLE_HEIGHT, COLLIDER_RECTANGLE_WIDTH, 2.0f);
 		tempRectangleEntity->AddComponent<SpriteComponent>(assets, colorsTextureIdMap[color], false);
 		tempRectangleEntity->AddGroup(GroupLabels::groupColliders);
 

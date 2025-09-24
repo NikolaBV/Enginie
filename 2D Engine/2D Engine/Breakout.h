@@ -12,7 +12,6 @@ enum RectangleColor {
 	DarkGreen,
 	LightGreen,
 	DarkBlue,
-	Last
 };
 
 struct RecntangleCollider {

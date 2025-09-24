@@ -102,8 +102,8 @@ void SandboxScene::Update(SceneContext& sceneContext)
 			}
 		}
 
-		Game::camera.x = playerEntity->GetComponent<TransformComponent>().position.x - 400;
-		Game::camera.y = playerEntity->GetComponent<TransformComponent>().position.y - 320;
+		Game::camera.x = static_cast<int>(playerEntity->GetComponent<TransformComponent>().position.x) - 400;
+		Game::camera.y = static_cast<int>(playerEntity->GetComponent<TransformComponent>().position.y) - 320;
 
 		// Map size: 10x10 tiles * 128 pixels = 1280x1280 pixels
 		const int mapWidth = 10 * 128;  // 1280 pixels

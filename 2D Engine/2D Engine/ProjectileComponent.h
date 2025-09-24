@@ -10,7 +10,7 @@ private:
 
 	int range = 0;
 	int speed = 0;
-	unsigned int distance = 0;
+	int distance = 0;
 	Vector2D velocity;
 
 public:

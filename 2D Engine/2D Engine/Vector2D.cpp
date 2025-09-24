@@ -49,12 +49,11 @@ Vector2D& Vector2D::Reflection(Vector2D& normalVector)
 	twoProj.x = normalVectorTimesDot.x * 2.0f;
 	twoProj.y = normalVectorTimesDot.y * 2.0f;
 
-	Vector2D reflected;
-	reflected.x = this->x - twoProj.x;
-	reflected.y = this->y - twoProj.y;
+	this->x = this->x - twoProj.x;
+	this->y = this->y - twoProj.y;
 
-	Vector2D reflectionNormalized = reflected.Normalize();
-	return reflectionNormalized;
+	this->Normalize();
+	return *this;
 }
 
 float Vector2D::DotProduct(const Vector2D& vector) const

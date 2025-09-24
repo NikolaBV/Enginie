@@ -20,8 +20,8 @@ public:
 	TileComponent(AssetManager& assetManager, int sourceX, int sourceY, int xPosition, int yPosition, std::string textureId, int tileSize, int tileScale) {
 		texture = assetManager.GetTexture(textureId);
 
-		position.x = xPosition;
-		position.y = yPosition;
+		position.x = static_cast<float>(xPosition);
+		position.y = static_cast<float>(yPosition);
 
 
 		sourceRect.x = sourceX;
@@ -37,8 +37,8 @@ public:
 	}
 
 	void Update() override {
-		destinationRect.x = position.x - Game::camera.x;
-		destinationRect.y = position.y - Game::camera.y;
+		destinationRect.x = static_cast<int>(position.x) - Game::camera.x;
+		destinationRect.y = static_cast<int>(position.y) - Game::camera.y;
 	}
 
 	~TileComponent() {
