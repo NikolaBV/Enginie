@@ -22,7 +22,7 @@ public:
 	Game();
 	~Game();
 
-	void Init(const char* windowTitle, int height, int width, bool isFullscreen);
+	void Init(const char* windowTitle, int width, int height, bool isFullscreen);
 
 	void SetScene(Scene* scene);
 

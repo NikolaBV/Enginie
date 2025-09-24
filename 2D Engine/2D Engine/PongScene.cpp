@@ -57,7 +57,7 @@ void PongScene::OnEnter(SceneContext& ctx)
 
 	SDL_Color whiteColor = { 255,255,255,255 };
 	leftScoreLabel->AddComponent<UILabelComponent>(assets, 10, 10, "Score Player 1", "stardew", whiteColor);
-	rightScoreLabel->AddComponent<UILabelComponent>(assets, 700,10, "Score Player 2", "stardew", whiteColor);
+	rightScoreLabel->AddComponent<UILabelComponent>(assets, 700, 10, "Score Player 2", "stardew", whiteColor);
 
 	Game::assets = &assets;
 
@@ -69,7 +69,7 @@ void PongScene::OnEnter(SceneContext& ctx)
 
 			playerWinner = e.entity->GetComponent<ColliderComponent>().tag;
 
-		if (Rml::DataModelConstructor constructor = Game::context->CreateDataModel("winners"))
+			if (Rml::DataModelConstructor constructor = Game::context->CreateDataModel("winners"))
 			{
 				constructor.Bind("winner-player", &winner_data.winner_player);
 				constructor.Bind("winner", &playerWinner);
@@ -102,28 +102,28 @@ void PongScene::OnEnter(SceneContext& ctx)
 
 void PongScene::OnExit(SceneContext& ctx)
 {
-    if (leftPaddle) leftPaddle->Destroy();
-    if (rightPaddle) rightPaddle->Destroy();
-    if (ball) ball->Destroy();
-    if (leftScoreLabel) leftScoreLabel->Destroy();
-    if (rightScoreLabel) rightScoreLabel->Destroy();
+	if (leftPaddle) leftPaddle->Destroy();
+	if (rightPaddle) rightPaddle->Destroy();
+	if (ball) ball->Destroy();
+	if (leftScoreLabel) leftScoreLabel->Destroy();
+	if (rightScoreLabel) rightScoreLabel->Destroy();
 
-    manager.refresh();
+	manager.refresh();
 
-    if (gameOver) {
-        gameOver->Close();
-        gameOver = nullptr;
-    }
+	if (gameOver) {
+		gameOver->Close();
+		gameOver = nullptr;
+	}
 
-    Game::assets = nullptr;
+	Game::assets = nullptr;
 
-    leftPaddle = nullptr;
-    rightPaddle = nullptr;
-    ball = nullptr;
-    leftScoreLabel = nullptr;
-    rightScoreLabel = nullptr;
-    pendingRestart = false;
-    isRunningScene = false;
+	leftPaddle = nullptr;
+	rightPaddle = nullptr;
+	ball = nullptr;
+	leftScoreLabel = nullptr;
+	rightScoreLabel = nullptr;
+	pendingRestart = false;
+	isRunningScene = false;
 }
 
 void PongScene::HandleEvent(SceneContext& ctx, const SDL_Event& e)
@@ -137,7 +137,7 @@ void PongScene::Update(SceneContext& ctx)
 		Vector2D ballPosition = ball->GetComponent<TransformComponent>().position;
 		Vector2D ballVelocity = ball->GetComponent<TransformComponent>().velocity;
 
-		bool collidesTop =false , collidesBottom = false, collidesLeft = false, collidesRight = false;
+		bool collidesTop = false, collidesBottom = false, collidesLeft = false, collidesRight = false;
 
 		std::stringstream leftPaddleLabelStream, rightPaddleLabelStream;
 

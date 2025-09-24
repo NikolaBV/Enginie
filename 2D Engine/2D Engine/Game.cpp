@@ -37,7 +37,7 @@ Game::Game() {}
 
 Game::~Game() {}
 
-void Game::Init(const char* windowTitle, int height, int width, bool isFullscreen) {
+void Game::Init(const char* windowTitle, int width, int height, bool isFullscreen) {
 
 #pragma region SDL Initlization
 	int flags = 0;
@@ -49,7 +49,7 @@ void Game::Init(const char* windowTitle, int height, int width, bool isFullscree
 	if (SDL_Init(SDL_INIT_EVERYTHING) == 0) {
 		std::cout << "SDL is initialized" << std::endl;
 
-		window = SDL_CreateWindow(windowTitle, SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, height, width, flags);
+		window = SDL_CreateWindow(windowTitle, SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, width, height, flags);
 
 		if (window) {
 			std::cout << "Window is created" << std::endl;
@@ -100,7 +100,7 @@ void Game::Init(const char* windowTitle, int height, int width, bool isFullscree
 		std::cout << "rmlInit initlised" << std::endl;
 	}
 
-	Rml::Context* localContext = Rml::CreateContext("default", Rml::Vector2i(height, width));
+	Rml::Context* localContext = Rml::CreateContext("default", Rml::Vector2i(width, height));
 	if (localContext) {
 		std::cout << "RmlUi context initlised" << std::endl;
 		context = localContext;
