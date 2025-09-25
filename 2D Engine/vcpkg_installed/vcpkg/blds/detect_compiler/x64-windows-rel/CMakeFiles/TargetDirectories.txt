@@ -1,2 +1,2 @@
-D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/detect_compiler/x64-windows-rel/CMakeFiles/edit_cache.dir
-D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/detect_compiler/x64-windows-rel/CMakeFiles/rebuild_cache.dir
+C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/detect_compiler/x64-windows-rel/CMakeFiles/edit_cache.dir
+C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/detect_compiler/x64-windows-rel/CMakeFiles/rebuild_cache.dir

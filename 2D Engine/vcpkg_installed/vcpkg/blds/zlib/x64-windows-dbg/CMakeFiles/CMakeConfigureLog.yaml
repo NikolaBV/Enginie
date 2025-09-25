@@ -31,7 +31,7 @@ events:
       Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.obj"
       
       The C compiler identification is MSVC, found in:
-        D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/zlib/x64-windows-dbg/CMakeFiles/3.31.6-msvc6/CompilerIdC/CMakeCCompilerId.exe
+        C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/zlib/x64-windows-dbg/CMakeFiles/3.31.6-msvc6/CompilerIdC/CMakeCCompilerId.exe
       
   -
     kind: "message-v1"
@@ -43,7 +43,7 @@ events:
     message: |
       Detecting C compiler /showIncludes prefix:
         main.c
-        Note: including file: D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\CMakeFiles\\ShowIncludes\\foo.h
+        Note: including file: C:\\Programming\\C++\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\CMakeFiles\\ShowIncludes\\foo.h
         
       Found prefix "Note: including file: "
   -
@@ -55,8 +55,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/zlib/x64-windows-dbg/CMakeFiles/CMakeScratch/TryCompile-b5m248"
-      binary: "D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/zlib/x64-windows-dbg/CMakeFiles/CMakeScratch/TryCompile-b5m248"
+      source: "C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/zlib/x64-windows-dbg/CMakeFiles/CMakeScratch/TryCompile-rgrtjn"
+      binary: "C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/zlib/x64-windows-dbg/CMakeFiles/CMakeScratch/TryCompile-rgrtjn"
     cmakeVariables:
       CMAKE_C_FLAGS: " /nologo /DWIN32 /D_WINDOWS /utf-8 /MP "
       CMAKE_C_FLAGS_DEBUG: "/MDd /Z7 /Ob0 /Od /RTC1 "
@@ -71,7 +71,7 @@ events:
       VCPKG_C_FLAGS: ""
       VCPKG_C_FLAGS_DEBUG: ""
       VCPKG_C_FLAGS_RELEASE: ""
-      VCPKG_INSTALLED_DIR: "D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed"
+      VCPKG_INSTALLED_DIR: "C:/Programming/C++/Enginie/2D Engine/vcpkg_installed"
       VCPKG_LINKER_FLAGS: ""
       VCPKG_LINKER_FLAGS_DEBUG: ""
       VCPKG_LINKER_FLAGS_RELEASE: ""
@@ -85,11 +85,11 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/zlib/x64-windows-dbg/CMakeFiles/CMakeScratch/TryCompile-b5m248'
+        Change Dir: 'C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/zlib/x64-windows-dbg/CMakeFiles/CMakeScratch/TryCompile-rgrtjn'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_0ccdf
-        [1/2] C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /nologo /DWIN32 /D_WINDOWS /utf-8 /MP   /MDd /Z7 /Ob0 /Od /RTC1  -MDd /showIncludes /FoCMakeFiles\\cmTC_0ccdf.dir\\CMakeCCompilerABI.c.obj /FdCMakeFiles\\cmTC_0ccdf.dir\\ /FS -c "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.31\\Modules\\CMakeCCompilerABI.c"
-        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_0ccdf.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_0ccdf.dir\\CMakeCCompilerABI.c.obj  /out:cmTC_0ccdf.exe /implib:cmTC_0ccdf.lib /pdb:cmTC_0ccdf.pdb /version:0.0 /machine:x64  /nologo    /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_f23c7
+        [1/2] C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /nologo /DWIN32 /D_WINDOWS /utf-8 /MP   /MDd /Z7 /Ob0 /Od /RTC1  -MDd /showIncludes /FoCMakeFiles\\cmTC_f23c7.dir\\CMakeCCompilerABI.c.obj /FdCMakeFiles\\cmTC_f23c7.dir\\ /FS -c "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.31\\Modules\\CMakeCCompilerABI.c"
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_f23c7.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_f23c7.dir\\CMakeCCompilerABI.c.obj  /out:cmTC_f23c7.exe /implib:cmTC_f23c7.lib /pdb:cmTC_f23c7.pdb /version:0.0 /machine:x64  /nologo    /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
         
       exitCode: 0
   -
@@ -102,7 +102,7 @@ events:
       Parsed C implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?))("|,| |$)]
-        linker tool for 'C': C:/PROGRA~1/MICROS~2/2022/COMMUN~1/VC/Tools/MSVC/1444~1.352/bin/Hostx64/x64/link.exe
+        linker tool for 'C': C:/PROGRA~1/MICROS~1/2022/COMMUN~1/VC/Tools/MSVC/1444~1.352/bin/Hostx64/x64/link.exe
         implicit libs: []
         implicit objs: []
         implicit dirs: []
@@ -117,8 +117,8 @@ events:
       - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
       - "CMakeLists.txt:4 (project)"
     message: |
-      Running the C compiler's linker: "C:/PROGRA~1/MICROS~2/2022/COMMUN~1/VC/Tools/MSVC/1444~1.352/bin/Hostx64/x64/link.exe" "-v"
-      Microsoft (R) Incremental Linker Version 14.44.35214.0
+      Running the C compiler's linker: "C:/PROGRA~1/MICROS~1/2022/COMMUN~1/VC/Tools/MSVC/1444~1.352/bin/Hostx64/x64/link.exe" "-v"
+      Microsoft (R) Incremental Linker Version 14.44.35213.0
       Copyright (C) Microsoft Corporation.  All rights reserved.
   -
     kind: "try_compile-v1"
@@ -128,8 +128,8 @@ events:
     checks:
       - "Looking for sys/types.h"
     directories:
-      source: "D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/zlib/x64-windows-dbg/CMakeFiles/CMakeScratch/TryCompile-dzn5b4"
-      binary: "D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/zlib/x64-windows-dbg/CMakeFiles/CMakeScratch/TryCompile-dzn5b4"
+      source: "C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/zlib/x64-windows-dbg/CMakeFiles/CMakeScratch/TryCompile-3ka2ii"
+      binary: "C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/zlib/x64-windows-dbg/CMakeFiles/CMakeScratch/TryCompile-3ka2ii"
     cmakeVariables:
       CMAKE_C_FLAGS: " /nologo /DWIN32 /D_WINDOWS /utf-8 /MP "
       CMAKE_C_FLAGS_DEBUG: "/MDd /Z7 /Ob0 /Od /RTC1 "
@@ -144,7 +144,7 @@ events:
       VCPKG_C_FLAGS: ""
       VCPKG_C_FLAGS_DEBUG: ""
       VCPKG_C_FLAGS_RELEASE: ""
-      VCPKG_INSTALLED_DIR: "D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed"
+      VCPKG_INSTALLED_DIR: "C:/Programming/C++/Enginie/2D Engine/vcpkg_installed"
       VCPKG_LINKER_FLAGS: ""
       VCPKG_LINKER_FLAGS_DEBUG: ""
       VCPKG_LINKER_FLAGS_RELEASE: ""
@@ -158,11 +158,11 @@ events:
       variable: "HAVE_SYS_TYPES_H"
       cached: true
       stdout: |
-        Change Dir: 'D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/zlib/x64-windows-dbg/CMakeFiles/CMakeScratch/TryCompile-dzn5b4'
+        Change Dir: 'C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/zlib/x64-windows-dbg/CMakeFiles/CMakeScratch/TryCompile-3ka2ii'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_74ec5
-        [1/2] C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /nologo /DWIN32 /D_WINDOWS /utf-8 /MP   /MDd /Z7 /Ob0 /Od /RTC1  -MDd /showIncludes /FoCMakeFiles\\cmTC_74ec5.dir\\CheckIncludeFile.c.obj /FdCMakeFiles\\cmTC_74ec5.dir\\ /FS -c "D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\CMakeFiles\\CMakeScratch\\TryCompile-dzn5b4\\CheckIncludeFile.c"
-        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_74ec5.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_74ec5.dir\\CheckIncludeFile.c.obj  /out:cmTC_74ec5.exe /implib:cmTC_74ec5.lib /pdb:cmTC_74ec5.pdb /version:0.0 /machine:x64  /nologo    /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_51976
+        [1/2] C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /nologo /DWIN32 /D_WINDOWS /utf-8 /MP   /MDd /Z7 /Ob0 /Od /RTC1  -MDd /showIncludes /FoCMakeFiles\\cmTC_51976.dir\\CheckIncludeFile.c.obj /FdCMakeFiles\\cmTC_51976.dir\\ /FS -c "C:\\Programming\\C++\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\CMakeFiles\\CMakeScratch\\TryCompile-3ka2ii\\CheckIncludeFile.c"
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_51976.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_51976.dir\\CheckIncludeFile.c.obj  /out:cmTC_51976.exe /implib:cmTC_51976.lib /pdb:cmTC_51976.pdb /version:0.0 /machine:x64  /nologo    /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
         
       exitCode: 0
   -
@@ -173,8 +173,8 @@ events:
     checks:
       - "Looking for stdint.h"
     directories:
-      source: "D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/zlib/x64-windows-dbg/CMakeFiles/CMakeScratch/TryCompile-4cho7l"
-      binary: "D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/zlib/x64-windows-dbg/CMakeFiles/CMakeScratch/TryCompile-4cho7l"
+      source: "C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/zlib/x64-windows-dbg/CMakeFiles/CMakeScratch/TryCompile-z1szv3"
+      binary: "C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/zlib/x64-windows-dbg/CMakeFiles/CMakeScratch/TryCompile-z1szv3"
     cmakeVariables:
       CMAKE_C_FLAGS: " /nologo /DWIN32 /D_WINDOWS /utf-8 /MP "
       CMAKE_C_FLAGS_DEBUG: "/MDd /Z7 /Ob0 /Od /RTC1 "
@@ -189,7 +189,7 @@ events:
       VCPKG_C_FLAGS: ""
       VCPKG_C_FLAGS_DEBUG: ""
       VCPKG_C_FLAGS_RELEASE: ""
-      VCPKG_INSTALLED_DIR: "D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed"
+      VCPKG_INSTALLED_DIR: "C:/Programming/C++/Enginie/2D Engine/vcpkg_installed"
       VCPKG_LINKER_FLAGS: ""
       VCPKG_LINKER_FLAGS_DEBUG: ""
       VCPKG_LINKER_FLAGS_RELEASE: ""
@@ -203,11 +203,11 @@ events:
       variable: "HAVE_STDINT_H"
       cached: true
       stdout: |
-        Change Dir: 'D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/zlib/x64-windows-dbg/CMakeFiles/CMakeScratch/TryCompile-4cho7l'
+        Change Dir: 'C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/zlib/x64-windows-dbg/CMakeFiles/CMakeScratch/TryCompile-z1szv3'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_78a99
-        [1/2] C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /nologo /DWIN32 /D_WINDOWS /utf-8 /MP   /MDd /Z7 /Ob0 /Od /RTC1  -MDd /showIncludes /FoCMakeFiles\\cmTC_78a99.dir\\CheckIncludeFile.c.obj /FdCMakeFiles\\cmTC_78a99.dir\\ /FS -c "D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\CMakeFiles\\CMakeScratch\\TryCompile-4cho7l\\CheckIncludeFile.c"
-        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_78a99.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_78a99.dir\\CheckIncludeFile.c.obj  /out:cmTC_78a99.exe /implib:cmTC_78a99.lib /pdb:cmTC_78a99.pdb /version:0.0 /machine:x64  /nologo    /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_5dcfd
+        [1/2] C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /nologo /DWIN32 /D_WINDOWS /utf-8 /MP   /MDd /Z7 /Ob0 /Od /RTC1  -MDd /showIncludes /FoCMakeFiles\\cmTC_5dcfd.dir\\CheckIncludeFile.c.obj /FdCMakeFiles\\cmTC_5dcfd.dir\\ /FS -c "C:\\Programming\\C++\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\CMakeFiles\\CMakeScratch\\TryCompile-z1szv3\\CheckIncludeFile.c"
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_5dcfd.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_5dcfd.dir\\CheckIncludeFile.c.obj  /out:cmTC_5dcfd.exe /implib:cmTC_5dcfd.lib /pdb:cmTC_5dcfd.pdb /version:0.0 /machine:x64  /nologo    /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
         
       exitCode: 0
   -
@@ -218,8 +218,8 @@ events:
     checks:
       - "Looking for stddef.h"
     directories:
-      source: "D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/zlib/x64-windows-dbg/CMakeFiles/CMakeScratch/TryCompile-zm1pnl"
-      binary: "D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/zlib/x64-windows-dbg/CMakeFiles/CMakeScratch/TryCompile-zm1pnl"
+      source: "C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/zlib/x64-windows-dbg/CMakeFiles/CMakeScratch/TryCompile-lncwiz"
+      binary: "C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/zlib/x64-windows-dbg/CMakeFiles/CMakeScratch/TryCompile-lncwiz"
     cmakeVariables:
       CMAKE_C_FLAGS: " /nologo /DWIN32 /D_WINDOWS /utf-8 /MP "
       CMAKE_C_FLAGS_DEBUG: "/MDd /Z7 /Ob0 /Od /RTC1 "
@@ -234,7 +234,7 @@ events:
       VCPKG_C_FLAGS: ""
       VCPKG_C_FLAGS_DEBUG: ""
       VCPKG_C_FLAGS_RELEASE: ""
-      VCPKG_INSTALLED_DIR: "D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed"
+      VCPKG_INSTALLED_DIR: "C:/Programming/C++/Enginie/2D Engine/vcpkg_installed"
       VCPKG_LINKER_FLAGS: ""
       VCPKG_LINKER_FLAGS_DEBUG: ""
       VCPKG_LINKER_FLAGS_RELEASE: ""
@@ -248,11 +248,11 @@ events:
       variable: "HAVE_STDDEF_H"
       cached: true
       stdout: |
-        Change Dir: 'D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/zlib/x64-windows-dbg/CMakeFiles/CMakeScratch/TryCompile-zm1pnl'
+        Change Dir: 'C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/zlib/x64-windows-dbg/CMakeFiles/CMakeScratch/TryCompile-lncwiz'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_82a5c
-        [1/2] C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /nologo /DWIN32 /D_WINDOWS /utf-8 /MP   /MDd /Z7 /Ob0 /Od /RTC1  -MDd /showIncludes /FoCMakeFiles\\cmTC_82a5c.dir\\CheckIncludeFile.c.obj /FdCMakeFiles\\cmTC_82a5c.dir\\ /FS -c "D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\CMakeFiles\\CMakeScratch\\TryCompile-zm1pnl\\CheckIncludeFile.c"
-        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_82a5c.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_82a5c.dir\\CheckIncludeFile.c.obj  /out:cmTC_82a5c.exe /implib:cmTC_82a5c.lib /pdb:cmTC_82a5c.pdb /version:0.0 /machine:x64  /nologo    /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_b7a15
+        [1/2] C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /nologo /DWIN32 /D_WINDOWS /utf-8 /MP   /MDd /Z7 /Ob0 /Od /RTC1  -MDd /showIncludes /FoCMakeFiles\\cmTC_b7a15.dir\\CheckIncludeFile.c.obj /FdCMakeFiles\\cmTC_b7a15.dir\\ /FS -c "C:\\Programming\\C++\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\CMakeFiles\\CMakeScratch\\TryCompile-lncwiz\\CheckIncludeFile.c"
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_b7a15.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_b7a15.dir\\CheckIncludeFile.c.obj  /out:cmTC_b7a15.exe /implib:cmTC_b7a15.lib /pdb:cmTC_b7a15.pdb /version:0.0 /machine:x64  /nologo    /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
         
       exitCode: 0
   -
@@ -264,8 +264,8 @@ events:
     checks:
       - "Check size of off64_t"
     directories:
-      source: "D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/zlib/x64-windows-dbg/CMakeFiles/CMakeScratch/TryCompile-fsppiz"
-      binary: "D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/zlib/x64-windows-dbg/CMakeFiles/CMakeScratch/TryCompile-fsppiz"
+      source: "C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/zlib/x64-windows-dbg/CMakeFiles/CMakeScratch/TryCompile-4br0q9"
+      binary: "C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/zlib/x64-windows-dbg/CMakeFiles/CMakeScratch/TryCompile-4br0q9"
     cmakeVariables:
       CMAKE_C_FLAGS: " /nologo /DWIN32 /D_WINDOWS /utf-8 /MP "
       CMAKE_C_FLAGS_DEBUG: "/MDd /Z7 /Ob0 /Od /RTC1 "
@@ -280,7 +280,7 @@ events:
       VCPKG_C_FLAGS: ""
       VCPKG_C_FLAGS_DEBUG: ""
       VCPKG_C_FLAGS_RELEASE: ""
-      VCPKG_INSTALLED_DIR: "D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed"
+      VCPKG_INSTALLED_DIR: "C:/Programming/C++/Enginie/2D Engine/vcpkg_installed"
       VCPKG_LINKER_FLAGS: ""
       VCPKG_LINKER_FLAGS_DEBUG: ""
       VCPKG_LINKER_FLAGS_RELEASE: ""
@@ -294,17 +294,17 @@ events:
       variable: "HAVE_OFF64_T"
       cached: true
       stdout: |
-        Change Dir: 'D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/zlib/x64-windows-dbg/CMakeFiles/CMakeScratch/TryCompile-fsppiz'
+        Change Dir: 'C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/zlib/x64-windows-dbg/CMakeFiles/CMakeScratch/TryCompile-4br0q9'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_21aed
-        [1/2] C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo -DHAVE_STDDEF_H -DHAVE_STDINT_H -DHAVE_SYS_TYPES_H -D_LARGEFILE64_SOURCE=1  /nologo /DWIN32 /D_WINDOWS /utf-8 /MP   /MDd /Z7 /Ob0 /Od /RTC1  -MDd /showIncludes /FoCMakeFiles\\cmTC_21aed.dir\\OFF64_T.c.obj /FdCMakeFiles\\cmTC_21aed.dir\\ /FS -c "D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\CMakeFiles\\CMakeScratch\\TryCompile-fsppiz\\OFF64_T.c"
-        FAILED: CMakeFiles/cmTC_21aed.dir/OFF64_T.c.obj 
-        C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo -DHAVE_STDDEF_H -DHAVE_STDINT_H -DHAVE_SYS_TYPES_H -D_LARGEFILE64_SOURCE=1  /nologo /DWIN32 /D_WINDOWS /utf-8 /MP   /MDd /Z7 /Ob0 /Od /RTC1  -MDd /showIncludes /FoCMakeFiles\\cmTC_21aed.dir\\OFF64_T.c.obj /FdCMakeFiles\\cmTC_21aed.dir\\ /FS -c "D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\CMakeFiles\\CMakeScratch\\TryCompile-fsppiz\\OFF64_T.c"
-        D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\CMakeFiles\\CMakeScratch\\TryCompile-fsppiz\\OFF64_T.c(29): error C2065: 'off64_t': undeclared identifier
-        D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\CMakeFiles\\CMakeScratch\\TryCompile-fsppiz\\OFF64_T.c(30): error C2065: 'off64_t': undeclared identifier
-        D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\CMakeFiles\\CMakeScratch\\TryCompile-fsppiz\\OFF64_T.c(31): error C2065: 'off64_t': undeclared identifier
-        D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\CMakeFiles\\CMakeScratch\\TryCompile-fsppiz\\OFF64_T.c(32): error C2065: 'off64_t': undeclared identifier
-        D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\CMakeFiles\\CMakeScratch\\TryCompile-fsppiz\\OFF64_T.c(33): error C2065: 'off64_t': undeclared identifier
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_8b0a7
+        [1/2] C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo -DHAVE_STDDEF_H -DHAVE_STDINT_H -DHAVE_SYS_TYPES_H -D_LARGEFILE64_SOURCE=1  /nologo /DWIN32 /D_WINDOWS /utf-8 /MP   /MDd /Z7 /Ob0 /Od /RTC1  -MDd /showIncludes /FoCMakeFiles\\cmTC_8b0a7.dir\\OFF64_T.c.obj /FdCMakeFiles\\cmTC_8b0a7.dir\\ /FS -c "C:\\Programming\\C++\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\CMakeFiles\\CMakeScratch\\TryCompile-4br0q9\\OFF64_T.c"
+        FAILED: CMakeFiles/cmTC_8b0a7.dir/OFF64_T.c.obj 
+        C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo -DHAVE_STDDEF_H -DHAVE_STDINT_H -DHAVE_SYS_TYPES_H -D_LARGEFILE64_SOURCE=1  /nologo /DWIN32 /D_WINDOWS /utf-8 /MP   /MDd /Z7 /Ob0 /Od /RTC1  -MDd /showIncludes /FoCMakeFiles\\cmTC_8b0a7.dir\\OFF64_T.c.obj /FdCMakeFiles\\cmTC_8b0a7.dir\\ /FS -c "C:\\Programming\\C++\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\CMakeFiles\\CMakeScratch\\TryCompile-4br0q9\\OFF64_T.c"
+        C:\\Programming\\C++\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\CMakeFiles\\CMakeScratch\\TryCompile-4br0q9\\OFF64_T.c(29): error C2065: 'off64_t': undeclared identifier
+        C:\\Programming\\C++\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\CMakeFiles\\CMakeScratch\\TryCompile-4br0q9\\OFF64_T.c(30): error C2065: 'off64_t': undeclared identifier
+        C:\\Programming\\C++\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\CMakeFiles\\CMakeScratch\\TryCompile-4br0q9\\OFF64_T.c(31): error C2065: 'off64_t': undeclared identifier
+        C:\\Programming\\C++\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\CMakeFiles\\CMakeScratch\\TryCompile-4br0q9\\OFF64_T.c(32): error C2065: 'off64_t': undeclared identifier
+        C:\\Programming\\C++\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\CMakeFiles\\CMakeScratch\\TryCompile-4br0q9\\OFF64_T.c(33): error C2065: 'off64_t': undeclared identifier
         ninja: build stopped: subcommand failed.
         
       exitCode: 1
@@ -316,8 +316,8 @@ events:
     checks:
       - "Looking for fseeko"
     directories:
-      source: "D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/zlib/x64-windows-dbg/CMakeFiles/CMakeScratch/TryCompile-rxzzfu"
-      binary: "D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/zlib/x64-windows-dbg/CMakeFiles/CMakeScratch/TryCompile-rxzzfu"
+      source: "C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/zlib/x64-windows-dbg/CMakeFiles/CMakeScratch/TryCompile-r0ea5c"
+      binary: "C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/zlib/x64-windows-dbg/CMakeFiles/CMakeScratch/TryCompile-r0ea5c"
     cmakeVariables:
       CMAKE_C_FLAGS: " /nologo /DWIN32 /D_WINDOWS /utf-8 /MP "
       CMAKE_C_FLAGS_DEBUG: "/MDd /Z7 /Ob0 /Od /RTC1 "
@@ -332,7 +332,7 @@ events:
       VCPKG_C_FLAGS: ""
       VCPKG_C_FLAGS_DEBUG: ""
       VCPKG_C_FLAGS_RELEASE: ""
-      VCPKG_INSTALLED_DIR: "D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed"
+      VCPKG_INSTALLED_DIR: "C:/Programming/C++/Enginie/2D Engine/vcpkg_installed"
       VCPKG_LINKER_FLAGS: ""
       VCPKG_LINKER_FLAGS_DEBUG: ""
       VCPKG_LINKER_FLAGS_RELEASE: ""
@@ -346,16 +346,16 @@ events:
       variable: "HAVE_FSEEKO"
       cached: true
       stdout: |
-        Change Dir: 'D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/zlib/x64-windows-dbg/CMakeFiles/CMakeScratch/TryCompile-rxzzfu'
+        Change Dir: 'C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/zlib/x64-windows-dbg/CMakeFiles/CMakeScratch/TryCompile-r0ea5c'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_ea309
-        [1/2] C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /nologo /DWIN32 /D_WINDOWS /utf-8 /MP  -DCHECK_FUNCTION_EXISTS=fseeko /MDd /Z7 /Ob0 /Od /RTC1  -MDd /showIncludes /FoCMakeFiles\\cmTC_ea309.dir\\CheckFunctionExists.c.obj /FdCMakeFiles\\cmTC_ea309.dir\\ /FS -c "D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\CMakeFiles\\CMakeScratch\\TryCompile-rxzzfu\\CheckFunctionExists.c"
-        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_ea309.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_ea309.dir\\CheckFunctionExists.c.obj  /out:cmTC_ea309.exe /implib:cmTC_ea309.lib /pdb:cmTC_ea309.pdb /version:0.0 /machine:x64  /nologo    /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
-        FAILED: cmTC_ea309.exe 
-        C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_ea309.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_ea309.dir\\CheckFunctionExists.c.obj  /out:cmTC_ea309.exe /implib:cmTC_ea309.lib /pdb:cmTC_ea309.pdb /version:0.0 /machine:x64  /nologo    /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
-        LINK Pass 1: command "C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_ea309.dir\\CheckFunctionExists.c.obj /out:cmTC_ea309.exe /implib:cmTC_ea309.lib /pdb:cmTC_ea309.pdb /version:0.0 /machine:x64 /nologo /debug /INCREMENTAL /subsystem:console kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\\cmTC_ea309.dir/intermediate.manifest CMakeFiles\\cmTC_ea309.dir/manifest.res" failed (exit code 1120) with the following output:
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_4c534
+        [1/2] C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /nologo /DWIN32 /D_WINDOWS /utf-8 /MP  -DCHECK_FUNCTION_EXISTS=fseeko /MDd /Z7 /Ob0 /Od /RTC1  -MDd /showIncludes /FoCMakeFiles\\cmTC_4c534.dir\\CheckFunctionExists.c.obj /FdCMakeFiles\\cmTC_4c534.dir\\ /FS -c "C:\\Programming\\C++\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\CMakeFiles\\CMakeScratch\\TryCompile-r0ea5c\\CheckFunctionExists.c"
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_4c534.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_4c534.dir\\CheckFunctionExists.c.obj  /out:cmTC_4c534.exe /implib:cmTC_4c534.lib /pdb:cmTC_4c534.pdb /version:0.0 /machine:x64  /nologo    /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        FAILED: cmTC_4c534.exe 
+        C:\\Windows\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_4c534.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_4c534.dir\\CheckFunctionExists.c.obj  /out:cmTC_4c534.exe /implib:cmTC_4c534.lib /pdb:cmTC_4c534.pdb /version:0.0 /machine:x64  /nologo    /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        LINK Pass 1: command "C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_4c534.dir\\CheckFunctionExists.c.obj /out:cmTC_4c534.exe /implib:cmTC_4c534.lib /pdb:cmTC_4c534.pdb /version:0.0 /machine:x64 /nologo /debug /INCREMENTAL /subsystem:console kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\\cmTC_4c534.dir/intermediate.manifest CMakeFiles\\cmTC_4c534.dir/manifest.res" failed (exit code 1120) with the following output:
         CheckFunctionExists.c.obj : error LNK2019: unresolved external symbol fseeko referenced in function main
-        cmTC_ea309.exe : fatal error LNK1120: 1 unresolved externals\x0d
+        cmTC_4c534.exe : fatal error LNK1120: 1 unresolved externals\x0d
         ninja: build stopped: subcommand failed.
         
       exitCode: 1
@@ -367,8 +367,8 @@ events:
     checks:
       - "Looking for unistd.h"
     directories:
-      source: "D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/zlib/x64-windows-dbg/CMakeFiles/CMakeScratch/TryCompile-gvdy17"
-      binary: "D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/zlib/x64-windows-dbg/CMakeFiles/CMakeScratch/TryCompile-gvdy17"
+      source: "C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/zlib/x64-windows-dbg/CMakeFiles/CMakeScratch/TryCompile-p5j1e2"
+      binary: "C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/zlib/x64-windows-dbg/CMakeFiles/CMakeScratch/TryCompile-p5j1e2"
     cmakeVariables:
       CMAKE_C_FLAGS: " /nologo /DWIN32 /D_WINDOWS /utf-8 /MP "
       CMAKE_C_FLAGS_DEBUG: "/MDd /Z7 /Ob0 /Od /RTC1 "
@@ -383,7 +383,7 @@ events:
       VCPKG_C_FLAGS: ""
       VCPKG_C_FLAGS_DEBUG: ""
       VCPKG_C_FLAGS_RELEASE: ""
-      VCPKG_INSTALLED_DIR: "D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed"
+      VCPKG_INSTALLED_DIR: "C:/Programming/C++/Enginie/2D Engine/vcpkg_installed"
       VCPKG_LINKER_FLAGS: ""
       VCPKG_LINKER_FLAGS_DEBUG: ""
       VCPKG_LINKER_FLAGS_RELEASE: ""
@@ -397,13 +397,13 @@ events:
       variable: "Z_HAVE_UNISTD_H"
       cached: true
       stdout: |
-        Change Dir: 'D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/zlib/x64-windows-dbg/CMakeFiles/CMakeScratch/TryCompile-gvdy17'
+        Change Dir: 'C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/zlib/x64-windows-dbg/CMakeFiles/CMakeScratch/TryCompile-p5j1e2'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_d8c52
-        [1/2] C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /nologo /DWIN32 /D_WINDOWS /utf-8 /MP   /MDd /Z7 /Ob0 /Od /RTC1  -MDd /showIncludes /FoCMakeFiles\\cmTC_d8c52.dir\\CheckIncludeFile.c.obj /FdCMakeFiles\\cmTC_d8c52.dir\\ /FS -c "D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\CMakeFiles\\CMakeScratch\\TryCompile-gvdy17\\CheckIncludeFile.c"
-        FAILED: CMakeFiles/cmTC_d8c52.dir/CheckIncludeFile.c.obj 
-        C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /nologo /DWIN32 /D_WINDOWS /utf-8 /MP   /MDd /Z7 /Ob0 /Od /RTC1  -MDd /showIncludes /FoCMakeFiles\\cmTC_d8c52.dir\\CheckIncludeFile.c.obj /FdCMakeFiles\\cmTC_d8c52.dir\\ /FS -c "D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\CMakeFiles\\CMakeScratch\\TryCompile-gvdy17\\CheckIncludeFile.c"
-        D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\CMakeFiles\\CMakeScratch\\TryCompile-gvdy17\\CheckIncludeFile.c(1): fatal error C1083: Cannot open include file: 'unistd.h': No such file or directory
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_92471
+        [1/2] C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /nologo /DWIN32 /D_WINDOWS /utf-8 /MP   /MDd /Z7 /Ob0 /Od /RTC1  -MDd /showIncludes /FoCMakeFiles\\cmTC_92471.dir\\CheckIncludeFile.c.obj /FdCMakeFiles\\cmTC_92471.dir\\ /FS -c "C:\\Programming\\C++\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\CMakeFiles\\CMakeScratch\\TryCompile-p5j1e2\\CheckIncludeFile.c"
+        FAILED: CMakeFiles/cmTC_92471.dir/CheckIncludeFile.c.obj 
+        C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /nologo /DWIN32 /D_WINDOWS /utf-8 /MP   /MDd /Z7 /Ob0 /Od /RTC1  -MDd /showIncludes /FoCMakeFiles\\cmTC_92471.dir\\CheckIncludeFile.c.obj /FdCMakeFiles\\cmTC_92471.dir\\ /FS -c "C:\\Programming\\C++\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\CMakeFiles\\CMakeScratch\\TryCompile-p5j1e2\\CheckIncludeFile.c"
+        C:\\Programming\\C++\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\CMakeFiles\\CMakeScratch\\TryCompile-p5j1e2\\CheckIncludeFile.c(1): fatal error C1083: Cannot open include file: 'unistd.h': No such file or directory
         ninja: build stopped: subcommand failed.
         
       exitCode: 1

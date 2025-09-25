@@ -13,8 +13,8 @@
 # SPDX-License-Identifier: libpng-2.0
 
 # Variables substituted from CMakeLists.txt
-set(SRCDIR "D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/libpng/src/v1.6.46-0d105c43f9.clean")
-set(BINDIR "D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/libpng/x64-windows-dbg")
+set(SRCDIR "C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/libpng/src/v1.6.46-0d105c43f9.clean")
+set(BINDIR "C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/libpng/x64-windows-dbg")
 
 set(AWK "AWK-NOTFOUND")
 set(DFA_XTRA "")

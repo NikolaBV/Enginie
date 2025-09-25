@@ -1,12 +1,12 @@
-D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/brotli_x64-windows/debug/tools/brotli/brotli.exe
-D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/brotli_x64-windows/debug/lib/brotlienc.lib
-D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/brotli_x64-windows/debug/bin/brotlienc.dll
-D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/brotli_x64-windows/debug/lib/brotlidec.lib
-D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/brotli_x64-windows/debug/bin/brotlidec.dll
-D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/brotli_x64-windows/debug/lib/brotlicommon.lib
-D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/brotli_x64-windows/debug/bin/brotlicommon.dll
-D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/brotli_x64-windows/debug/share/unofficial-brotli/unofficial-brotli-config.cmake
-D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/brotli_x64-windows/debug/share/unofficial-brotli/unofficial-brotli-config-debug.cmake
-D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/brotli_x64-windows/debug/lib/pkgconfig/libbrotlicommon.pc
-D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/brotli_x64-windows/debug/lib/pkgconfig/libbrotlidec.pc
-D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/brotli_x64-windows/debug/lib/pkgconfig/libbrotlienc.pc
+C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/brotli_x64-windows/debug/tools/brotli/brotli.exe
+C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/brotli_x64-windows/debug/lib/brotlienc.lib
+C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/brotli_x64-windows/debug/bin/brotlienc.dll
+C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/brotli_x64-windows/debug/lib/brotlidec.lib
+C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/brotli_x64-windows/debug/bin/brotlidec.dll
+C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/brotli_x64-windows/debug/lib/brotlicommon.lib
+C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/brotli_x64-windows/debug/bin/brotlicommon.dll
+C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/brotli_x64-windows/debug/share/unofficial-brotli/unofficial-brotli-config.cmake
+C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/brotli_x64-windows/debug/share/unofficial-brotli/unofficial-brotli-config-debug.cmake
+C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/brotli_x64-windows/debug/lib/pkgconfig/libbrotlicommon.pc
+C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/brotli_x64-windows/debug/lib/pkgconfig/libbrotlidec.pc
+C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/brotli_x64-windows/debug/lib/pkgconfig/libbrotlienc.pc

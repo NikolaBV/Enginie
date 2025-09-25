@@ -1,8 +1,8 @@
-# Install script for directory: D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/brotli/src/v1.1.0-958bece74c.clean
+# Install script for directory: C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/brotli/src/v1.1.0-958bece74c.clean
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/brotli_x64-windows")
+  set(CMAKE_INSTALL_PREFIX "C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/brotli_x64-windows")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -33,36 +33,36 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/tools/brotli" TYPE EXECUTABLE FILES "D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/brotli/x64-windows-rel/brotli.exe")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/tools/brotli" TYPE EXECUTABLE FILES "C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/brotli/x64-windows-rel/brotli.exe")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY OPTIONAL FILES "D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/brotli/x64-windows-rel/brotlienc.lib")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY OPTIONAL FILES "C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/brotli/x64-windows-rel/brotlienc.lib")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE SHARED_LIBRARY FILES "D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/brotli/x64-windows-rel/brotlienc.dll")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE SHARED_LIBRARY FILES "C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/brotli/x64-windows-rel/brotlienc.dll")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY OPTIONAL FILES "D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/brotli/x64-windows-rel/brotlidec.lib")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY OPTIONAL FILES "C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/brotli/x64-windows-rel/brotlidec.lib")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE SHARED_LIBRARY FILES "D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/brotli/x64-windows-rel/brotlidec.dll")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE SHARED_LIBRARY FILES "C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/brotli/x64-windows-rel/brotlidec.dll")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY OPTIONAL FILES "D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/brotli/x64-windows-rel/brotlicommon.lib")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY OPTIONAL FILES "C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/brotli/x64-windows-rel/brotlicommon.lib")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE SHARED_LIBRARY FILES "D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/brotli/x64-windows-rel/brotlicommon.dll")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE SHARED_LIBRARY FILES "C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/brotli/x64-windows-rel/brotlicommon.dll")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   if(CMAKE_INSTALL_CONFIG_NAME MATCHES "^([Rr][Ee][Ll][Ee][Aa][Ss][Ee])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/brotli/src/v1.1.0-958bece74c.clean/c/include/brotli")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/brotli/src/v1.1.0-958bece74c.clean/c/include/brotli")
   endif()
 endif()
 
@@ -70,7 +70,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/unofficial-brotli/unofficial-brotli-config.cmake")
     file(DIFFERENT _cmake_export_file_changed FILES
          "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/unofficial-brotli/unofficial-brotli-config.cmake"
-         "D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/brotli/x64-windows-rel/CMakeFiles/Export/763bc5bdfe41530dbbed90361b0f2a15/unofficial-brotli-config.cmake")
+         "C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/brotli/x64-windows-rel/CMakeFiles/Export/763bc5bdfe41530dbbed90361b0f2a15/unofficial-brotli-config.cmake")
     if(_cmake_export_file_changed)
       file(GLOB _cmake_old_config_files "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/unofficial-brotli/unofficial-brotli-config-*.cmake")
       if(_cmake_old_config_files)
@@ -83,28 +83,28 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
     endif()
     unset(_cmake_export_file_changed)
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/unofficial-brotli" TYPE FILE FILES "D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/brotli/x64-windows-rel/CMakeFiles/Export/763bc5bdfe41530dbbed90361b0f2a15/unofficial-brotli-config.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/unofficial-brotli" TYPE FILE FILES "C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/brotli/x64-windows-rel/CMakeFiles/Export/763bc5bdfe41530dbbed90361b0f2a15/unofficial-brotli-config.cmake")
   if(CMAKE_INSTALL_CONFIG_NAME MATCHES "^([Rr][Ee][Ll][Ee][Aa][Ss][Ee])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/unofficial-brotli" TYPE FILE FILES "D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/brotli/x64-windows-rel/CMakeFiles/Export/763bc5bdfe41530dbbed90361b0f2a15/unofficial-brotli-config-release.cmake")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/unofficial-brotli" TYPE FILE FILES "C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/brotli/x64-windows-rel/CMakeFiles/Export/763bc5bdfe41530dbbed90361b0f2a15/unofficial-brotli-config-release.cmake")
   endif()
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/brotli/x64-windows-rel/libbrotlicommon.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/brotli/x64-windows-rel/libbrotlicommon.pc")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/brotli/x64-windows-rel/libbrotlidec.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/brotli/x64-windows-rel/libbrotlidec.pc")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/brotli/x64-windows-rel/libbrotlienc.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/brotli/x64-windows-rel/libbrotlienc.pc")
 endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/brotli/x64-windows-rel/install_local_manifest.txt"
+  file(WRITE "C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/brotli/x64-windows-rel/install_local_manifest.txt"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()
 if(CMAKE_INSTALL_COMPONENT)
@@ -120,6 +120,6 @@ else()
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/brotli/x64-windows-rel/${CMAKE_INSTALL_MANIFEST}"
+  file(WRITE "C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/brotli/x64-windows-rel/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

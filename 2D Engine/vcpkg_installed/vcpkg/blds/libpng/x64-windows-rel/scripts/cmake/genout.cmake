@@ -13,19 +13,19 @@
 # SPDX-License-Identifier: libpng-2.0
 
 # Variables substituted from CMakeLists.txt
-set(SRCDIR "D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/libpng/src/v1.6.46-0d105c43f9.clean")
-set(BINDIR "D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/libpng/x64-windows-rel")
+set(SRCDIR "C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/libpng/src/v1.6.46-0d105c43f9.clean")
+set(BINDIR "C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/libpng/x64-windows-rel")
 
 set(AWK "AWK-NOTFOUND")
 set(CMAKE_C_COMPILER "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe")
 set(CMAKE_C_FLAGS  /nologo /DWIN32 /D_WINDOWS /utf-8 /MP )
 set(CMAKE_SYSROOT )
-set(INCDIR "D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/libpng/x64-windows-rel")
+set(INCDIR "C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/libpng/x64-windows-rel")
 set(PNG_PREFIX "")
 set(PNGLIB_MAJOR "1")
 set(PNGLIB_MINOR "6")
 set(PNGLIB_VERSION "1.6.46")
-set(ZLIBINCDIR "D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/x64-windows/include")
+set(ZLIBINCDIR "C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/x64-windows/include")
 
 set(PLATFORM_C_FLAGS)
 if(APPLE)

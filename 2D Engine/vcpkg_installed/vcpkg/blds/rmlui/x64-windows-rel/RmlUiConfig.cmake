@@ -51,7 +51,7 @@ add_library(RmlUi::Core SHARED IMPORTED)
 
 set_target_properties(RmlUi::Core PROPERTIES
   INTERFACE_COMPILE_FEATURES "cxx_std_14"
-  INTERFACE_INCLUDE_DIRECTORIES "D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/rmlui/src/6.0-611c7f442e.clean/Include;D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/x64-windows/include"
+  INTERFACE_INCLUDE_DIRECTORIES "C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/rmlui/src/6.0-611c7f442e.clean/Include;C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/x64-windows/include"
 )
 
 # Create imported target RmlUi::Debugger
@@ -59,7 +59,7 @@ add_library(RmlUi::Debugger SHARED IMPORTED)
 
 set_target_properties(RmlUi::Debugger PROPERTIES
   INTERFACE_COMPILE_FEATURES "cxx_std_14"
-  INTERFACE_INCLUDE_DIRECTORIES "D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/rmlui/src/6.0-611c7f442e.clean/Include"
+  INTERFACE_INCLUDE_DIRECTORIES "C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/rmlui/src/6.0-611c7f442e.clean/Include"
   INTERFACE_LINK_LIBRARIES "RmlUi::Core"
 )
 
@@ -73,15 +73,15 @@ set_target_properties(RmlUi::RmlUi PROPERTIES
 # Import target "RmlUi::Core" for configuration "Release"
 set_property(TARGET RmlUi::Core APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(RmlUi::Core PROPERTIES
-  IMPORTED_IMPLIB_RELEASE "D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/rmlui/x64-windows-rel/Source/Core/rmlui.lib"
-  IMPORTED_LOCATION_RELEASE "D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/rmlui/x64-windows-rel/rmlui.dll"
+  IMPORTED_IMPLIB_RELEASE "C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/rmlui/x64-windows-rel/Source/Core/rmlui.lib"
+  IMPORTED_LOCATION_RELEASE "C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/rmlui/x64-windows-rel/rmlui.dll"
   )
 
 # Import target "RmlUi::Debugger" for configuration "Release"
 set_property(TARGET RmlUi::Debugger APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(RmlUi::Debugger PROPERTIES
-  IMPORTED_IMPLIB_RELEASE "D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/rmlui/x64-windows-rel/Source/Debugger/rmlui_debugger.lib"
-  IMPORTED_LOCATION_RELEASE "D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/rmlui/x64-windows-rel/rmlui_debugger.dll"
+  IMPORTED_IMPLIB_RELEASE "C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/rmlui/x64-windows-rel/Source/Debugger/rmlui_debugger.lib"
+  IMPORTED_LOCATION_RELEASE "C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/rmlui/x64-windows-rel/rmlui_debugger.dll"
   )
 
 # This file does not depend on other imported targets which have

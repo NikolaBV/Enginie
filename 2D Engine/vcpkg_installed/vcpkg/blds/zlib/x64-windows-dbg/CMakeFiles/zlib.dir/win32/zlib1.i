@@ -1,4 +1,4 @@
-#line 1 "D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\src\\v1.3.1-2e5db616bf.clean\\win32\\zlib1.rc"
+#line 1 "C:\\Programming\\C++\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\src\\v1.3.1-2e5db616bf.clean\\win32\\zlib1.rc"
 #line 1 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.26100.0\\um\\winver.h"
 #line 1 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.26100.0\\shared\\winapifamily.h"
 
@@ -5781,8 +5781,8 @@
 
 #line 257 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.26100.0\\um\\winver.h"
 
-#line 2 "D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\src\\v1.3.1-2e5db616bf.clean\\win32\\zlib1.rc"
-#line 1 "D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\src\\v1.3.1-2e5db616bf.clean\\win32\\../zlib.h"
+#line 2 "C:\\Programming\\C++\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\src\\v1.3.1-2e5db616bf.clean\\win32\\zlib1.rc"
+#line 1 "C:\\Programming\\C++\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\src\\v1.3.1-2e5db616bf.clean\\win32\\../zlib.h"
 
 
 
@@ -5816,7 +5816,7 @@
 
 
 
-#line 1 "D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
+#line 1 "C:\\Programming\\C++\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
 
 
 
@@ -5991,25 +5991,25 @@
 
 
 
-#line 176 "D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
+#line 176 "C:\\Programming\\C++\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
 
 
-#line 179 "D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
+#line 179 "C:\\Programming\\C++\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
 
 
-#line 182 "D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
+#line 182 "C:\\Programming\\C++\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
 
 
 
 
-#line 187 "D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
+#line 187 "C:\\Programming\\C++\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
 
 
 
 
 
 
-#line 194 "D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
+#line 194 "C:\\Programming\\C++\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
 
 
 
@@ -6034,20 +6034,20 @@
 
 
 
-#line 219 "D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
+#line 219 "C:\\Programming\\C++\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
 
 
-#line 222 "D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
+#line 222 "C:\\Programming\\C++\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
 
 
-#line 225 "D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
+#line 225 "C:\\Programming\\C++\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
 
 
-#line 228 "D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
+#line 228 "C:\\Programming\\C++\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
 
 
 
-#line 232 "D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
+#line 232 "C:\\Programming\\C++\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
 
 
 
@@ -6057,9 +6057,9 @@
 
 
 
-#line 242 "D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
+#line 242 "C:\\Programming\\C++\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
 
-#line 244 "D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
+#line 244 "C:\\Programming\\C++\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
 
 
 
@@ -6071,7 +6071,7 @@
 
 
 
-#line 256 "D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
+#line 256 "C:\\Programming\\C++\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
 #line 1 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.26100.0\\ucrt\\stddef.h"
 
 
@@ -8838,22 +8838,13 @@ __pragma(pack(pop))
 
 #pragma warning(pop) 
 #line 65 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.26100.0\\ucrt\\stddef.h"
-#line 257 "D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
+#line 257 "C:\\Programming\\C++\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
      typedef size_t z_size_t;
 
 
-#line 261 "D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
+#line 261 "C:\\Programming\\C++\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
 
-#line 263 "D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
-
-
-
-
-
-
-
-#line 271 "D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
-#line 272 "D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
+#line 263 "C:\\Programming\\C++\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
 
 
 
@@ -8861,8 +8852,17 @@ __pragma(pack(pop))
 
 
 
+#line 271 "C:\\Programming\\C++\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
+#line 272 "C:\\Programming\\C++\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
 
-#line 281 "D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
+
+
+
+
+
+
+
+#line 281 "C:\\Programming\\C++\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
 
 
 
@@ -8884,8 +8884,8 @@ __pragma(pack(pop))
 
 
 
-#line 303 "D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
-#line 304 "D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
+#line 303 "C:\\Programming\\C++\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
+#line 304 "C:\\Programming\\C++\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
 
 
 
@@ -8924,9 +8924,9 @@ __pragma(pack(pop))
 
 
 
-#line 343 "D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
-#line 344 "D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
-#line 345 "D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
+#line 343 "C:\\Programming\\C++\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
+#line 344 "C:\\Programming\\C++\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
+#line 345 "C:\\Programming\\C++\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
    
 
 
@@ -8948,7 +8948,7 @@ __pragma(pack(pop))
 
 
 
-#line 367 "D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
+#line 367 "C:\\Programming\\C++\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
 
 
 
@@ -8960,25 +8960,25 @@ __pragma(pack(pop))
 
 
 
-#line 379 "D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
+#line 379 "C:\\Programming\\C++\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
 
 
 
 
 
 
-#line 386 "D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
+#line 386 "C:\\Programming\\C++\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
 
 
-#line 389 "D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
+#line 389 "C:\\Programming\\C++\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
 
 
 
-#line 393 "D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
+#line 393 "C:\\Programming\\C++\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
 
 
 typedef unsigned char  Byte;  
-#line 397 "D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
+#line 397 "C:\\Programming\\C++\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
 typedef unsigned int   uInt;  
 typedef unsigned long  uLong; 
 
@@ -8987,7 +8987,7 @@ typedef unsigned long  uLong;
 
 
    typedef Byte   Bytef;
-#line 406 "D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
+#line 406 "C:\\Programming\\C++\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
 typedef char   charf;
 typedef int    intf;
 typedef uInt   uIntf;
@@ -9001,7 +9001,7 @@ typedef uLong  uLongf;
 
 
 
-#line 420 "D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
+#line 420 "C:\\Programming\\C++\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
 
 
 #line 1 "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\include\\limits.h"
@@ -9081,21 +9081,21 @@ __pragma(pack(push, 8))
 __pragma(pack(pop))
 
 #pragma warning(pop) 
-#line 423 "D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
+#line 423 "C:\\Programming\\C++\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
 
 
 
 
 
 
-#line 430 "D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
-#line 431 "D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
+#line 430 "C:\\Programming\\C++\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
+#line 431 "C:\\Programming\\C++\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
 
 
    typedef unsigned z_crc_t;
 
 
-#line 437 "D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
+#line 437 "C:\\Programming\\C++\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
 
 
 
@@ -9167,9 +9167,9 @@ __pragma(pack(pop))
 
 
 #pragma warning(pop) 
-#line 457 "D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
-#line 458 "D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
-#line 459 "D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
+#line 457 "C:\\Programming\\C++\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
+#line 458 "C:\\Programming\\C++\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
+#line 459 "C:\\Programming\\C++\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
 
 
 
@@ -9203,15 +9203,15 @@ __pragma(pack(push, 8))
 __pragma(pack(pop))
 
 #pragma warning(pop) 
-#line 463 "D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
-#line 464 "D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
-#line 465 "D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
+#line 463 "C:\\Programming\\C++\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
+#line 464 "C:\\Programming\\C++\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
+#line 465 "C:\\Programming\\C++\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
 
 
 
 
-#line 470 "D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
-#line 471 "D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
+#line 470 "C:\\Programming\\C++\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
+#line 471 "C:\\Programming\\C++\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
 
 
 
@@ -9221,18 +9221,18 @@ __pragma(pack(pop))
 
 
 
-#line 481 "D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
+#line 481 "C:\\Programming\\C++\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
 
 
 
 
 
-#line 487 "D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
+#line 487 "C:\\Programming\\C++\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
 
 
 
-#line 491 "D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
-#line 492 "D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
+#line 491 "C:\\Programming\\C++\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
+#line 492 "C:\\Programming\\C++\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
 
 
 
@@ -9242,40 +9242,40 @@ __pragma(pack(pop))
 
 
 
-#line 502 "D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
-#line 503 "D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
+#line 502 "C:\\Programming\\C++\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
+#line 503 "C:\\Programming\\C++\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
 
 
 
-#line 507 "D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
+#line 507 "C:\\Programming\\C++\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
 
 
 
-#line 511 "D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
+#line 511 "C:\\Programming\\C++\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
 
 
 
-#line 515 "D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
+#line 515 "C:\\Programming\\C++\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
 
 
 
 
 
-#line 521 "D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
+#line 521 "C:\\Programming\\C++\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
 
 
 
-#line 525 "D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
+#line 525 "C:\\Programming\\C++\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
 
 
 
-#line 529 "D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
+#line 529 "C:\\Programming\\C++\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
 
 
 
 
-#line 534 "D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
-#line 535 "D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
+#line 534 "C:\\Programming\\C++\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
+#line 535 "C:\\Programming\\C++\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
 
 
 
@@ -9292,10 +9292,10 @@ __pragma(pack(pop))
 
 
 
-#line 552 "D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
+#line 552 "C:\\Programming\\C++\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
 
-#line 554 "D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
-#line 35 "D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\src\\v1.3.1-2e5db616bf.clean\\win32\\../zlib.h"
+#line 554 "C:\\Programming\\C++\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\x64-windows-dbg\\zconf.h"
+#line 35 "C:\\Programming\\C++\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\src\\v1.3.1-2e5db616bf.clean\\win32\\../zlib.h"
 
 
 
@@ -10943,7 +10943,7 @@ extern __declspec(dllimport) void  gzclearerr(gzFile file);
 
 
 
-#line 1683 "D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\src\\v1.3.1-2e5db616bf.clean\\win32\\../zlib.h"
+#line 1683 "C:\\Programming\\C++\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\src\\v1.3.1-2e5db616bf.clean\\win32\\../zlib.h"
 
                         
 
@@ -11087,7 +11087,7 @@ extern __declspec(dllimport) int  inflateBackInit_(z_streamp strm, int windowBit
 
 
 
-#line 1827 "D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\src\\v1.3.1-2e5db616bf.clean\\win32\\../zlib.h"
+#line 1827 "C:\\Programming\\C++\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\src\\v1.3.1-2e5db616bf.clean\\win32\\../zlib.h"
 
 
 
@@ -11111,7 +11111,7 @@ extern __declspec(dllimport) int  gzgetc_(gzFile file);
 
 
 
-#line 1851 "D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\src\\v1.3.1-2e5db616bf.clean\\win32\\../zlib.h"
+#line 1851 "C:\\Programming\\C++\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\src\\v1.3.1-2e5db616bf.clean\\win32\\../zlib.h"
 
 
 
@@ -11156,7 +11156,7 @@ extern __declspec(dllimport) int  gzgetc_(gzFile file);
 
 
 
-#line 1896 "D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\src\\v1.3.1-2e5db616bf.clean\\win32\\../zlib.h"
+#line 1896 "C:\\Programming\\C++\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\src\\v1.3.1-2e5db616bf.clean\\win32\\../zlib.h"
    extern __declspec(dllimport) gzFile  gzopen(const char *, const char *);
    extern __declspec(dllimport) long  gzseek(gzFile, long, int);
    extern __declspec(dllimport) long  gztell(gzFile);
@@ -11164,7 +11164,7 @@ extern __declspec(dllimport) int  gzgetc_(gzFile file);
    extern __declspec(dllimport) uLong  adler32_combine(uLong, uLong, long);
    extern __declspec(dllimport) uLong  crc32_combine(uLong, uLong, long);
    extern __declspec(dllimport) uLong  crc32_combine_gen(long);
-#line 1904 "D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\src\\v1.3.1-2e5db616bf.clean\\win32\\../zlib.h"
+#line 1904 "C:\\Programming\\C++\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\src\\v1.3.1-2e5db616bf.clean\\win32\\../zlib.h"
 
 
 
@@ -11172,7 +11172,7 @@ extern __declspec(dllimport) int  gzgetc_(gzFile file);
 
 
 
-#line 1912 "D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\src\\v1.3.1-2e5db616bf.clean\\win32\\../zlib.h"
+#line 1912 "C:\\Programming\\C++\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\src\\v1.3.1-2e5db616bf.clean\\win32\\../zlib.h"
 
 
 extern __declspec(dllimport) const char   *  zError(int);
@@ -11186,27 +11186,27 @@ extern __declspec(dllimport) int             deflateResetKeep(z_streamp);
 
 extern __declspec(dllimport) gzFile          gzopen_w(const wchar_t *path,
                                         const char *mode);
-#line 1926 "D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\src\\v1.3.1-2e5db616bf.clean\\win32\\../zlib.h"
+#line 1926 "C:\\Programming\\C++\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\src\\v1.3.1-2e5db616bf.clean\\win32\\../zlib.h"
 
 
 extern __declspec(dllimport) int             gzvprintf(gzFile file,
                                            const char *format,
                                            va_list va);
-#line 1932 "D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\src\\v1.3.1-2e5db616bf.clean\\win32\\../zlib.h"
-#line 1933 "D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\src\\v1.3.1-2e5db616bf.clean\\win32\\../zlib.h"
+#line 1932 "C:\\Programming\\C++\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\src\\v1.3.1-2e5db616bf.clean\\win32\\../zlib.h"
+#line 1933 "C:\\Programming\\C++\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\src\\v1.3.1-2e5db616bf.clean\\win32\\../zlib.h"
 
 
 
 
 
-#line 1939 "D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\src\\v1.3.1-2e5db616bf.clean\\win32\\../zlib.h"
-#line 3 "D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\src\\v1.3.1-2e5db616bf.clean\\win32\\zlib1.rc"
+#line 1939 "C:\\Programming\\C++\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\src\\v1.3.1-2e5db616bf.clean\\win32\\../zlib.h"
+#line 3 "C:\\Programming\\C++\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\src\\v1.3.1-2e5db616bf.clean\\win32\\zlib1.rc"
 
 
 
 
 1		VERSIONINFO	MOVEABLE IMPURE LOADONCALL DISCARDABLE
-#line 9 "D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\src\\v1.3.1-2e5db616bf.clean\\win32\\zlib1.rc"
+#line 9 "C:\\Programming\\C++\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\src\\v1.3.1-2e5db616bf.clean\\win32\\zlib1.rc"
   FILEVERSION		1,3,1,0
   PRODUCTVERSION	1,3,1,0
   FILEFLAGSMASK		0x0000003FL
@@ -11214,7 +11214,7 @@ extern __declspec(dllimport) int             gzvprintf(gzFile file,
   FILEFLAGS		1
 
 
-#line 17 "D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\src\\v1.3.1-2e5db616bf.clean\\win32\\zlib1.rc"
+#line 17 "C:\\Programming\\C++\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\zlib\\src\\v1.3.1-2e5db616bf.clean\\win32\\zlib1.rc"
   FILEOS		0x00000004L
   FILETYPE		0x00000002L
   FILESUBTYPE		0	

@@ -1,7 +1,7 @@
-prefix=D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/libpng_x64-windows/debug
-exec_prefix=D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/libpng_x64-windows/debug
-libdir=D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/libpng_x64-windows/debug/lib
-includedir=D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/libpng_x64-windows/debug/include/libpng16
+prefix=C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/libpng_x64-windows/debug
+exec_prefix=C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/libpng_x64-windows/debug
+libdir=C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/libpng_x64-windows/debug/lib
+includedir=C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/libpng_x64-windows/debug/include/libpng16
 
 Name: libpng
 Description: Loads and saves PNG files

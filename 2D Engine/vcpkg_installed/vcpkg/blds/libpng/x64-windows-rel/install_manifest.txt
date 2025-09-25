@@ -1,17 +1,17 @@
-D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/libpng_x64-windows/lib/libpng16.lib
-D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/libpng_x64-windows/bin/libpng16.dll
-D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/libpng_x64-windows/include/png.h
-D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/libpng_x64-windows/include/pngconf.h
-D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/libpng_x64-windows/include/pnglibconf.h
-D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/libpng_x64-windows/include/libpng16/png.h
-D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/libpng_x64-windows/include/libpng16/pngconf.h
-D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/libpng_x64-windows/include/libpng16/pnglibconf.h
-D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/libpng_x64-windows/lib/pkgconfig/libpng16.pc
-D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/libpng_x64-windows/lib/libpng/libpng16.cmake
-D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/libpng_x64-windows/lib/libpng/libpng16-release.cmake
-D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/libpng_x64-windows/lib/libpng16.lib
-D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/libpng_x64-windows/bin/libpng16.dll
-D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/libpng_x64-windows/lib/cmake/PNG/PNGTargets.cmake
-D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/libpng_x64-windows/lib/cmake/PNG/PNGTargets-release.cmake
-D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/libpng_x64-windows/lib/cmake/PNG/PNGConfig.cmake
-D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/libpng_x64-windows/lib/cmake/PNG/PNGConfigVersion.cmake
+C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/libpng_x64-windows/lib/libpng16.lib
+C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/libpng_x64-windows/bin/libpng16.dll
+C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/libpng_x64-windows/include/png.h
+C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/libpng_x64-windows/include/pngconf.h
+C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/libpng_x64-windows/include/pnglibconf.h
+C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/libpng_x64-windows/include/libpng16/png.h
+C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/libpng_x64-windows/include/libpng16/pngconf.h
+C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/libpng_x64-windows/include/libpng16/pnglibconf.h
+C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/libpng_x64-windows/lib/pkgconfig/libpng16.pc
+C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/libpng_x64-windows/lib/libpng/libpng16.cmake
+C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/libpng_x64-windows/lib/libpng/libpng16-release.cmake
+C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/libpng_x64-windows/lib/libpng16.lib
+C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/libpng_x64-windows/bin/libpng16.dll
+C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/libpng_x64-windows/lib/cmake/PNG/PNGTargets.cmake
+C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/libpng_x64-windows/lib/cmake/PNG/PNGTargets-release.cmake
+C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/libpng_x64-windows/lib/cmake/PNG/PNGConfig.cmake
+C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/libpng_x64-windows/lib/cmake/PNG/PNGConfigVersion.cmake

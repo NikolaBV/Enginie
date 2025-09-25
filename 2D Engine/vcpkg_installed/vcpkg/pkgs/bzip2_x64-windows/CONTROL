@@ -4,7 +4,7 @@ Port-Version: 6
 Depends: vcpkg-cmake
 Architecture: x64-windows
 Multi-Arch: same
-Abi: 47e60fd2d628cd57a63a4a16deeed2822ed999abfd452ff13eb0807b83346d00
+Abi: 5a1dd925d595ffe66d06567923ec2fdb8a0e796b96bea8193a875aee8c971ab3
 Description: bzip2 is a freely available, patent free, high-quality data compressor. It typically compresses files to within 10% to 15% of the best available techniques (the PPM family of statistical compressors), whilst being around twice as fast at compression and six times faster at decompression.
 Default-Features: tool
 

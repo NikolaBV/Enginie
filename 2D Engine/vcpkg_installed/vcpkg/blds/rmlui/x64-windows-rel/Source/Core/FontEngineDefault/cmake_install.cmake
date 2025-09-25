@@ -1,8 +1,8 @@
-# Install script for directory: D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/rmlui/src/6.0-611c7f442e.clean/Source/Core/FontEngineDefault
+# Install script for directory: C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/rmlui/src/6.0-611c7f442e.clean/Source/Core/FontEngineDefault
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/rmlui_x64-windows")
+  set(CMAKE_INSTALL_PREFIX "C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/rmlui_x64-windows")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -35,6 +35,6 @@ endif()
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/rmlui/x64-windows-rel/Source/Core/FontEngineDefault/install_local_manifest.txt"
+  file(WRITE "C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/rmlui/x64-windows-rel/Source/Core/FontEngineDefault/install_local_manifest.txt"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

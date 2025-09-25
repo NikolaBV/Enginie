@@ -137,19 +137,19 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir)..\..\lib\SDL2-dev\include;$(ProjectDir)..\..\lib\SDL2_image-2.0.5\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\lib\SDL2-dev\include;$(ProjectDir)..\..\lib\SDL2_image-2.0.5\include;$(SolutionDir)vcpkg_installed\x86-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(ProjectDir)..\..\lib\SDL2-dev\lib\x86;$(ProjectDir)..\..\lib\SDL2_image-2.0.5\lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\..\lib\SDL2-dev\lib\x86;$(ProjectDir)..\..\lib\SDL2_image-2.0.5\lib\x86;$(SolutionDir)vcpkg_installed\x86-windows\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;rmlui.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
       <Command>copy "$(ProjectDir)dlls\*.*" "$(TargetDir)" /Y
 copy "$(ProjectDir)..\..\lib\SDL2_image-2.0.5\lib\x86\zlib1.dll" "$(TargetDir)" /Y
-xcopy "$(ProjectDir)resources" "$(TargetDir)resources" /E /I /Y</Command>
-      <Message>Copying all DLLs and resources to output directory</Message>
+xcopy "$(ProjectDir)resources" "$(TargetDir)resources" /E /I /Y
+xcopy "$(SolutionDir)vcpkg_installed\x86-windows\debug\bin\*.dll" "$(TargetDir)" /Y</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -160,20 +160,21 @@ xcopy "$(ProjectDir)resources" "$(TargetDir)resources" /E /I /Y</Command>
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir)..\..\lib\SDL2-dev\include;$(ProjectDir)..\..\lib\SDL2_image-2.0.5\lib\x64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\lib\SDL2-dev\include;$(ProjectDir)..\..\lib\SDL2_image-2.0.5\lib\x64\include;$(SolutionDir)vcpkg_installed\x86-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(ProjectDir)..\..\lib\SDL2-dev\lib\x86;$(ProjectDir)..\..\lib\SDL2_image-2.0.5\lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\..\lib\SDL2-dev\lib\x86;$(ProjectDir)..\..\lib\SDL2_image-2.0.5\lib\x86;$(SolutionDir)vcpkg_installed\x86-windows\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;rmlui.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
       <Command>copy "$(ProjectDir)dlls\*.*" "$(TargetDir)" /Y
 copy "$(ProjectDir)..\..\lib\SDL2_image-2.0.5\lib\x86\zlib1.dll" "$(TargetDir)" /Y
-xcopy "$(ProjectDir)resources" "$(TargetDir)resources" /E /I /Y</Command>
+xcopy "$(ProjectDir)resources" "$(TargetDir)resources" /E /I /Y
+xcopy "$(SolutionDir)vcpkg_installed\x86-windows\bin\*.dll" "$(TargetDir)" /Y</Command>
       <Message>Copying all DLLs and resources to output directory</Message>
     </PostBuildEvent>
   </ItemDefinitionGroup>
@@ -183,19 +184,20 @@ xcopy "$(ProjectDir)resources" "$(TargetDir)resources" /E /I /Y</Command>
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;SDL_MAIN_HANDLED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir)..\..\lib\SDL2_ttf-2.0.12\include;$(ProjectDir)..\..\lib\SDL2-dev\include;$(ProjectDir)..\..\lib\SDL2_image-2.0.5\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\lib\SDL2_ttf-2.0.12\include;$(ProjectDir)..\..\lib\SDL2-dev\include;$(ProjectDir)..\..\lib\SDL2_image-2.0.5\include;$(SolutionDir)vcpkg_installed\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(ProjectDir)..\..\lib\SDL2_ttf-2.0.12\lib\x64;$(ProjectDir)..\..\lib\SDL2-dev\lib\x64;$(ProjectDir)..\..\lib\SDL2_image-2.0.5\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;SDL2_ttf.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\..\lib\SDL2_ttf-2.0.12\lib\x64;$(ProjectDir)..\..\lib\SDL2-dev\lib\x64;$(ProjectDir)..\..\lib\SDL2_image-2.0.5\lib\x64;$(SolutionDir)vcpkg_installed\x64-windows\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;SDL2_ttf.lib;rmlui.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
       <Command>copy "$(ProjectDir)dlls\*.*" "$(TargetDir)" /Y
 copy "$(ProjectDir)..\..\lib\SDL2_image-2.0.5\lib\x64\zlib1.dll" "$(TargetDir)" /Y
-xcopy "$(ProjectDir)resources" "$(TargetDir)resources" /E /I /Y</Command>
+xcopy "$(ProjectDir)resources" "$(TargetDir)resources" /E /I /Y
+xcopy "$(SolutionDir)vcpkg_installed\x64-windows\debug\bin\*.dll" "$(TargetDir)" /Y</Command>
       <Message>Copying all DLLs and resources to output directory</Message>
     </PostBuildEvent>
   </ItemDefinitionGroup>
@@ -207,19 +209,20 @@ xcopy "$(ProjectDir)resources" "$(TargetDir)resources" /E /I /Y</Command>
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;SDL_MAIN_HANDLED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir)..\..\lib\SDL2-dev\include;$(ProjectDir)..\..\lib\SDL2_image-2.0.5\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\lib\SDL2-dev\include;$(ProjectDir)..\..\lib\SDL2_image-2.0.5\include;$(SolutionDir)vcpkg_installed\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(ProjectDir)..\..\lib\SDL2-dev\lib\x64;$(ProjectDir)..\..\lib\SDL2_image-2.0.5\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\..\lib\SDL2-dev\lib\x64;$(ProjectDir)..\..\lib\SDL2_image-2.0.5\lib\x64;$(SolutionDir)vcpkg_installed\x64-windows\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;rmlui.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
       <Command>copy "$(ProjectDir)dlls\*.*" "$(TargetDir)" /Y
-xcopy "$(ProjectDir)resources" "$(TargetDir)resources" /E /I /Y</Command>
+xcopy "$(ProjectDir)resources" "$(TargetDir)resources" /E /I /Y
+xcopy "$(SolutionDir)vcpkg_installed\x64-windows\bin\*.dll" "$(TargetDir)" /Y</Command>
       <Message>Copying all DLLs and resources to output directory</Message>
     </PostBuildEvent>
   </ItemDefinitionGroup>

@@ -1,62 +1,62 @@
-D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/config/ftheader.h
-D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/config/ftmodule.h
-D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/config/ftstdlib.h
-D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/config/integer-types.h
-D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/config/mac-support.h
-D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/config/public-macros.h
-D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/freetype.h
-D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/ftadvanc.h
-D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/ftbbox.h
-D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/ftbdf.h
-D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/ftbitmap.h
-D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/ftbzip2.h
-D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/ftcache.h
-D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/ftchapters.h
-D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/ftcid.h
-D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/ftcolor.h
-D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/ftdriver.h
-D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/fterrdef.h
-D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/fterrors.h
-D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/ftfntfmt.h
-D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/ftgasp.h
-D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/ftglyph.h
-D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/ftgxval.h
-D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/ftgzip.h
-D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/ftimage.h
-D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/ftincrem.h
-D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/ftlcdfil.h
-D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/ftlist.h
-D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/ftlogging.h
-D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/ftlzw.h
-D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/ftmac.h
-D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/ftmm.h
-D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/ftmodapi.h
-D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/ftmoderr.h
-D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/ftotval.h
-D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/ftoutln.h
-D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/ftparams.h
-D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/ftpfr.h
-D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/ftrender.h
-D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/ftsizes.h
-D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/ftsnames.h
-D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/ftstroke.h
-D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/ftsynth.h
-D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/ftsystem.h
-D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/fttrigon.h
-D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/fttypes.h
-D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/ftwinfnt.h
-D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/otsvg.h
-D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/t1tables.h
-D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/ttnameid.h
-D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/tttables.h
-D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/tttags.h
-D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/ft2build.h
-D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/config/ftconfig.h
-D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/config/ftoption.h
-D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/lib/pkgconfig/freetype2.pc
-D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/lib/freetype.lib
-D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/bin/freetype.dll
-D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/lib/cmake/freetype/freetype-targets.cmake
-D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/lib/cmake/freetype/freetype-targets-release.cmake
-D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/lib/cmake/freetype/freetype-config-version.cmake
-D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/lib/cmake/freetype/freetype-config.cmake
+C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/config/ftheader.h
+C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/config/ftmodule.h
+C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/config/ftstdlib.h
+C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/config/integer-types.h
+C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/config/mac-support.h
+C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/config/public-macros.h
+C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/freetype.h
+C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/ftadvanc.h
+C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/ftbbox.h
+C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/ftbdf.h
+C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/ftbitmap.h
+C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/ftbzip2.h
+C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/ftcache.h
+C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/ftchapters.h
+C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/ftcid.h
+C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/ftcolor.h
+C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/ftdriver.h
+C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/fterrdef.h
+C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/fterrors.h
+C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/ftfntfmt.h
+C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/ftgasp.h
+C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/ftglyph.h
+C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/ftgxval.h
+C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/ftgzip.h
+C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/ftimage.h
+C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/ftincrem.h
+C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/ftlcdfil.h
+C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/ftlist.h
+C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/ftlogging.h
+C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/ftlzw.h
+C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/ftmac.h
+C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/ftmm.h
+C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/ftmodapi.h
+C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/ftmoderr.h
+C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/ftotval.h
+C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/ftoutln.h
+C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/ftparams.h
+C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/ftpfr.h
+C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/ftrender.h
+C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/ftsizes.h
+C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/ftsnames.h
+C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/ftstroke.h
+C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/ftsynth.h
+C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/ftsystem.h
+C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/fttrigon.h
+C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/fttypes.h
+C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/ftwinfnt.h
+C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/otsvg.h
+C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/t1tables.h
+C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/ttnameid.h
+C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/tttables.h
+C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/tttags.h
+C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/ft2build.h
+C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/config/ftconfig.h
+C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/include/freetype2/freetype/config/ftoption.h
+C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/lib/pkgconfig/freetype2.pc
+C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/lib/freetype.lib
+C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/bin/freetype.dll
+C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/lib/cmake/freetype/freetype-targets.cmake
+C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/lib/cmake/freetype/freetype-targets-release.cmake
+C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/lib/cmake/freetype/freetype-config-version.cmake
+C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/freetype_x64-windows/lib/cmake/freetype/freetype-config.cmake

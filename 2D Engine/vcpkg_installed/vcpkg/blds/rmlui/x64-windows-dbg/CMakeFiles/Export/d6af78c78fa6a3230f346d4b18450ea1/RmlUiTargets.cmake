@@ -60,7 +60,7 @@ add_library(RmlUi::Core SHARED IMPORTED)
 
 set_target_properties(RmlUi::Core PROPERTIES
   INTERFACE_COMPILE_FEATURES "cxx_std_14"
-  INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include;D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/x64-windows/include"
+  INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include;C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/x64-windows/include"
 )
 
 # Create imported target RmlUi::Debugger

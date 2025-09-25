@@ -31,7 +31,7 @@ events:
       Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.obj"
       
       The C compiler identification is MSVC, found in:
-        D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/libpng/x64-windows-dbg/CMakeFiles/3.31.6-msvc6/CompilerIdC/CMakeCCompilerId.exe
+        C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/libpng/x64-windows-dbg/CMakeFiles/3.31.6-msvc6/CompilerIdC/CMakeCCompilerId.exe
       
   -
     kind: "message-v1"
@@ -43,7 +43,7 @@ events:
     message: |
       Detecting C compiler /showIncludes prefix:
         main.c
-        Note: including file: D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\libpng\\x64-windows-dbg\\CMakeFiles\\ShowIncludes\\foo.h
+        Note: including file: C:\\Programming\\C++\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\libpng\\x64-windows-dbg\\CMakeFiles\\ShowIncludes\\foo.h
         
       Found prefix "Note: including file: "
   -
@@ -54,7 +54,7 @@ events:
       - "CMakeLists.txt:28 (project)"
     message: |
       Checking whether the ASM compiler is GNU using "--version" did not match "(GNU assembler)|(GCC)|(Free Software Foundation)":
-      Microsoft (R) C/C++ Optimizing Compiler Version 19.44.35214 for x64
+      Microsoft (R) C/C++ Optimizing Compiler Version 19.44.35213 for x64
       Copyright (C) Microsoft Corporation.  All rights reserved.
       
       cl : Command line warning D9002 : ignoring unknown option '--version'
@@ -67,7 +67,7 @@ events:
       - "CMakeLists.txt:28 (project)"
     message: |
       Checking whether the ASM compiler is AppleClang using "--version" did not match "(Apple (clang|LLVM) version)":
-      Microsoft (R) C/C++ Optimizing Compiler Version 19.44.35214 for x64
+      Microsoft (R) C/C++ Optimizing Compiler Version 19.44.35213 for x64
       Copyright (C) Microsoft Corporation.  All rights reserved.
       
       cl : Command line warning D9002 : ignoring unknown option '--version'
@@ -80,7 +80,7 @@ events:
       - "CMakeLists.txt:28 (project)"
     message: |
       Checking whether the ASM compiler is Clang using "--version" did not match "(clang version)":
-      Microsoft (R) C/C++ Optimizing Compiler Version 19.44.35214 for x64
+      Microsoft (R) C/C++ Optimizing Compiler Version 19.44.35213 for x64
       Copyright (C) Microsoft Corporation.  All rights reserved.
       
       cl : Command line warning D9002 : ignoring unknown option '--version'
@@ -93,7 +93,7 @@ events:
       - "CMakeLists.txt:28 (project)"
     message: |
       Checking whether the ASM compiler is ARMClang using "--version" did not match "armclang":
-      Microsoft (R) C/C++ Optimizing Compiler Version 19.44.35214 for x64
+      Microsoft (R) C/C++ Optimizing Compiler Version 19.44.35213 for x64
       Copyright (C) Microsoft Corporation.  All rights reserved.
       
       cl : Command line warning D9002 : ignoring unknown option '--version'
@@ -106,7 +106,7 @@ events:
       - "CMakeLists.txt:28 (project)"
     message: |
       Checking whether the ASM compiler is OrangeC using "--version" did not match "occ \\(OrangeC\\) Version":
-      Microsoft (R) C/C++ Optimizing Compiler Version 19.44.35214 for x64
+      Microsoft (R) C/C++ Optimizing Compiler Version 19.44.35213 for x64
       Copyright (C) Microsoft Corporation.  All rights reserved.
       
       cl : Command line warning D9002 : ignoring unknown option '--version'
@@ -119,7 +119,7 @@ events:
       - "CMakeLists.txt:28 (project)"
     message: |
       Checking whether the ASM compiler is HP using "-V" did not match "HP C":
-      Microsoft (R) C/C++ Optimizing Compiler Version 19.44.35214 for x64
+      Microsoft (R) C/C++ Optimizing Compiler Version 19.44.35213 for x64
       Copyright (C) Microsoft Corporation.  All rights reserved.
       
       cl : Command line error D8004 : '/V' requires an argument
@@ -131,7 +131,7 @@ events:
       - "CMakeLists.txt:28 (project)"
     message: |
       Checking whether the ASM compiler is Intel using "--version" did not match "(ICC)":
-      Microsoft (R) C/C++ Optimizing Compiler Version 19.44.35214 for x64
+      Microsoft (R) C/C++ Optimizing Compiler Version 19.44.35213 for x64
       Copyright (C) Microsoft Corporation.  All rights reserved.
       
       cl : Command line warning D9002 : ignoring unknown option '--version'
@@ -145,7 +145,7 @@ events:
     message: |
       Checking whether the ASM compiler is IntelLLVM using "--version" did not match "(Intel[^
       ]+oneAPI)":
-      Microsoft (R) C/C++ Optimizing Compiler Version 19.44.35214 for x64
+      Microsoft (R) C/C++ Optimizing Compiler Version 19.44.35213 for x64
       Copyright (C) Microsoft Corporation.  All rights reserved.
       
       cl : Command line warning D9002 : ignoring unknown option '--version'
@@ -158,7 +158,7 @@ events:
       - "CMakeLists.txt:28 (project)"
     message: |
       Checking whether the ASM compiler is SunPro using "-V" did not match "Sun C":
-      Microsoft (R) C/C++ Optimizing Compiler Version 19.44.35214 for x64
+      Microsoft (R) C/C++ Optimizing Compiler Version 19.44.35213 for x64
       Copyright (C) Microsoft Corporation.  All rights reserved.
       
       cl : Command line error D8004 : '/V' requires an argument
@@ -170,7 +170,7 @@ events:
       - "CMakeLists.txt:28 (project)"
     message: |
       Checking whether the ASM compiler is XL using "-qversion" did not match "XL C":
-      Microsoft (R) C/C++ Optimizing Compiler Version 19.44.35214 for x64
+      Microsoft (R) C/C++ Optimizing Compiler Version 19.44.35213 for x64
       Copyright (C) Microsoft Corporation.  All rights reserved.
       
       cl : Command line warning D9002 : ignoring unknown option '-qversion'
@@ -183,7 +183,7 @@ events:
       - "CMakeLists.txt:28 (project)"
     message: |
       Checking whether the ASM compiler is MSVC using "-?" matched "Microsoft":
-      Microsoft (R) C/C++ Optimizing Compiler Version 19.44.35214 for x64
+      Microsoft (R) C/C++ Optimizing Compiler Version 19.44.35213 for x64
       Copyright (C) Microsoft Corporation.  All rights reserved.
       
                                C/C++ COMPILER OPTIONS
@@ -444,8 +444,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/libpng/x64-windows-dbg/CMakeFiles/CMakeScratch/TryCompile-ct4uhm"
-      binary: "D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/libpng/x64-windows-dbg/CMakeFiles/CMakeScratch/TryCompile-ct4uhm"
+      source: "C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/libpng/x64-windows-dbg/CMakeFiles/CMakeScratch/TryCompile-bjtjaa"
+      binary: "C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/libpng/x64-windows-dbg/CMakeFiles/CMakeScratch/TryCompile-bjtjaa"
     cmakeVariables:
       CMAKE_C_FLAGS: " /nologo /DWIN32 /D_WINDOWS /utf-8 /MP "
       CMAKE_C_FLAGS_DEBUG: "/MDd /Z7 /Ob0 /Od /RTC1 "
@@ -460,7 +460,7 @@ events:
       VCPKG_C_FLAGS: ""
       VCPKG_C_FLAGS_DEBUG: ""
       VCPKG_C_FLAGS_RELEASE: ""
-      VCPKG_INSTALLED_DIR: "D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed"
+      VCPKG_INSTALLED_DIR: "C:/Programming/C++/Enginie/2D Engine/vcpkg_installed"
       VCPKG_LINKER_FLAGS: ""
       VCPKG_LINKER_FLAGS_DEBUG: ""
       VCPKG_LINKER_FLAGS_RELEASE: ""
@@ -474,11 +474,11 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/libpng/x64-windows-dbg/CMakeFiles/CMakeScratch/TryCompile-ct4uhm'
+        Change Dir: 'C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/libpng/x64-windows-dbg/CMakeFiles/CMakeScratch/TryCompile-bjtjaa'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_43565
-        [1/2] C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /nologo /DWIN32 /D_WINDOWS /utf-8 /MP   /MDd /Z7 /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\\cmTC_43565.dir\\CMakeCCompilerABI.c.obj /FdCMakeFiles\\cmTC_43565.dir\\ /FS -c "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.31\\Modules\\CMakeCCompilerABI.c"
-        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_43565.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_43565.dir\\CMakeCCompilerABI.c.obj  /out:cmTC_43565.exe /implib:cmTC_43565.lib /pdb:cmTC_43565.pdb /version:0.0 /machine:x64  /nologo    /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_58d9e
+        [1/2] C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /nologo /DWIN32 /D_WINDOWS /utf-8 /MP   /MDd /Z7 /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\\cmTC_58d9e.dir\\CMakeCCompilerABI.c.obj /FdCMakeFiles\\cmTC_58d9e.dir\\ /FS -c "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.31\\Modules\\CMakeCCompilerABI.c"
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_58d9e.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_58d9e.dir\\CMakeCCompilerABI.c.obj  /out:cmTC_58d9e.exe /implib:cmTC_58d9e.lib /pdb:cmTC_58d9e.pdb /version:0.0 /machine:x64  /nologo    /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
         
       exitCode: 0
   -
@@ -491,7 +491,7 @@ events:
       Parsed C implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?))("|,| |$)]
-        linker tool for 'C': C:/PROGRA~1/MICROS~2/2022/COMMUN~1/VC/Tools/MSVC/1444~1.352/bin/Hostx64/x64/link.exe
+        linker tool for 'C': C:/PROGRA~1/MICROS~1/2022/COMMUN~1/VC/Tools/MSVC/1444~1.352/bin/Hostx64/x64/link.exe
         implicit libs: []
         implicit objs: []
         implicit dirs: []
@@ -506,8 +506,8 @@ events:
       - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
       - "CMakeLists.txt:28 (project)"
     message: |
-      Running the C compiler's linker: "C:/PROGRA~1/MICROS~2/2022/COMMUN~1/VC/Tools/MSVC/1444~1.352/bin/Hostx64/x64/link.exe" "-v"
-      Microsoft (R) Incremental Linker Version 14.44.35214.0
+      Running the C compiler's linker: "C:/PROGRA~1/MICROS~1/2022/COMMUN~1/VC/Tools/MSVC/1444~1.352/bin/Hostx64/x64/link.exe" "-v"
+      Microsoft (R) Incremental Linker Version 14.44.35213.0
       Copyright (C) Microsoft Corporation.  All rights reserved.
   -
     kind: "try_compile-v1"
@@ -518,8 +518,8 @@ events:
     checks:
       - "Performing Test HAVE_LD_VERSION_SCRIPT"
     directories:
-      source: "D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/libpng/x64-windows-dbg/CMakeFiles/CMakeScratch/TryCompile-ol5o7c"
-      binary: "D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/libpng/x64-windows-dbg/CMakeFiles/CMakeScratch/TryCompile-ol5o7c"
+      source: "C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/libpng/x64-windows-dbg/CMakeFiles/CMakeScratch/TryCompile-clphow"
+      binary: "C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/libpng/x64-windows-dbg/CMakeFiles/CMakeScratch/TryCompile-clphow"
     cmakeVariables:
       CMAKE_C_FLAGS: " /nologo /DWIN32 /D_WINDOWS /utf-8 /MP "
       CMAKE_C_FLAGS_DEBUG: "/MDd /Z7 /Ob0 /Od /RTC1 "
@@ -534,7 +534,7 @@ events:
       VCPKG_C_FLAGS: ""
       VCPKG_C_FLAGS_DEBUG: ""
       VCPKG_C_FLAGS_RELEASE: ""
-      VCPKG_INSTALLED_DIR: "D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed"
+      VCPKG_INSTALLED_DIR: "C:/Programming/C++/Enginie/2D Engine/vcpkg_installed"
       VCPKG_LINKER_FLAGS: ""
       VCPKG_LINKER_FLAGS_DEBUG: ""
       VCPKG_LINKER_FLAGS_RELEASE: ""
@@ -548,13 +548,13 @@ events:
       variable: "HAVE_LD_VERSION_SCRIPT"
       cached: true
       stdout: |
-        Change Dir: 'D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/libpng/x64-windows-dbg/CMakeFiles/CMakeScratch/TryCompile-ol5o7c'
+        Change Dir: 'C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/libpng/x64-windows-dbg/CMakeFiles/CMakeScratch/TryCompile-clphow'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_13870
-        [1/2] C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo -DHAVE_LD_VERSION_SCRIPT  /nologo /DWIN32 /D_WINDOWS /utf-8 /MP  -Wl,--version-script='D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/libpng/x64-windows-dbg/conftest.map' /MDd /Z7 /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\\cmTC_13870.dir\\src.c.obj /FdCMakeFiles\\cmTC_13870.dir\\ /FS -c "D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\libpng\\x64-windows-dbg\\CMakeFiles\\CMakeScratch\\TryCompile-ol5o7c\\src.c"
-        FAILED: CMakeFiles/cmTC_13870.dir/src.c.obj 
-        C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo -DHAVE_LD_VERSION_SCRIPT  /nologo /DWIN32 /D_WINDOWS /utf-8 /MP  -Wl,--version-script='D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/libpng/x64-windows-dbg/conftest.map' /MDd /Z7 /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\\cmTC_13870.dir\\src.c.obj /FdCMakeFiles\\cmTC_13870.dir\\ /FS -c "D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\libpng\\x64-windows-dbg\\CMakeFiles\\CMakeScratch\\TryCompile-ol5o7c\\src.c"
-        cl : Command line error D8021 : invalid numeric argument '/Wl,--version-script='D:/Programming/C++/Game'
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_cb66d
+        [1/2] C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo -DHAVE_LD_VERSION_SCRIPT  /nologo /DWIN32 /D_WINDOWS /utf-8 /MP  -Wl,--version-script='C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/libpng/x64-windows-dbg/conftest.map' /MDd /Z7 /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\\cmTC_cb66d.dir\\src.c.obj /FdCMakeFiles\\cmTC_cb66d.dir\\ /FS -c "C:\\Programming\\C++\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\libpng\\x64-windows-dbg\\CMakeFiles\\CMakeScratch\\TryCompile-clphow\\src.c"
+        FAILED: CMakeFiles/cmTC_cb66d.dir/src.c.obj 
+        C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo -DHAVE_LD_VERSION_SCRIPT  /nologo /DWIN32 /D_WINDOWS /utf-8 /MP  -Wl,--version-script='C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/libpng/x64-windows-dbg/conftest.map' /MDd /Z7 /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\\cmTC_cb66d.dir\\src.c.obj /FdCMakeFiles\\cmTC_cb66d.dir\\ /FS -c "C:\\Programming\\C++\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\libpng\\x64-windows-dbg\\CMakeFiles\\CMakeScratch\\TryCompile-clphow\\src.c"
+        cl : Command line error D8021 : invalid numeric argument '/Wl,--version-script='C:/Programming/C++/Enginie/2D'
         ninja: build stopped: subcommand failed.
         
       exitCode: 1
@@ -567,8 +567,8 @@ events:
     checks:
       - "Performing Test HAVE_SOLARIS_LD_VERSION_SCRIPT"
     directories:
-      source: "D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/libpng/x64-windows-dbg/CMakeFiles/CMakeScratch/TryCompile-8tlcmg"
-      binary: "D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/libpng/x64-windows-dbg/CMakeFiles/CMakeScratch/TryCompile-8tlcmg"
+      source: "C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/libpng/x64-windows-dbg/CMakeFiles/CMakeScratch/TryCompile-08swtm"
+      binary: "C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/libpng/x64-windows-dbg/CMakeFiles/CMakeScratch/TryCompile-08swtm"
     cmakeVariables:
       CMAKE_C_FLAGS: " /nologo /DWIN32 /D_WINDOWS /utf-8 /MP "
       CMAKE_C_FLAGS_DEBUG: "/MDd /Z7 /Ob0 /Od /RTC1 "
@@ -583,7 +583,7 @@ events:
       VCPKG_C_FLAGS: ""
       VCPKG_C_FLAGS_DEBUG: ""
       VCPKG_C_FLAGS_RELEASE: ""
-      VCPKG_INSTALLED_DIR: "D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed"
+      VCPKG_INSTALLED_DIR: "C:/Programming/C++/Enginie/2D Engine/vcpkg_installed"
       VCPKG_LINKER_FLAGS: ""
       VCPKG_LINKER_FLAGS_DEBUG: ""
       VCPKG_LINKER_FLAGS_RELEASE: ""
@@ -597,12 +597,12 @@ events:
       variable: "HAVE_SOLARIS_LD_VERSION_SCRIPT"
       cached: true
       stdout: |
-        Change Dir: 'D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/libpng/x64-windows-dbg/CMakeFiles/CMakeScratch/TryCompile-8tlcmg'
+        Change Dir: 'C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/libpng/x64-windows-dbg/CMakeFiles/CMakeScratch/TryCompile-08swtm'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_f727a
-        [1/2] C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo -DHAVE_SOLARIS_LD_VERSION_SCRIPT  /nologo /DWIN32 /D_WINDOWS /utf-8 /MP  -Wl,-M -Wl,D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/libpng/x64-windows-dbg/conftest.map /MDd /Z7 /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\\cmTC_f727a.dir\\src.c.obj /FdCMakeFiles\\cmTC_f727a.dir\\ /FS -c "D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\libpng\\x64-windows-dbg\\CMakeFiles\\CMakeScratch\\TryCompile-8tlcmg\\src.c"
-        FAILED: CMakeFiles/cmTC_f727a.dir/src.c.obj 
-        C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo -DHAVE_SOLARIS_LD_VERSION_SCRIPT  /nologo /DWIN32 /D_WINDOWS /utf-8 /MP  -Wl,-M -Wl,D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/libpng/x64-windows-dbg/conftest.map /MDd /Z7 /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\\cmTC_f727a.dir\\src.c.obj /FdCMakeFiles\\cmTC_f727a.dir\\ /FS -c "D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\libpng\\x64-windows-dbg\\CMakeFiles\\CMakeScratch\\TryCompile-8tlcmg\\src.c"
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_cd63d
+        [1/2] C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo -DHAVE_SOLARIS_LD_VERSION_SCRIPT  /nologo /DWIN32 /D_WINDOWS /utf-8 /MP  -Wl,-M -Wl,C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/libpng/x64-windows-dbg/conftest.map /MDd /Z7 /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\\cmTC_cd63d.dir\\src.c.obj /FdCMakeFiles\\cmTC_cd63d.dir\\ /FS -c "C:\\Programming\\C++\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\libpng\\x64-windows-dbg\\CMakeFiles\\CMakeScratch\\TryCompile-08swtm\\src.c"
+        FAILED: CMakeFiles/cmTC_cd63d.dir/src.c.obj 
+        C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo -DHAVE_SOLARIS_LD_VERSION_SCRIPT  /nologo /DWIN32 /D_WINDOWS /utf-8 /MP  -Wl,-M -Wl,C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/libpng/x64-windows-dbg/conftest.map /MDd /Z7 /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\\cmTC_cd63d.dir\\src.c.obj /FdCMakeFiles\\cmTC_cd63d.dir\\ /FS -c "C:\\Programming\\C++\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\libpng\\x64-windows-dbg\\CMakeFiles\\CMakeScratch\\TryCompile-08swtm\\src.c"
         cl : Command line error D8021 : invalid numeric argument '/Wl,-M'
         ninja: build stopped: subcommand failed.
         

@@ -116,7 +116,8 @@ void Game::Init(const char* windowTitle, int width, int height, bool isFullscree
 		std::cout << "Font loaded in RML" << std::endl;
 	}
 
-	Rml::ElementDocument* localDocument = context->LoadDocument("D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\2D Engine\\resources\\ui\\rml\\main-menu\\hello_world.rml");
+	//TODO FIX THE DOCUMENT PATH TO A RELATIVE ONE
+	Rml::ElementDocument* localDocument = context->LoadDocument("C:\\Programming\\C++\\Enginie\\2D Engine\\2D Engine\\resources\\ui\\rml\\main-menu\\hello_world.rml"); 
 	document = localDocument;
 
 	if (localDocument != NULL) {

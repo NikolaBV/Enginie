@@ -29,7 +29,7 @@ rule CUSTOM_COMMAND
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -S"D:\Programming\C++\Game Dev\Enginie\2D Engine\vcpkg_installed\vcpkg\blds\robin-hood-hashing\src\3.11.5-8b24072d1d.clean" -B"D:\Programming\C++\Game Dev\Enginie\2D Engine\vcpkg_installed\vcpkg\blds\robin-hood-hashing\x64-windows-rel"
+  command = "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -S"C:\Programming\C++\Enginie\2D Engine\vcpkg_installed\vcpkg\blds\robin-hood-hashing\src\3.11.5-8b24072d1d.clean" -B"C:\Programming\C++\Enginie\2D Engine\vcpkg_installed\vcpkg\blds\robin-hood-hashing\x64-windows-rel"
   description = Re-running CMake...
   generator = 1
 

@@ -1,8 +1,8 @@
-# Install script for directory: D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/rmlui/src/6.0-611c7f442e.clean
+# Install script for directory: C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/rmlui/src/6.0-611c7f442e.clean
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/rmlui_x64-windows")
+  set(CMAKE_INSTALL_PREFIX "C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/rmlui_x64-windows")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -34,19 +34,19 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/rmlui/x64-windows-rel/Source/cmake_install.cmake")
+  include("C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/rmlui/x64-windows-rel/Source/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/rmlui/x64-windows-rel/Samples/cmake_install.cmake")
+  include("C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/rmlui/x64-windows-rel/Samples/cmake_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/RmlUi/RmlUiTargets.cmake")
     file(DIFFERENT _cmake_export_file_changed FILES
          "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/RmlUi/RmlUiTargets.cmake"
-         "D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/rmlui/x64-windows-rel/CMakeFiles/Export/d6af78c78fa6a3230f346d4b18450ea1/RmlUiTargets.cmake")
+         "C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/rmlui/x64-windows-rel/CMakeFiles/Export/d6af78c78fa6a3230f346d4b18450ea1/RmlUiTargets.cmake")
     if(_cmake_export_file_changed)
       file(GLOB _cmake_old_config_files "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/RmlUi/RmlUiTargets-*.cmake")
       if(_cmake_old_config_files)
@@ -59,28 +59,28 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
     endif()
     unset(_cmake_export_file_changed)
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/RmlUi" TYPE FILE FILES "D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/rmlui/x64-windows-rel/CMakeFiles/Export/d6af78c78fa6a3230f346d4b18450ea1/RmlUiTargets.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/RmlUi" TYPE FILE FILES "C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/rmlui/x64-windows-rel/CMakeFiles/Export/d6af78c78fa6a3230f346d4b18450ea1/RmlUiTargets.cmake")
   if(CMAKE_INSTALL_CONFIG_NAME MATCHES "^([Rr][Ee][Ll][Ee][Aa][Ss][Ee])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/RmlUi" TYPE FILE FILES "D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/rmlui/x64-windows-rel/CMakeFiles/Export/d6af78c78fa6a3230f346d4b18450ea1/RmlUiTargets-release.cmake")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/RmlUi" TYPE FILE FILES "C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/rmlui/x64-windows-rel/CMakeFiles/Export/d6af78c78fa6a3230f346d4b18450ea1/RmlUiTargets-release.cmake")
   endif()
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/rmlui/src/6.0-611c7f442e.clean/Include/RmlUi")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/rmlui/src/6.0-611c7f442e.clean/Include/RmlUi")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/RmlUi" TYPE FILE FILES
-    "D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/rmlui/x64-windows-rel/install/RmlUiConfig.cmake"
-    "D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/rmlui/x64-windows-rel/install/RmlUiConfigVersion.cmake"
-    "D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/rmlui/src/6.0-611c7f442e.clean/CMake/Dependencies.cmake"
+    "C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/rmlui/x64-windows-rel/install/RmlUiConfig.cmake"
+    "C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/rmlui/x64-windows-rel/install/RmlUiConfigVersion.cmake"
+    "C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/rmlui/src/6.0-611c7f442e.clean/CMake/Dependencies.cmake"
     )
 endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/rmlui/x64-windows-rel/install_local_manifest.txt"
+  file(WRITE "C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/rmlui/x64-windows-rel/install_local_manifest.txt"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()
 if(CMAKE_INSTALL_COMPONENT)
@@ -96,6 +96,6 @@ else()
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/rmlui/x64-windows-rel/${CMAKE_INSTALL_MANIFEST}"
+  file(WRITE "C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/rmlui/x64-windows-rel/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

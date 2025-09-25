@@ -1,8 +1,8 @@
-# Install script for directory: D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/bzip2/src/bzip2-1-336d4794a3.clean
+# Install script for directory: C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/bzip2/src/bzip2-1-336d4794a3.clean
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/bzip2_x64-windows/debug")
+  set(CMAKE_INSTALL_PREFIX "C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/bzip2_x64-windows/debug")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -33,17 +33,17 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY OPTIONAL FILES "D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/bzip2/x64-windows-dbg/bz2d.lib")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY OPTIONAL FILES "C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/bzip2/x64-windows-dbg/bz2d.lib")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE SHARED_LIBRARY FILES "D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/bzip2/x64-windows-dbg/bz2d.dll")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE SHARED_LIBRARY FILES "C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/bzip2/x64-windows-dbg/bz2d.dll")
 endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/bzip2/x64-windows-dbg/install_local_manifest.txt"
+  file(WRITE "C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/bzip2/x64-windows-dbg/install_local_manifest.txt"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()
 if(CMAKE_INSTALL_COMPONENT)
@@ -59,6 +59,6 @@ else()
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/bzip2/x64-windows-dbg/${CMAKE_INSTALL_MANIFEST}"
+  file(WRITE "C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/blds/bzip2/x64-windows-dbg/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

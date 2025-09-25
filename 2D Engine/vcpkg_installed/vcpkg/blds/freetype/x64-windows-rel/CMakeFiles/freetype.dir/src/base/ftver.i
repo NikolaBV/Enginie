@@ -1,4 +1,4 @@
-#line 1 "D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\freetype\\src\\VER-2-13-3-8b423a038b.clean\\src\\base\\ftver.rc"
+#line 1 "C:\\Programming\\C++\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\freetype\\src\\VER-2-13-3-8b423a038b.clean\\src\\base\\ftver.rc"
 
 
 
@@ -9386,7 +9386,7 @@
 
 #line 276 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.26100.0\\um\\windows.h"
 
-#line 20 "D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\freetype\\src\\VER-2-13-3-8b423a038b.clean\\src\\base\\ftver.rc"
+#line 20 "C:\\Programming\\C++\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\freetype\\src\\VER-2-13-3-8b423a038b.clean\\src\\base\\ftver.rc"
 
 
 
@@ -9404,7 +9404,7 @@ FILETYPE             0x00000002L
 
 
 
-#line 38 "D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\freetype\\src\\VER-2-13-3-8b423a038b.clean\\src\\base\\ftver.rc"
+#line 38 "C:\\Programming\\C++\\Enginie\\2D Engine\\vcpkg_installed\\vcpkg\\blds\\freetype\\src\\VER-2-13-3-8b423a038b.clean\\src\\base\\ftver.rc"
 BEGIN
   BLOCK "StringFileInfo"
   BEGIN

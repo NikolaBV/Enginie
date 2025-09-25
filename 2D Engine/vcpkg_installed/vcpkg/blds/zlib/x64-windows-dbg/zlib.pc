@@ -1,8 +1,8 @@
-prefix=D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/zlib_x64-windows/debug
-exec_prefix=D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/zlib_x64-windows/debug
-libdir=D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/zlib_x64-windows/debug/lib
-sharedlibdir=D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/zlib_x64-windows/debug/lib
-includedir=D:/Programming/C++/Game Dev/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/zlib_x64-windows/debug/include
+prefix=C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/zlib_x64-windows/debug
+exec_prefix=C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/zlib_x64-windows/debug
+libdir=C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/zlib_x64-windows/debug/lib
+sharedlibdir=C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/zlib_x64-windows/debug/lib
+includedir=C:/Programming/C++/Enginie/2D Engine/vcpkg_installed/vcpkg/pkgs/zlib_x64-windows/debug/include
 
 Name: zlib
 Description: zlib compression library

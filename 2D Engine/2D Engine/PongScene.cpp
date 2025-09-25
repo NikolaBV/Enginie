@@ -73,8 +73,8 @@ void PongScene::OnEnter(SceneContext& ctx)
 				constructor.Bind("winner-player", &winner_data.winner_player);
 				constructor.Bind("winner", &playerWinner);
 			}
-
-			Rml::ElementDocument* localDocument = Game::context->LoadDocument("D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\2D Engine\\resources\\ui\\rml\\pong\\game-over.rml");
+			//TODO Add a relative path to the document
+			Rml::ElementDocument* localDocument = Game::context->LoadDocument("C:\\Programming\\C++\\Enginie\\2D Engine\\2D Engine\\resources\\ui\\rml\\pong\\game-over.rml");
 			gameOver = localDocument;
 
 			if (localDocument != NULL) {
