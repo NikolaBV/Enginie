@@ -27,7 +27,10 @@ void Breakout::OnEnter(SceneContext& ctx)
 
 	ball->AddComponent<TransformComponent>(400.0f, 400.0f, 5, 5, 2.0f);
 	ball->AddComponent<SpriteComponent>(assets, "whiteTile", false);
+	ball->AddComponent<ColliderComponent>("ball");
 	ball->AddGroup(GroupLabels::groupProjectiles);
+
+	ball->GetComponent<TransformComponent>().velocity = Vector2D(0.8f, 1);
 
 
 	std::cout << "Darkblue: " << static_cast<RectangleColor>(DarkBlue) << std::endl;
@@ -52,6 +55,10 @@ void Breakout::Update(SceneContext& ctx)
 	SDL_Rect playerCollider = playerPaddle->GetComponent<ColliderComponent>().collider;
 	Vector2D initlialPlayerPosition = playerPaddle->GetComponent<TransformComponent>().position;
 
+	Vector2D initlialBallPosition = ball->GetComponent<TransformComponent>().position;
+	SDL_Rect ballCollider = ball->GetComponent<ColliderComponent>().collider;
+	Vector2D ballVelocity = ball->GetComponent<TransformComponent>().velocity;
+
 	manager.refresh();
 	manager.Update();
 	
@@ -59,14 +66,46 @@ void Breakout::Update(SceneContext& ctx)
 	auto& projectiles = manager.GetGroup(GroupLabels::groupProjectiles);
 
 	for (auto& collider : colliders) {
-
+		if (Collision::AABB(ball->GetComponent<ColliderComponent>().collider, collider->GetComponent<ColliderComponent>().collider)) {
+			Vector2D normalVector = Vector2D(0, 1);
+			Vector2D reflection = ballVelocity.Reflection(normalVector);
+			ball->GetComponent<TransformComponent>().velocity = reflection;
+			return;
+		}
 	}
 
+	//TODO Make a fucntion in Collison class to detect collision with all sides of the window and return true if so
 	if (playerCollider.x + playerCollider.w >= 800) {
 		playerPaddle->GetComponent<TransformComponent>().position = initlialPlayerPosition;	
 	}
 	if (playerCollider.x <= 0) {
 		playerPaddle->GetComponent<TransformComponent>().position = initlialPlayerPosition;
+	}
+
+	if (ball->GetComponent<ColliderComponent>().collider.x >= Game::windowWidth) {
+		Vector2D normalVector = Vector2D(1, 0);
+		Vector2D reflection = ballVelocity.Reflection(normalVector);
+		ball->GetComponent<TransformComponent>().velocity = reflection;
+	}
+	if (ball->GetComponent<ColliderComponent>().collider.x <= 0) {
+		Vector2D normalVector = Vector2D(1, 0);
+		Vector2D reflection = ballVelocity.Reflection(normalVector);
+		ball->GetComponent<TransformComponent>().velocity = reflection;
+	}
+	if (Collision::AABB(playerPaddle->GetComponent<ColliderComponent>().collider, ball->GetComponent<ColliderComponent>().collider)) {
+		Vector2D normalVector = Vector2D(0, 1);
+		Vector2D reflection = ballVelocity.Reflection(normalVector);
+		ball->GetComponent<TransformComponent>().velocity = reflection;
+	}
+
+	if (ball->GetComponent<ColliderComponent>().collider.y >= Game::windowHeight || ball->GetComponent<ColliderComponent>().collider.y == 0) {
+		ResetRound();
+		return;
+	}
+
+	if (health <= 0) {
+		//TODO Implement a game over event
+		std::cout << "Game over!" << std::endl;
 	}
 
 }
@@ -103,10 +142,19 @@ void Breakout::DrawColliderRectanglesRow(RectangleColor color)
 
 		tempRectangleEntity->AddComponent<TransformComponent>(static_cast<float>(xPosition), static_cast<float>(collider_row_y_position), COLLIDER_RECTANGLE_HEIGHT, COLLIDER_RECTANGLE_WIDTH, 2.0f);
 		tempRectangleEntity->AddComponent<SpriteComponent>(assets, colorsTextureIdMap[color], false);
+		tempRectangleEntity->AddComponent<ColliderComponent>(color + ": " + i);
 		tempRectangleEntity->AddGroup(GroupLabels::groupColliders);
 
 		rectangleColliders.push_back(newRectangleCollider);
 		xPosition += COLLIDER_RECTANGLE_WIDTH;
 	}
 	collider_row_y_position += COLLIDER_RECTANGLE_HEIGHT * 2;
+}
+
+void Breakout::ResetRound()
+{
+	health--;
+	std::cout << "Heath: " << health << std::endl;
+	ball->GetComponent<TransformComponent>().position = Vector2D(400.0f, 400.0f);
+	ball->GetComponent<TransformComponent>().velocity = Vector2D(0.8f, 1);
 }

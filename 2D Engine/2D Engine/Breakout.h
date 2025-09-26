@@ -31,6 +31,7 @@ public:
 	void Render(SceneContext& ctx) override;
 
 	void DrawColliderRectanglesRow(RectangleColor color);
+	void ResetRound();
 
 private:
 	Entity* playerPaddle = nullptr;
@@ -40,6 +41,7 @@ private:
 	std::vector<RecntangleCollider> rectangleColliders;
 
 	int score = 0;
+	int health = 3;
 
 	const int COLLIDER_RECTANGLE_HEIGHT = 10;
 	const int COLLIDER_RECTANGLE_WIDTH = 20;
