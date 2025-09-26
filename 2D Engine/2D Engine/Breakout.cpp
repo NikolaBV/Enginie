@@ -22,6 +22,7 @@ void Breakout::OnEnter(SceneContext& ctx)
 	playerPaddle->AddComponent<TransformComponent>(360.0f, 550.0f, 5, 80, 2.0f);
 	playerPaddle->AddComponent<SpriteComponent>(assets, "whiteTile", false);
 	playerPaddle->AddComponent<KeyboardController>(assets, Game::keyState, playerControlsMap, true, false, InputScheme::WASD);
+	playerPaddle->AddComponent<ColliderComponent>("player");
 	playerPaddle->AddGroup(GroupLabels::groupPlayers);
 
 	ball->AddComponent<TransformComponent>(400.0f, 400.0f, 5, 5, 2.0f);
@@ -48,8 +49,26 @@ void Breakout::HandleEvent(SceneContext& ctx, const SDL_Event& e)
 
 void Breakout::Update(SceneContext& ctx)
 {
+	SDL_Rect playerCollider = playerPaddle->GetComponent<ColliderComponent>().collider;
+	Vector2D initlialPlayerPosition = playerPaddle->GetComponent<TransformComponent>().position;
+
 	manager.refresh();
 	manager.Update();
+	
+	auto& colliders = manager.GetGroup(GroupLabels::groupColliders);
+	auto& projectiles = manager.GetGroup(GroupLabels::groupProjectiles);
+
+	for (auto& collider : colliders) {
+
+	}
+
+	if (playerCollider.x + playerCollider.w >= 800) {
+		playerPaddle->GetComponent<TransformComponent>().position = initlialPlayerPosition;	
+	}
+	if (playerCollider.x <= 0) {
+		playerPaddle->GetComponent<TransformComponent>().position = initlialPlayerPosition;
+	}
+
 }
 
 void Breakout::Render(SceneContext& ctx)

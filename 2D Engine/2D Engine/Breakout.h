@@ -1,10 +1,12 @@
 #pragma once
 #include "Scene.h"
-#include <vector>
 #include "Game.h"
 #include "Components.h"
 #include "Groups.h"
+#include "Collision.h"
+
 #include <map>
+#include <vector>
 
 enum RectangleColor {
 	Red,
