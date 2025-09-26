@@ -7,6 +7,7 @@
 
 #include <map>
 #include <vector>
+#include <sstream>
 
 enum RectangleColor {
 	Red,
@@ -38,13 +39,12 @@ private:
 	Entity* ball = nullptr;
 	Entity* scoreLabel = nullptr;
 
-	std::vector<RecntangleCollider> rectangleColliders;
-
 	int score = 0;
 	int health = 3;
+	int rectnagleColliderId = 0;
 
-	const int COLLIDER_RECTANGLE_HEIGHT = 10;
-	const int COLLIDER_RECTANGLE_WIDTH = 20;
+	const int COLLIDER_RECTANGLE_HEIGHT = 20;
+	const int COLLIDER_RECTANGLE_WIDTH = 50;
 	float collider_row_y_position = 250;
 
 	int numberOfRectnaglesPerRow = Game::windowWidth / COLLIDER_RECTANGLE_WIDTH;
@@ -57,5 +57,7 @@ private:
 		{RectangleColor::Orange, "orangeTile"},
 		{RectangleColor::Red, "redTile"},
 	};
+	std::map<int, RecntangleCollider> rectangleColliders;
+
 };
 

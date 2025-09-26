@@ -32,12 +32,13 @@ void Breakout::OnEnter(SceneContext& ctx)
 
 	ball->GetComponent<TransformComponent>().velocity = Vector2D(0.8f, 1);
 
-
-	std::cout << "Darkblue: " << static_cast<RectangleColor>(DarkBlue) << std::endl;
+	SDL_Color whiteColor = { 255,255,255,255 };
+	scoreLabel->AddComponent<UILabelComponent>(assets, 10, 10, "Score", "stardew", whiteColor);
 
 	for (int colorInt = Red; colorInt <= 4; colorInt++) {
 		DrawColliderRectanglesRow(static_cast<RectangleColor>(colorInt));
 	}
+	rectnagleColliderId = 0;
 
 	Game::assets = &assets;
 }
@@ -59,6 +60,10 @@ void Breakout::Update(SceneContext& ctx)
 	SDL_Rect ballCollider = ball->GetComponent<ColliderComponent>().collider;
 	Vector2D ballVelocity = ball->GetComponent<TransformComponent>().velocity;
 
+	std::stringstream scoreStream;
+	scoreStream << "Score " << score;
+	scoreLabel->GetComponent<UILabelComponent>().SetlabelText(scoreStream.str(), "stardew");
+
 	manager.refresh();
 	manager.Update();
 	
@@ -70,6 +75,12 @@ void Breakout::Update(SceneContext& ctx)
 			Vector2D normalVector = Vector2D(0, 1);
 			Vector2D reflection = ballVelocity.Reflection(normalVector);
 			ball->GetComponent<TransformComponent>().velocity = reflection;
+
+			std::string tag = collider->GetComponent<ColliderComponent>().tag;
+			RecntangleCollider  rectangleCollider = rectangleColliders[stoi(tag)];
+			rectangleCollider.entity->Destroy();
+			rectangleColliders.erase(stoi(tag));
+			std::cout << tag << " destroyed" << std::endl;
 			return;
 		}
 	}
@@ -105,7 +116,6 @@ void Breakout::Update(SceneContext& ctx)
 
 	if (health <= 0) {
 		//TODO Implement a game over event
-		std::cout << "Game over!" << std::endl;
 	}
 
 }
@@ -127,6 +137,8 @@ void Breakout::Render(SceneContext& ctx)
 	for (auto& projectile : projectiles) {
 		projectile->Draw();
 	}
+
+	scoreLabel->Draw();
 }
 
 void Breakout::DrawColliderRectanglesRow(RectangleColor color)
@@ -137,18 +149,21 @@ void Breakout::DrawColliderRectanglesRow(RectangleColor color)
 
 		tempRectangleEntity = &manager.AddEntity();
 
+		tempRectangleEntity->AddComponent<TransformComponent>(static_cast<float>(xPosition), static_cast<float>(collider_row_y_position), COLLIDER_RECTANGLE_HEIGHT, COLLIDER_RECTANGLE_WIDTH, 1);
+		tempRectangleEntity->AddComponent<SpriteComponent>(assets, colorsTextureIdMap[color], false);
+		tempRectangleEntity->AddGroup(GroupLabels::groupColliders);
+		tempRectangleEntity->AddComponent<ColliderComponent>(std::to_string(rectnagleColliderId));
+
 		RecntangleCollider newRectangleCollider;
 		newRectangleCollider.entity = tempRectangleEntity;
+		newRectangleCollider.color = color;
 
-		tempRectangleEntity->AddComponent<TransformComponent>(static_cast<float>(xPosition), static_cast<float>(collider_row_y_position), COLLIDER_RECTANGLE_HEIGHT, COLLIDER_RECTANGLE_WIDTH, 2.0f);
-		tempRectangleEntity->AddComponent<SpriteComponent>(assets, colorsTextureIdMap[color], false);
-		tempRectangleEntity->AddComponent<ColliderComponent>(color + ": " + i);
-		tempRectangleEntity->AddGroup(GroupLabels::groupColliders);
+		rectangleColliders.insert({ rectnagleColliderId, newRectangleCollider });
 
-		rectangleColliders.push_back(newRectangleCollider);
 		xPosition += COLLIDER_RECTANGLE_WIDTH;
+		rectnagleColliderId++;
 	}
-	collider_row_y_position += COLLIDER_RECTANGLE_HEIGHT * 2;
+	collider_row_y_position += COLLIDER_RECTANGLE_HEIGHT;
 }
 
 void Breakout::ResetRound()

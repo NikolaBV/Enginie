@@ -37,6 +37,9 @@ public:
 		}
 		transform = &entity->GetComponent<TransformComponent>();
 
+		collider.h = transform->height;
+		collider.w = transform->width;
+
 		texture = TextureManager::LoadTexture("resources/tiles/CollisionTexture.png");
 		sourceRect = { 0,0,64,64 };
 		destinationRect = { collider.x, collider.y, collider.w, collider.h };
