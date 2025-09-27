@@ -1,14 +1,6 @@
 #include "PongScene.h"
-#include "Game.h"
-#include "Groups.h"
-#include "QuitGameListner.h"
-#include "PlayAgainListner.h"
 
 Rml::ElementDocument* PongScene::gameOver = nullptr;
-
-struct WinnerData {
-	bool winner_player = true;
-} winner_data;
 
 void PongScene::OnEnter(SceneContext& ctx)
 {

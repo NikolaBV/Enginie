@@ -5,6 +5,7 @@
 #include "TransformComponent.h"
 #include "Collision.h"
 #include "UILabelComponent.h"
+#include "Groups.h"
 #include "ColliderComponent.h"
 
 #include <sstream>
@@ -20,6 +21,7 @@ public:
 	void HandleEvent(SceneContext& sceneContext, const SDL_Event& e) override;
 	void Update(SceneContext& sceneContext) override;
 	void Render(SceneContext& sceneContext) override;
+	void ResetGame() override;
 private:
 	std::unique_ptr<Map> map;
 	Entity* playerEntity = nullptr;

@@ -7,6 +7,11 @@
 #include "UILabelComponent.h"
 #include "ColliderComponent.h"
 #include "InputScheme.h"
+#include "Game.h"
+#include "Groups.h"
+#include "QuitGameListner.h"
+#include "PlayAgainListner.h"
+#include "WinnerData.h"
 
 #include <sstream>
 #include <vector>
@@ -19,8 +24,7 @@ public:
 	void HandleEvent(SceneContext& ctx, const SDL_Event& e) override;
 	void Update(SceneContext& ctx) override;
 	void Render(SceneContext& ctx) override;
-	void ResetGame();
-	Rml::String playerWinner = "";
+	void ResetGame() override;
 	float CalculateNewSpeed(float increasePercentage);
 
 private:
@@ -39,6 +43,8 @@ private:
 
 	bool pendingRestart = false;
 	bool isRunningScene = false;
+
+	Rml::String playerWinner = "";
 
 	static Rml::ElementDocument* gameOver;
 };

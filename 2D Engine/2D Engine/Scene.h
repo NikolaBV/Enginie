@@ -20,6 +20,7 @@ public:
 	virtual void HandleEvent(SceneContext& sceneContext, const SDL_Event& e) = 0;
 	virtual void Update(SceneContext& sceneContext) = 0;
 	virtual void Render(SceneContext& sceneContext) = 0;
+	virtual void ResetGame();
 
 protected:
 	Manager manager;

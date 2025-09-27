@@ -1,5 +1,4 @@
 #include "SandboxScene.h"
-#include "Groups.h"
 
 void SandboxScene::OnEnter(SceneContext& sceneContext)
 {
@@ -151,4 +150,8 @@ void SandboxScene::Render(SceneContext& sceneContext)
 	}
 
 	labelEntity->Draw();
+}
+
+void SandboxScene::ResetGame()
+{
 }

@@ -5,9 +5,9 @@
 
 class PlayAgainListner : public Rml::EventListener {
 private:
-	PongScene* scene = nullptr;
+	Scene* scene = nullptr;
 public:
-	PlayAgainListner(PongScene* scene) : scene(scene){}
+	PlayAgainListner(Scene* scene) : scene(scene){}
 	void ProcessEvent(Rml::Event& event) override {
 		std::cout << "Play again" << std::endl;
 		scene->ResetGame();

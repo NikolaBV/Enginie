@@ -1,7 +1,10 @@
 #include "Breakout.h"
+Rml::ElementDocument* Breakout::gameOver = nullptr;
 
 void Breakout::OnEnter(SceneContext& ctx)
 {
+	isRunningScene = true;
+
 	std::cout << "Breakout scene loaded" << std::endl;
 
 	playerPaddle = &manager.AddEntity();
@@ -40,6 +43,37 @@ void Breakout::OnEnter(SceneContext& ctx)
 	}
 	rectnagleColliderId = 0;
 
+
+	ctx.eventBus.Subscribe<EndGame>([this](const EndGame& e) {
+	
+			pendingRestart = true;
+			isRunningScene = false;
+
+			//TODO Add a relative path to the document
+			//TODO Add a document for game over only
+			Rml::ElementDocument* localDocument = Game::context->LoadDocument("D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\2D Engine\\resources\\ui\\rml\\pong\\game-over.rml");
+			gameOver = localDocument;
+
+			if (localDocument != NULL) {
+				localDocument->Show();
+			}
+			else {
+				std::cout << "Problem loading document" << std::endl;
+			}
+
+			Rml::Element* gameOverButton = gameOver->GetElementById("quit-game");
+			Rml::Element* playAgainButton = gameOver->GetElementById("play-again");
+
+			if (gameOverButton) {
+				static QuitGameListener quitListener;
+				gameOverButton->AddEventListener("click", &quitListener);
+			}
+			if (playAgainButton) {
+				static PlayAgainListner playAgainListner(this);
+				playAgainButton->AddEventListener("click", &playAgainListner);
+			}
+		});
+
 	Game::assets = &assets;
 }
 
@@ -53,69 +87,83 @@ void Breakout::HandleEvent(SceneContext& ctx, const SDL_Event& e)
 
 void Breakout::Update(SceneContext& ctx)
 {
-	SDL_Rect playerCollider = playerPaddle->GetComponent<ColliderComponent>().collider;
-	Vector2D initlialPlayerPosition = playerPaddle->GetComponent<TransformComponent>().position;
+	if (isRunningScene) {
+		SDL_Rect playerCollider = playerPaddle->GetComponent<ColliderComponent>().collider;
+		Vector2D initlialPlayerPosition = playerPaddle->GetComponent<TransformComponent>().position;
 
-	Vector2D initlialBallPosition = ball->GetComponent<TransformComponent>().position;
-	SDL_Rect ballCollider = ball->GetComponent<ColliderComponent>().collider;
-	Vector2D ballVelocity = ball->GetComponent<TransformComponent>().velocity;
+		Vector2D initlialBallPosition = ball->GetComponent<TransformComponent>().position;
+		SDL_Rect ballCollider = ball->GetComponent<ColliderComponent>().collider;
+		Vector2D ballVelocity = ball->GetComponent<TransformComponent>().velocity;
 
-	std::stringstream scoreStream;
-	scoreStream << "Score " << score;
-	scoreLabel->GetComponent<UILabelComponent>().SetlabelText(scoreStream.str(), "stardew");
+		std::stringstream scoreStream;
+		scoreStream << "Score " << score;
+		scoreLabel->GetComponent<UILabelComponent>().SetlabelText(scoreStream.str(), "stardew");
 
-	manager.refresh();
-	manager.Update();
-	
-	auto& colliders = manager.GetGroup(GroupLabels::groupColliders);
-	auto& projectiles = manager.GetGroup(GroupLabels::groupProjectiles);
+		manager.refresh();
+		manager.Update();
 
-	for (auto& collider : colliders) {
-		if (Collision::AABB(ball->GetComponent<ColliderComponent>().collider, collider->GetComponent<ColliderComponent>().collider)) {
+		if (pendingRestart) {
+			std::cout << "Game over" << std::endl;
+			ResetGame();
+			pendingRestart = false;
+			return;
+		}
+
+		auto& colliders = manager.GetGroup(GroupLabels::groupColliders);
+		auto& projectiles = manager.GetGroup(GroupLabels::groupProjectiles);
+
+		for (auto& collider : colliders) {
+			if (Collision::AABB(ball->GetComponent<ColliderComponent>().collider, collider->GetComponent<ColliderComponent>().collider)) {
+				Vector2D normalVector = Vector2D(0, 1);
+				Vector2D reflection = ballVelocity.Reflection(normalVector);
+
+				std::string tag = collider->GetComponent<ColliderComponent>().tag;
+				RecntangleCollider  rectangleCollider = rectangleColliders[stoi(tag)];
+				ball->GetComponent<TransformComponent>().velocity = reflection;
+				rectangleCollider.entity->Destroy();
+				rectangleColliders.erase(stoi(tag));
+				std::cout << tag << " destroyed" << std::endl;
+
+				score++;
+				return;
+			}
+		}
+
+		//TODO Make a fucntion in Collison class to detect collision with all sides of the window and return true if so
+		if (ball->GetComponent<ColliderComponent>().collider.x >= Game::windowWidth) {
+			Vector2D normalVector = Vector2D(1, 0);
+			Vector2D reflection = ballVelocity.Reflection(normalVector);
+			ball->GetComponent<TransformComponent>().velocity = reflection;
+		}
+		if (ball->GetComponent<ColliderComponent>().collider.x <= 0) {
+			Vector2D normalVector = Vector2D(1, 0);
+			Vector2D reflection = ballVelocity.Reflection(normalVector);
+			ball->GetComponent<TransformComponent>().velocity = reflection;
+		}
+		if (Collision::AABB(playerPaddle->GetComponent<ColliderComponent>().collider, ball->GetComponent<ColliderComponent>().collider)) {
 			Vector2D normalVector = Vector2D(0, 1);
 			Vector2D reflection = ballVelocity.Reflection(normalVector);
 			ball->GetComponent<TransformComponent>().velocity = reflection;
-
-			std::string tag = collider->GetComponent<ColliderComponent>().tag;
-			RecntangleCollider  rectangleCollider = rectangleColliders[stoi(tag)];
-			rectangleCollider.entity->Destroy();
-			rectangleColliders.erase(stoi(tag));
-			std::cout << tag << " destroyed" << std::endl;
+		}
+		if (ball->GetComponent<ColliderComponent>().collider.y == 0) {
+			Vector2D normalVector = Vector2D(0, 1);
+			Vector2D reflection = ballVelocity.Reflection(normalVector);
+			ball->GetComponent<TransformComponent>().velocity = reflection;
 			return;
 		}
-	}
 
-	//TODO Make a fucntion in Collison class to detect collision with all sides of the window and return true if so
-	if (playerCollider.x + playerCollider.w >= 800) {
-		playerPaddle->GetComponent<TransformComponent>().position = initlialPlayerPosition;	
-	}
-	if (playerCollider.x <= 0) {
-		playerPaddle->GetComponent<TransformComponent>().position = initlialPlayerPosition;
-	}
+		if (ball->GetComponent<ColliderComponent>().collider.y >= Game::windowHeight) {
+			ResetRound();
+			return;
+		}
 
-	if (ball->GetComponent<ColliderComponent>().collider.x >= Game::windowWidth) {
-		Vector2D normalVector = Vector2D(1, 0);
-		Vector2D reflection = ballVelocity.Reflection(normalVector);
-		ball->GetComponent<TransformComponent>().velocity = reflection;
+		if (health <= 0) {
+			//TODO Implement a game over event
+			ctx.eventBus.Publish(EndGame{ playerPaddle });
+		}
 	}
-	if (ball->GetComponent<ColliderComponent>().collider.x <= 0) {
-		Vector2D normalVector = Vector2D(1, 0);
-		Vector2D reflection = ballVelocity.Reflection(normalVector);
-		ball->GetComponent<TransformComponent>().velocity = reflection;
-	}
-	if (Collision::AABB(playerPaddle->GetComponent<ColliderComponent>().collider, ball->GetComponent<ColliderComponent>().collider)) {
-		Vector2D normalVector = Vector2D(0, 1);
-		Vector2D reflection = ballVelocity.Reflection(normalVector);
-		ball->GetComponent<TransformComponent>().velocity = reflection;
-	}
-
-	if (ball->GetComponent<ColliderComponent>().collider.y >= Game::windowHeight || ball->GetComponent<ColliderComponent>().collider.y == 0) {
-		ResetRound();
+	else {
 		return;
-	}
-
-	if (health <= 0) {
-		//TODO Implement a game over event
 	}
 
 }
@@ -172,4 +220,13 @@ void Breakout::ResetRound()
 	std::cout << "Heath: " << health << std::endl;
 	ball->GetComponent<TransformComponent>().position = Vector2D(400.0f, 400.0f);
 	ball->GetComponent<TransformComponent>().velocity = Vector2D(0.8f, 1);
+}
+float Breakout::CalculateNewSpeed(float increasePercentage)
+{
+	return currentSpeed * increasePercentage;
+}
+void Breakout::ResetGame()
+{
+	//TODO implement a reset game
+	std::cout << "Reset game" << std::endl;
 }

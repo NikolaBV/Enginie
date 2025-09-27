@@ -4,6 +4,9 @@
 #include "Components.h"
 #include "Groups.h"
 #include "Collision.h"
+#include "PlayAgainListner.h"
+#include "QuitGameListner.h"
+#include "WinnerData.h"
 
 #include <map>
 #include <vector>
@@ -30,18 +33,25 @@ public:
 	void HandleEvent(SceneContext& ctx, const SDL_Event& e) override;
 	void Update(SceneContext& ctx) override;
 	void Render(SceneContext& ctx) override;
+	void ResetGame() override;
 
 	void DrawColliderRectanglesRow(RectangleColor color);
 	void ResetRound();
+	float CalculateNewSpeed(float increasePercentage);
 
 private:
 	Entity* playerPaddle = nullptr;
 	Entity* ball = nullptr;
 	Entity* scoreLabel = nullptr;
 
+	bool pendingRestart = false;
+	bool isRunningScene = false;
+
 	int score = 0;
 	int health = 3;
 	int rectnagleColliderId = 0;
+	float baseSpeed = 1.0f;
+	float currentSpeed = baseSpeed;
 
 	const int COLLIDER_RECTANGLE_HEIGHT = 20;
 	const int COLLIDER_RECTANGLE_WIDTH = 50;
@@ -58,6 +68,9 @@ private:
 		{RectangleColor::Red, "redTile"},
 	};
 	std::map<int, RecntangleCollider> rectangleColliders;
+
+	Rml::String playerWinner = "";
+	static Rml::ElementDocument* gameOver;
 
 };
 

@@ -61,6 +61,9 @@
     <Filter Include="Header Files\Scenes\Breakout">
       <UniqueIdentifier>{f1b17ac7-0b3d-405f-8d31-8e883ab433a3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Structs">
+      <UniqueIdentifier>{cd7d7a66-7448-4c54-8c6c-63e0d26eae81}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -150,6 +153,9 @@
     <ClCompile Include="Breakout.cpp">
       <Filter>Source Files\Scenes\Breakout</Filter>
     </ClCompile>
+    <ClCompile Include="WinnerData.cpp">
+      <Filter>Header Files\Structs</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game.h">
@@ -227,14 +233,14 @@
     <ClInclude Include="QuitGameListner.h">
       <Filter>Header Files\EventListners</Filter>
     </ClInclude>
-    <ClInclude Include="PlayAgainListner.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="StartGameListner.h">
       <Filter>Header Files\Scenes\Sandbox\EventListners</Filter>
     </ClInclude>
     <ClInclude Include="Breakout.h">
       <Filter>Header Files\Scenes\Breakout</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayAgainListner.h">
+      <Filter>Header Files\Scenes\Pong\EventListners</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
