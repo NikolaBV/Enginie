@@ -1,4 +1,5 @@
 #include "Breakout.h"
+#include "RmlDocumentsPaths.h"
 Rml::ElementDocument* Breakout::gameOver = nullptr;
 
 void Breakout::OnEnter(SceneContext& ctx)
@@ -51,7 +52,7 @@ void Breakout::OnEnter(SceneContext& ctx)
 
 			//TODO Add a relative path to the document
 			//TODO Add a document for game over only
-			Rml::ElementDocument* localDocument = Game::context->LoadDocument("D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\2D Engine\\resources\\ui\\rml\\pong\\game-over.rml");
+			Rml::ElementDocument* localDocument = Game::context->LoadDocument(RmlDocumentsPaths::documentPaths[DocumentPath::LaptopGlobalGameOver]);
 			gameOver = localDocument;
 
 			if (localDocument != NULL) {

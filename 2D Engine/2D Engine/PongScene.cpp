@@ -1,4 +1,5 @@
 #include "PongScene.h"
+#include "RmlDocumentsPaths.h"
 
 Rml::ElementDocument* PongScene::gameOver = nullptr;
 
@@ -6,7 +7,7 @@ void PongScene::OnEnter(SceneContext& ctx)
 {
 	isRunningScene = true;
 	leftPaddle = &manager.AddEntity();
-	rightPaddle = &manager.AddEntity();
+	rightPaddle = &manager.AddEntity(); 
 	ball = &manager.AddEntity();
 	leftScoreLabel = &manager.AddEntity();
 	rightScoreLabel = &manager.AddEntity();
@@ -66,7 +67,7 @@ void PongScene::OnEnter(SceneContext& ctx)
 				constructor.Bind("winner", &playerWinner);
 			}
 			//TODO Add a relative path to the document
-			Rml::ElementDocument* localDocument = Game::context->LoadDocument("D:\\Programming\\C++\\Game Dev\\Enginie\\2D Engine\\2D Engine\\resources\\ui\\rml\\pong\\game-over.rml");
+			Rml::ElementDocument* localDocument = Game::context->LoadDocument(RmlDocumentsPaths::documentPaths[DocumentPath::LaptopPongGameOver]);
 			gameOver = localDocument;
 
 			if (localDocument != NULL) {
