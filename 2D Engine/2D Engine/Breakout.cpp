@@ -50,8 +50,6 @@ void Breakout::OnEnter(SceneContext& ctx)
 			pendingRestart = true;
 			isRunningScene = false;
 
-			//TODO Add a relative path to the document
-			//TODO Add a document for game over only
 			Rml::ElementDocument* localDocument = Game::context->LoadDocument(RmlDocumentsPaths::documentPaths[DocumentPath::LaptopGlobalGameOver]);
 			gameOver = localDocument;
 
@@ -107,6 +105,7 @@ void Breakout::Update(SceneContext& ctx)
 			std::cout << "Game over" << std::endl;
 			ResetGame();
 			pendingRestart = false;
+			isRunningScene = true;
 			return;
 		}
 
@@ -230,4 +229,13 @@ void Breakout::ResetGame()
 {
 	//TODO implement a reset game
 	std::cout << "Reset game" << std::endl;
+	score = 0;
+	ball->GetComponent<TransformComponent>().position = Vector2D(400.0f, 400.0f);
+	playerPaddle->GetComponent<TransformComponent>().position = Vector2D(360.0f, 550.0f);
+
+	if (gameOver) {
+		gameOver->Close();
+	}
+	isRunningScene = true;
+	pendingRestart = false;
 }
