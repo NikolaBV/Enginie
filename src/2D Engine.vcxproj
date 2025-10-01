@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Source\Animation.cpp" />
+    <ClCompile Include="Source\AssetManager.cpp" />
+    <ClCompile Include="Source\Breakout.cpp" />
+    <ClCompile Include="Source\ColliderComponent.cpp" />
+    <ClCompile Include="Source\Collision.cpp" />
+    <ClCompile Include="Source\Components.cpp" />
+    <ClCompile Include="Source\EntityComponentSystem.cpp" />
+    <ClCompile Include="Source\EventBus.cpp" />
+    <ClCompile Include="Source\Game.cpp" />
+    <ClCompile Include="Source\PlayAgainListner.cpp" />
+    <ClCompile Include="Source\QuitGameListner.cpp" />
+    <ClCompile Include="Source\RmlDocumentsPaths.cpp" />
+    <ClCompile Include="rmlui_backends\RmlUi_Platform_SDL.cpp" />
+    <ClCompile Include="rmlui_backends\RmlUi_Renderer_SDL.cpp" />
+    <ClCompile Include="Source\HealthComponent.cpp" />
+    <ClCompile Include="Source\KeyboardController.cpp" />
+    <ClCompile Include="Source\Main.cpp" />
+    <ClCompile Include="Source\Map.cpp" />
+    <ClCompile Include="Source\PongScene.cpp" />
+    <ClCompile Include="Source\PositionComponent.cpp" />
+    <ClCompile Include="Source\ProjectileComponent.cpp" />
+    <ClCompile Include="Source\SandboxScene.cpp" />
+    <ClCompile Include="Source\Scene.cpp" />
+    <ClCompile Include="Source\SpriteComponent.cpp" />
+    <ClCompile Include="Source\StartGameListner.cpp" />
+    <ClCompile Include="Source\TextureManager.cpp" />
+    <ClCompile Include="Source\TileComponent.cpp" />
+    <ClCompile Include="Source\UILabelComponent.cpp" />
+    <ClCompile Include="Source\Vector2D.cpp" />
+    <ClCompile Include="Source\WinnerData.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Header\Animation.h" />
+    <ClInclude Include="Header\AssetManager.h" />
+    <ClInclude Include="Header\Breakout.h" />
+    <ClInclude Include="Header\ColliderComponent.h" />
+    <ClInclude Include="Header\Collision.h" />
+    <ClInclude Include="Header\Components.h" />
+    <ClInclude Include="Header\DocumentPath.h" />
+    <ClInclude Include="Header\EntityComponentSystem.h" />
+    <ClInclude Include="Header\EventBus.h" />
+    <ClInclude Include="Header\Game.h" />
+    <ClInclude Include="Header\Groups.h" />
+    <ClInclude Include="Header\HealthComponent.h" />
+    <ClInclude Include="Header\KeyboardController.h" />
+    <ClInclude Include="Header\Map.h" />
+    <ClInclude Include="Header\PlayAgainListner.h" />
+    <ClInclude Include="Header\PongScene.h" />
+    <ClInclude Include="Header\ProjectileComponent.h" />
+    <ClInclude Include="Header\QuitGameListner.h" />
+    <ClInclude Include="Header\RmlDocumentsPaths.h" />
+    <ClInclude Include="rmlui_backends\RmlUi_Platform_SDL.h" />
+    <ClInclude Include="rmlui_backends\RmlUi_Renderer_SDL.h" />
+    <ClInclude Include="Header\SandboxScene.h" />
+    <ClInclude Include="Header\Scene.h" />
+    <ClInclude Include="Header\StartGameListner.h" />
+    <ClInclude Include="Header\TileComponent.h" />
+    <ClInclude Include="Header\TransformComponent.h" />
+    <ClInclude Include="Header\SpriteComponent.h" />
+    <ClInclude Include="Header\TextureManager.h" />
+    <ClInclude Include="Header\UILabelComponent.h" />
+    <ClInclude Include="Header\Vector2D.h" />
+    <ClInclude Include="Header\InputScheme.h" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{acab1236-6fda-4226-b742-d7f016069367}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\lib\SDL2-dev\include;$(ProjectDir)..\lib\SDL2_image-2.0.5\include;$(SolutionDir)vcpkg_installed\x86-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\lib\SDL2-dev\lib\x86;$(ProjectDir)..\lib\SDL2_image-2.0.5\lib\x86;$(SolutionDir)vcpkg_installed\x86-windows\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;rmlui.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy "$(ProjectDir)dlls\*.*" "$(TargetDir)" /Y
+copy "$(ProjectDir)..\lib\SDL2_image-2.0.5\lib\x86\zlib1.dll" "$(TargetDir)" /Y
+xcopy "$(ProjectDir)resources" "$(TargetDir)resources" /E /I /Y
+xcopy "$(SolutionDir)vcpkg_installed\x86-windows\debug\bin\*.dll" "$(TargetDir)" /Y</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\lib\SDL2-dev\include;$(ProjectDir)..\lib\SDL2_image-2.0.5\include;$(SolutionDir)vcpkg_installed\x86-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\lib\SDL2-dev\lib\x86;$(ProjectDir)..\lib\SDL2_image-2.0.5\lib\x86;$(SolutionDir)vcpkg_installed\x86-windows\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;rmlui.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy "$(ProjectDir)dlls\*.*" "$(TargetDir)" /Y
+copy "$(ProjectDir)..\lib\SDL2_image-2.0.5\lib\x86\zlib1.dll" "$(TargetDir)" /Y
+xcopy "$(ProjectDir)resources" "$(TargetDir)resources" /E /I /Y
+xcopy "$(SolutionDir)vcpkg_installed\x86-windows\bin\*.dll" "$(TargetDir)" /Y</Command>
+      <Message>Copying all DLLs and resources to output directory</Message>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;SDL_MAIN_HANDLED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\lib\SDL2_ttf-2.0.12\include;$(ProjectDir)..\lib\SDL2-dev\include;$(ProjectDir)..\lib\SDL2_image-2.0.5\include;$(SolutionDir)vcpkg_installed\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\lib\SDL2_ttf-2.0.12\lib\x64;$(ProjectDir)..\lib\SDL2-dev\lib\x64;$(ProjectDir)..\lib\SDL2_image-2.0.5\lib\x64;$(SolutionDir)vcpkg_installed\x64-windows\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;SDL2_ttf.lib;rmlui.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy "$(ProjectDir)dlls\*.*" "$(TargetDir)" /Y
+copy "$(ProjectDir)..\lib\SDL2_image-2.0.5\lib\x64\zlib1.dll" "$(TargetDir)" /Y
+xcopy "$(ProjectDir)resources" "$(TargetDir)resources" /E /I /Y
+xcopy "$(SolutionDir)vcpkg_installed\x64-windows\debug\bin\*.dll" "$(TargetDir)" /Y</Command>
+      <Message>Copying all DLLs and resources to output directory</Message>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;SDL_MAIN_HANDLED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\lib\SDL2-dev\include;$(ProjectDir)..\lib\SDL2_image-2.0.5\include;$(SolutionDir)vcpkg_installed\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\lib\SDL2-dev\lib\x64;$(ProjectDir)..\lib\SDL2_image-2.0.5\lib\x64;$(SolutionDir)vcpkg_installed\x64-windows\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;rmlui.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy "$(ProjectDir)dlls\*.*" "$(TargetDir)" /Y
+xcopy "$(ProjectDir)resources" "$(TargetDir)resources" /E /I /Y
+xcopy "$(SolutionDir)vcpkg_installed\x64-windows\bin\*.dll" "$(TargetDir)" /Y</Command>
+      <Message>Copying all DLLs and resources to output directory</Message>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
