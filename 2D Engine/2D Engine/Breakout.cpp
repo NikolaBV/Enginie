@@ -50,7 +50,7 @@ void Breakout::OnEnter(SceneContext& ctx)
 			pendingRestart = true;
 			isRunningScene = false;
 
-			Rml::ElementDocument* localDocument = Game::context->LoadDocument(RmlDocumentsPaths::documentPaths[DocumentPath::LaptopGlobalGameOver]);
+			Rml::ElementDocument* localDocument = Game::context->LoadDocument(RmlDocumentsPaths::documentPaths[DocumentPath::PCGlobalGameOver]);
 			gameOver = localDocument;
 
 			if (localDocument != NULL) {
@@ -236,6 +236,8 @@ void Breakout::ResetGame()
 	if (gameOver) {
 		gameOver->Close();
 	}
+
+	health = 3;
 	isRunningScene = true;
 	pendingRestart = false;
 }

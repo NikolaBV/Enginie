@@ -9,7 +9,6 @@ public:
 	{
 
 	}
-	void Init();
 
 	static std::map<DocumentPath, std::string> documentPaths;
 

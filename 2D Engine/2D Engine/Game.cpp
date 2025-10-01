@@ -20,6 +20,9 @@
 #include "QuitGameListner.h"
 #include "StartGameListner.h"
 
+#include <windows.h>
+#include <Lmcons.h>
+
 Map* map;
 
 SDL_Renderer* Game::renderer = nullptr;
@@ -39,7 +42,14 @@ Game::Game() {}
 Game::~Game() {}
 
 void Game::Init(const char* windowTitle, int width, int height, bool isFullscreen) {
+	//TODO Use this for the rml file paths somehow
+	//TCHAR name[UNLEN + 1];
+	//DWORD size = UNLEN + 1;
 
+	//if (GetUserName((TCHAR*)name, &size))
+	//	std::wcout << L"Hello, " << name << L"!\n";
+	//else
+	//	std::cout << "Hello, unnamed person!\n";
 #pragma region SDL Initlization
 	int flags = 0;
 
@@ -117,7 +127,7 @@ void Game::Init(const char* windowTitle, int width, int height, bool isFullscree
 		std::cout << "Font loaded in RML" << std::endl;
 	}
 	//TODO FIX THE DOCUMENT PATH TO A RELATIVE ONE
-	Rml::ElementDocument* localDocument = context->LoadDocument(RmlDocumentsPaths::documentPaths[DocumentPath::LaptopMainMenu]);
+	Rml::ElementDocument* localDocument = context->LoadDocument(RmlDocumentsPaths::documentPaths[DocumentPath::PCMainMenu]);
 	document = localDocument;
 
 	if (localDocument != NULL) {

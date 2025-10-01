@@ -67,7 +67,7 @@ void PongScene::OnEnter(SceneContext& ctx)
 				constructor.Bind("winner", &playerWinner);
 			}
 			//TODO Add a relative path to the document
-			Rml::ElementDocument* localDocument = Game::context->LoadDocument(RmlDocumentsPaths::documentPaths[DocumentPath::LaptopPongGameOver]);
+			Rml::ElementDocument* localDocument = Game::context->LoadDocument(RmlDocumentsPaths::documentPaths[DocumentPath::PCPongGameOver]);
 			gameOver = localDocument;
 
 			if (localDocument != NULL) {

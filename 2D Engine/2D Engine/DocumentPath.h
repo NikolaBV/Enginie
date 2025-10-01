@@ -4,4 +4,6 @@ enum DocumentPath {
 	LaptopPongGameOver,
 	LaptopGlobalGameOver,
 	PCMainMenu,
+	PCGlobalGameOver,
+	PCPongGameOver
 };
