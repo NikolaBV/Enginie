@@ -15,6 +15,8 @@
 #include "../Header/SandboxScene.h"
 #include "../Header/PongScene.h"
 #include "../Header/Breakout.h"
+#include "../Header/TetrisScene.h"
+
 
 #include <sstream>
 #include "../Header/QuitGameListner.h"
@@ -158,6 +160,10 @@ void Game::Init(const char* windowTitle, int width, int height, bool isFullscree
 	}
 	if (Rml::Element* startBreakoutElement = document->GetElementById("start-breakout")) {
 		static StartGameListener startListener(this, new Breakout());
+		startBreakoutElement->AddEventListener("click", &startListener);
+	}
+	if (Rml::Element* startBreakoutElement = document->GetElementById("start-tetris")) {
+		static StartGameListener startListener(this, new TetrisScene());
 		startBreakoutElement->AddEventListener("click", &startListener);
 	}
 	else {

@@ -10,6 +10,7 @@
 <button id="start-sandbox">Start Sandbox</button>
 <button id="start-pong">Start Pong</button>
 <button id="start-breakout">Start Breakout</button>
+<button id="start-tetris">Start Tetris</button>
 <button id="quit-game">Quit Game</button>
 
 </body>

@@ -67,191 +67,212 @@
     <Filter Include="Header Files\Enums">
       <UniqueIdentifier>{45ef8563-cff8-4ddd-accc-6ea2b506d80b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Rml">
+      <UniqueIdentifier>{bed478c7-e11c-49e0-847b-a237b4b5d26f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Utils">
+      <UniqueIdentifier>{94687fa9-b70a-466a-833c-a2438bb4d66a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Utils">
+      <UniqueIdentifier>{9e23afba-5bf6-45b7-a23c-e5a397967899}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Rml">
+      <UniqueIdentifier>{1f0cc42b-db2d-4f45-b53b-ad5165307be5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Scenes\Tetris">
+      <UniqueIdentifier>{081748fb-2ca2-4429-bca4-075d8c83f8a1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Main.cpp">
+    <ClCompile Include="Source\Game.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Game.cpp">
+    <ClCompile Include="Source\Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="TextureManager.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Map.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="EntityComponentSystem.cpp">
+    <ClCompile Include="Source\ColliderComponent.cpp">
       <Filter>Source Files\ECS</Filter>
     </ClCompile>
-    <ClCompile Include="Components.cpp">
+    <ClCompile Include="Source\Components.cpp">
       <Filter>Source Files\ECS</Filter>
     </ClCompile>
-    <ClCompile Include="SpriteComponent.cpp">
+    <ClCompile Include="Source\EntityComponentSystem.cpp">
       <Filter>Source Files\ECS</Filter>
     </ClCompile>
-    <ClCompile Include="PositionComponent.cpp">
+    <ClCompile Include="Source\HealthComponent.cpp">
       <Filter>Source Files\ECS</Filter>
     </ClCompile>
-    <ClCompile Include="Vector2D.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="KeyboardController.cpp">
+    <ClCompile Include="Source\KeyboardController.cpp">
       <Filter>Source Files\ECS</Filter>
     </ClCompile>
-    <ClCompile Include="ColliderComponent.cpp">
+    <ClCompile Include="Source\PositionComponent.cpp">
       <Filter>Source Files\ECS</Filter>
     </ClCompile>
-    <ClCompile Include="Collision.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="TileComponent.cpp">
+    <ClCompile Include="Source\ProjectileComponent.cpp">
       <Filter>Source Files\ECS</Filter>
     </ClCompile>
-    <ClCompile Include="AssetManager.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ProjectileComponent.cpp">
+    <ClCompile Include="Source\TileComponent.cpp">
       <Filter>Source Files\ECS</Filter>
     </ClCompile>
-    <ClCompile Include="UILabelComponent.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="PongScene.cpp">
-      <Filter>Source Files\Scenes\Pong</Filter>
-    </ClCompile>
-    <ClCompile Include="Scene.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Animation.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="HealthComponent.cpp">
+    <ClCompile Include="Source\UILabelComponent.cpp">
       <Filter>Source Files\ECS</Filter>
     </ClCompile>
-    <ClCompile Include="EventBus.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SandboxScene.cpp">
-      <Filter>Source Files\Scenes\Sandbox</Filter>
+    <ClCompile Include="Source\RmlDocumentsPaths.cpp">
+      <Filter>Source Files\Rml</Filter>
     </ClCompile>
     <ClCompile Include="rmlui_backends\RmlUi_Platform_SDL.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Rml</Filter>
     </ClCompile>
     <ClCompile Include="rmlui_backends\RmlUi_Renderer_SDL.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Rml</Filter>
     </ClCompile>
-    <ClCompile Include="QuitGameListner.cpp">
+    <ClCompile Include="Source\PlayAgainListner.cpp">
       <Filter>Source Files\EventListners</Filter>
     </ClCompile>
-    <ClCompile Include="PlayAgainListner.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Source\QuitGameListner.cpp">
+      <Filter>Source Files\EventListners</Filter>
     </ClCompile>
-    <ClCompile Include="StartGameListner.cpp">
-      <Filter>Source Files\Scenes\Sandbox\EventListners</Filter>
+    <ClCompile Include="Source\EventBus.cpp">
+      <Filter>Source Files\EventListners</Filter>
     </ClCompile>
-    <ClCompile Include="Breakout.cpp">
+    <ClCompile Include="Source\PongScene.cpp">
+      <Filter>Source Files\Scenes\Pong</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Breakout.cpp">
       <Filter>Source Files\Scenes\Breakout</Filter>
     </ClCompile>
-    <ClCompile Include="WinnerData.cpp">
-      <Filter>Header Files\Structs</Filter>
+    <ClCompile Include="Source\SandboxScene.cpp">
+      <Filter>Source Files\Scenes\Sandbox</Filter>
     </ClCompile>
-    <ClCompile Include="InputScheme.h">
-      <Filter>Header Files\Enums</Filter>
+    <ClCompile Include="Source\WinnerData.cpp">
+      <Filter>Source Files\Utils</Filter>
     </ClCompile>
-    <ClCompile Include="RmlDocumentsPaths.cpp">
+    <ClCompile Include="Source\Vector2D.cpp">
+      <Filter>Source Files\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\TextureManager.cpp">
+      <Filter>Source Files\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\StartGameListner.cpp">
+      <Filter>Source Files\EventListners</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\SpriteComponent.cpp">
+      <Filter>Source Files\ECS</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Scene.cpp">
+      <Filter>Source Files\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Collision.cpp">
+      <Filter>Source Files\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\AssetManager.cpp">
+      <Filter>Source Files\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Animation.cpp">
+      <Filter>Source Files\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Map.cpp">
+      <Filter>Source Files\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="TetrisScene.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Game.h">
+    <ClInclude Include="Header\Game.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="TextureManager.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="Header\Animation.h">
+      <Filter>Header Files\Utils</Filter>
     </ClInclude>
-    <ClInclude Include="Map.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="Header\AssetManager.h">
+      <Filter>Header Files\Utils</Filter>
     </ClInclude>
-    <ClInclude Include="EntityComponentSystem.h">
-      <Filter>Header Files\ECS</Filter>
-    </ClInclude>
-    <ClInclude Include="Components.h">
-      <Filter>Header Files\ECS</Filter>
-    </ClInclude>
-    <ClInclude Include="SpriteComponent.h">
-      <Filter>Header Files\ECS</Filter>
-    </ClInclude>
-    <ClInclude Include="TransformComponent.h">
-      <Filter>Header Files\ECS</Filter>
-    </ClInclude>
-    <ClInclude Include="Vector2D.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="KeyboardController.h">
-      <Filter>Header Files\ECS</Filter>
-    </ClInclude>
-    <ClInclude Include="ColliderComponent.h">
-      <Filter>Header Files\ECS</Filter>
-    </ClInclude>
-    <ClInclude Include="Collision.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="TileComponent.h">
-      <Filter>Header Files\ECS</Filter>
-    </ClInclude>
-    <ClInclude Include="AssetManager.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="ProjectileComponent.h">
-      <Filter>Header Files\ECS</Filter>
-    </ClInclude>
-    <ClInclude Include="UILabelComponent.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="PongScene.h">
-      <Filter>Header Files\Scenes\Pong</Filter>
-    </ClInclude>
-    <ClInclude Include="Scene.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SandboxScene.h">
-      <Filter>Header Files\Scenes\Sandbox</Filter>
-    </ClInclude>
-    <ClInclude Include="Animation.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="HealthComponent.h">
-      <Filter>Header Files\ECS</Filter>
-    </ClInclude>
-    <ClInclude Include="EventBus.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="rmlui_backends\RmlUi_Platform_SDL.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="rmlui_backends\RmlUi_Renderer_SDL.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="QuitGameListner.h">
-      <Filter>Header Files\EventListners</Filter>
-    </ClInclude>
-    <ClInclude Include="StartGameListner.h">
-      <Filter>Header Files\Scenes\Sandbox\EventListners</Filter>
-    </ClInclude>
-    <ClInclude Include="Breakout.h">
+    <ClInclude Include="Header\Breakout.h">
       <Filter>Header Files\Scenes\Breakout</Filter>
     </ClInclude>
-    <ClInclude Include="PlayAgainListner.h">
-      <Filter>Header Files\Scenes\Pong\EventListners</Filter>
+    <ClInclude Include="Header\ColliderComponent.h">
+      <Filter>Header Files\ECS</Filter>
     </ClInclude>
-    <ClInclude Include="Groups.h">
+    <ClInclude Include="Header\EntityComponentSystem.h">
+      <Filter>Header Files\ECS</Filter>
+    </ClInclude>
+    <ClInclude Include="Header\Components.h">
+      <Filter>Header Files\ECS</Filter>
+    </ClInclude>
+    <ClInclude Include="Header\HealthComponent.h">
+      <Filter>Header Files\ECS</Filter>
+    </ClInclude>
+    <ClInclude Include="Header\KeyboardController.h">
+      <Filter>Header Files\ECS</Filter>
+    </ClInclude>
+    <ClInclude Include="Header\ProjectileComponent.h">
+      <Filter>Header Files\ECS</Filter>
+    </ClInclude>
+    <ClInclude Include="Header\SpriteComponent.h">
+      <Filter>Header Files\ECS</Filter>
+    </ClInclude>
+    <ClInclude Include="Header\TransformComponent.h">
+      <Filter>Header Files\ECS</Filter>
+    </ClInclude>
+    <ClInclude Include="Header\TileComponent.h">
+      <Filter>Header Files\ECS</Filter>
+    </ClInclude>
+    <ClInclude Include="Header\UILabelComponent.h">
+      <Filter>Header Files\ECS</Filter>
+    </ClInclude>
+    <ClInclude Include="Header\Collision.h">
+      <Filter>Header Files\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Header\DocumentPath.h">
       <Filter>Header Files\Enums</Filter>
     </ClInclude>
-    <ClInclude Include="DocumentPath.h">
+    <ClInclude Include="Header\EventBus.h">
+      <Filter>Header Files\EventListners</Filter>
+    </ClInclude>
+    <ClInclude Include="Header\Groups.h">
       <Filter>Header Files\Enums</Filter>
     </ClInclude>
-    <ClInclude Include="RmlDocumentsPaths.h">
+    <ClInclude Include="Header\InputScheme.h">
+      <Filter>Header Files\Enums</Filter>
+    </ClInclude>
+    <ClInclude Include="Header\Map.h">
+      <Filter>Header Files\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Header\PlayAgainListner.h">
+      <Filter>Header Files\EventListners</Filter>
+    </ClInclude>
+    <ClInclude Include="Header\QuitGameListner.h">
+      <Filter>Header Files\EventListners</Filter>
+    </ClInclude>
+    <ClInclude Include="rmlui_backends\RmlUi_Platform_SDL.h">
+      <Filter>Header Files\Rml</Filter>
+    </ClInclude>
+    <ClInclude Include="rmlui_backends\RmlUi_Renderer_SDL.h">
+      <Filter>Header Files\Rml</Filter>
+    </ClInclude>
+    <ClInclude Include="Header\PongScene.h">
+      <Filter>Header Files\Scenes\Pong</Filter>
+    </ClInclude>
+    <ClInclude Include="Header\RmlDocumentsPaths.h">
+      <Filter>Header Files\Rml</Filter>
+    </ClInclude>
+    <ClInclude Include="Header\SandboxScene.h">
+      <Filter>Header Files\Scenes\Sandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="Header\Scene.h">
+      <Filter>Header Files\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Header\TextureManager.h">
+      <Filter>Header Files\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Header\Vector2D.h">
+      <Filter>Header Files\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Header\StartGameListner.h">
+      <Filter>Header Files\EventListners</Filter>
+    </ClInclude>
+    <ClInclude Include="TetrisScene.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
