@@ -36,3 +36,27 @@ TTF_Font* AssetManager::GetFont(std::string fontId)
 {
 	return fonts[fontId];
 }
+
+void AssetManager::AddSoundEffect(std::string tag, std::string url)
+{
+	Mix_Chunk* soundEffect = Mix_LoadWAV(url.c_str());
+	soundEffects.emplace(tag, soundEffect);
+	soundEffect = nullptr;
+}
+
+void AssetManager::GetSoundEffect(std::string tag)
+{
+}
+
+void AssetManager::RemoveSoundEffect(std::string tag)
+{
+}
+
+void AssetManager::PlaySound(std::string tag)
+{
+	Mix_PlayChannel(-1, soundEffects[tag], 0);
+}
+
+void AssetManager::StopSound(std::string tag)
+{
+}

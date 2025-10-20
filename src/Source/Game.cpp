@@ -7,7 +7,6 @@
 #include "../Header/Groups.h" 
 #include "../Header/RmlDocumentsPaths.h"
 
-#include <memory>
 
 #include "../rmlui_backends/RmlUi_Platform_SDL.h"
 #include "../rmlui_backends/RmlUi_Renderer_SDL.h"
@@ -18,12 +17,15 @@
 #include "../Header/TetrisScene.h"
 
 
-#include <sstream>
 #include "../Header/QuitGameListner.h"
 #include "../Header/StartGameListner.h"
 
 #include <windows.h>
 #include <Lmcons.h>
+#include <sstream>
+#include <memory>
+#include "SDL_mixer.h"
+
 
 Map* map;
 
@@ -58,7 +60,7 @@ void Game::Init(const char* windowTitle, int width, int height, bool isFullscree
 	if (isFullscreen) {
 		flags = SDL_WINDOW_FULLSCREEN;
 	}
-
+	 
 	if (SDL_Init(SDL_INIT_EVERYTHING) == 0) {
 		std::cout << "SDL is initialized" << std::endl;
 
@@ -74,6 +76,15 @@ void Game::Init(const char* windowTitle, int width, int height, bool isFullscree
 
 		if (renderer) {
 			std::cout << "Renderer is created" << std::endl;
+		}
+
+		// Initialize SDL_mixer
+		int mix_flags = MIX_INIT_OGG | MIX_INIT_MP3;
+		if ((Mix_Init(mix_flags) & mix_flags) != mix_flags) {
+			std::cout << "SDL_mixer init error: " << Mix_GetError() << std::endl;
+		}
+		if (Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 2048) < 0) {
+			std::cout << "SDL_mixer open audio error: " << Mix_GetError() << std::endl;
 		}
 
 		isRunning = true;
@@ -235,6 +246,8 @@ void Game::Clean() {
 	SDL_DestroyWindow(window);
 	SDL_DestroyRenderer(renderer);
 	SDL_Quit();
+	Mix_CloseAudio();
+	Mix_Quit();
 
 	context = nullptr;
 	renderer = nullptr;

@@ -21,6 +21,8 @@ void Breakout::OnEnter(SceneContext& ctx)
 
 	assets.AddFont("stardew", "resources/fonts/Stardew_Valley.otf", 16);
 
+	assets.AddSoundEffect("fart", "resources/sound/sound.wav");
+
 	std::map<SDL_Scancode, const char*> playerControlsMap = { {SDL_SCANCODE_A, "whiteTile"}, {SDL_SCANCODE_D, "whiteTile"} };
 
 	playerPaddle->AddComponent<TransformComponent>(360.0f, 550.0f, 5, 80, 2.0f);
@@ -74,6 +76,9 @@ void Breakout::OnEnter(SceneContext& ctx)
 		});
 
 	Game::assets = &assets;
+
+	assets.PlaySound("fart");
+
 }
 
 void Breakout::OnExit(SceneContext& ctx)
