@@ -22,6 +22,8 @@ void Breakout::OnEnter(SceneContext& ctx)
 	assets.AddFont("stardew", "resources/fonts/Stardew_Valley.otf", 16);
 
 	assets.AddSoundEffect("fart", "resources/sound/sound.wav");
+	assets.AddBackgroundMusic("music", "resources/sound/music.wav");
+
 
 	std::map<SDL_Scancode, const char*> playerControlsMap = { {SDL_SCANCODE_A, "whiteTile"}, {SDL_SCANCODE_D, "whiteTile"} };
 
@@ -77,12 +79,14 @@ void Breakout::OnEnter(SceneContext& ctx)
 
 	Game::assets = &assets;
 
-	assets.PlaySound("fart");
-
+	if (!Mix_PlayingMusic()) {
+		assets.PlayBackgroundMusic("music");
+	}
 }
 
 void Breakout::OnExit(SceneContext& ctx)
 {
+	assets.RemoveSoundEffect("fart");
 }
 
 void Breakout::HandleEvent(SceneContext& ctx, const SDL_Event& e)
@@ -128,7 +132,6 @@ void Breakout::Update(SceneContext& ctx)
 				rectangleCollider.entity->Destroy();
 				rectangleColliders.erase(stoi(tag));
 				std::cout << tag << " destroyed" << std::endl;
-
 				score++;
 				return;
 			}
@@ -149,6 +152,7 @@ void Breakout::Update(SceneContext& ctx)
 			Vector2D normalVector = Vector2D(0, 1);
 			Vector2D reflection = ballVelocity.Reflection(normalVector);
 			ball->GetComponent<TransformComponent>().velocity = reflection;
+
 		}
 		if (ball->GetComponent<ColliderComponent>().collider.y == 0) {
 			Vector2D normalVector = Vector2D(0, 1);
@@ -237,6 +241,8 @@ void Breakout::ResetGame()
 	score = 0;
 	ball->GetComponent<TransformComponent>().position = Vector2D(400.0f, 400.0f);
 	playerPaddle->GetComponent<TransformComponent>().position = Vector2D(360.0f, 550.0f);
+
+	assets.PauseBackgroundMusic();
 
 	if (gameOver) {
 		gameOver->Close();

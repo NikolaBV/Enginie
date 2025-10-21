@@ -28,17 +28,21 @@ public:
 	//Add volume, stereo channels ect as function arguments
 	//TODO Think about making a Sound class to export this functionality to and store a Sound class in the value of the map instead of a string to the url
 	
-	//TODO finish all functions
 	void AddSoundEffect(std::string tag, std::string url);
-	void GetSoundEffect(std::string tag);
 	void RemoveSoundEffect(std::string tag);
-	void PlaySound(std::string tag);
-	void StopSound(std::string tag);
+	void PlaySound(std::string tag); 
+
+	void AddBackgroundMusic(std::string tag, std::string url);
+	void RemoveBackgroundMusic(std::string tag);
+	void PlayBackgroundMusic(std::string tag);
+	void PauseBackgroundMusic();
+	void ResumeBackgroundMusic();
 
 private:	
 	Manager* manager;
 	std::map<std::string, SDL_Texture*> textures;
 	std::map<std::string, TTF_Font*> fonts;
 	std::map<std::string, Mix_Chunk*> soundEffects;
+	std::map<std::string, Mix_Music*> backgroundMusic;
 };
 

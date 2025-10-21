@@ -44,12 +44,10 @@ void AssetManager::AddSoundEffect(std::string tag, std::string url)
 	soundEffect = nullptr;
 }
 
-void AssetManager::GetSoundEffect(std::string tag)
-{
-}
-
 void AssetManager::RemoveSoundEffect(std::string tag)
 {
+	soundEffects[tag] = nullptr;
+	soundEffects.erase(tag);
 }
 
 void AssetManager::PlaySound(std::string tag)
@@ -57,6 +55,31 @@ void AssetManager::PlaySound(std::string tag)
 	Mix_PlayChannel(-1, soundEffects[tag], 0);
 }
 
-void AssetManager::StopSound(std::string tag)
+void AssetManager::AddBackgroundMusic(std::string tag, std::string url)
 {
+	Mix_Music* music = Mix_LoadMUS(url.c_str());
+	backgroundMusic.emplace(tag, music);
+	music = nullptr;
 }
+
+void AssetManager::RemoveBackgroundMusic(std::string tag)
+{
+	backgroundMusic[tag] = nullptr;
+	backgroundMusic.erase(tag);
+}
+
+void AssetManager::PlayBackgroundMusic(std::string tag)
+{
+	Mix_PlayMusic(backgroundMusic[tag], -1);
+}
+
+void AssetManager::PauseBackgroundMusic()
+{
+	Mix_PauseMusic();
+}
+
+void AssetManager::ResumeBackgroundMusic()
+{
+	Mix_ResumeMusic();
+}
+
